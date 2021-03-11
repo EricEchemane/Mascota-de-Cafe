@@ -114,7 +114,11 @@ video {
 .slideshow {
   width: calc(6 * (280px + 4rem));
   overflow: hidden;
-  animation: slide 30s infinite;
+  animation: slide 40s infinite;
+}
+
+.dflt-width {
+  max-width: calc(1080px);
 }
 
 .coffee-card {

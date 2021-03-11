@@ -1,7 +1,10 @@
 import {Grid} from '@material-ui/core';
+import {useContext} from "react";
+
 import Vid from '../assets/videos/landing-video.mp4';
 
-import {useContext} from "react";
+
+import Story from '../components/Story';
 import CoffeeCard from '../components/CoffeeCard';
 import globalState from "../api/context";
 
@@ -46,8 +49,8 @@ export default function Homepage () {
             </div>
 
             <div className="outer-w">
-                <div className="inner p-3">
-                    <div className="slideshow mt-2">
+                <div className="inner p-3 dflt-width">
+                    <div className="slideshow ">
                         {state.coffees.map((coffee: any) => {
                             return <CoffeeCard
                                 src={source[coffee.src]}
@@ -59,6 +62,9 @@ export default function Homepage () {
                 </div>
             </div>
 
+            <div className="outer-g pt-4 pb-4">
+                <Story />
+            </div>
         </div>
     </>;
 }

@@ -16,6 +16,7 @@ function App () {
   const db = firebase.firestore();
   const [activeTab, set_activeTab] = useState(0);
   const [coffees, setCoffees] = useState([]);
+  const [stories, setStories] = useState([]);
   const sideNav_isClose = useRef(true);
 
   async function setCoffeeItems () {
@@ -28,6 +29,17 @@ function App () {
     setCoffees(items);
   }
 
+  async function setStoryItems () {
+    const storyItems = db.collection("collection_stories");
+    const data = await storyItems.get();
+    const items = [] as any;
+    data.docs.forEach((story: any) => {
+      items.push(story.data());
+      // console.log(story.data().dateTime.toDate().getTime());
+    });
+    setStories(items);
+  }
+
   function toggleSideNav () {
     const dimmer = document.getElementById('dimmer');
     const sideNav = document.getElementById('side-nav');
@@ -35,7 +47,8 @@ function App () {
       var right = '0';
       var display = 'block';
       var opa = '1';
-    } else {
+    }
+    else {
       right = '-260px';
       display = 'none';
       opa = '0';
@@ -52,12 +65,14 @@ function App () {
 
   useEffect(() => {
     setCoffeeItems();
+    setStoryItems();
   }, []);
 
   return <>
     <globalState.Provider value={{
       coffees,
-      setCoffees
+      setCoffees,
+      stories
     }}>
 
       <Router>

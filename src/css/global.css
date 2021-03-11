@@ -19,7 +19,15 @@
   color: #ff8800;
 }
 
+.prime * {
+  color: #ff8800;
+}
+
 .second {
+  color: #ff006f;
+}
+
+.second * {
   color: #ff006f;
 }
 
@@ -146,6 +154,14 @@
 
 .title {
   font-size: 2.5rem;
+}
+
+.opa-7 {
+  opacity: 0.7;
+}
+
+.opa-5 {
+  opacity: 0.5;
 }
 
 /* margins */
@@ -486,8 +502,12 @@ video {
 .slideshow {
   width: calc(6 * (280px + 4rem));
   overflow: hidden;
-  -webkit-animation: slide 30s infinite;
-          animation: slide 30s infinite;
+  -webkit-animation: slide 40s infinite;
+          animation: slide 40s infinite;
+}
+
+.dflt-width {
+  max-width: calc(1080px);
 }
 
 .coffee-card {
