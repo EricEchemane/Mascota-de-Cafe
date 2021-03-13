@@ -3,6 +3,7 @@ import {useState, useEffect, useRef} from "react";
 import firebase from './api/firebase';
 // pages
 import Homepage from '../src/pages/Homepage';
+
 import {
   Route,
   BrowserRouter as Router,
@@ -13,31 +14,34 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 function App () {
 
-  const db = firebase.firestore();
-  const [activeTab, set_activeTab] = useState(0);
-  const [coffees, setCoffees] = useState([]);
-  const [stories, setStories] = useState([]);
+  const [states, setStates] = useState({
+    activeTab: 0,
+    coffees: [],
+    stories: []
+  });
   const sideNav_isClose = useRef(true);
 
-  async function setCoffeeItems () {
+  async function getAllStates () {
+    const db = firebase.firestore();
+
     const coffeeProducts = db.collection("collection_coffee_products");
-    const data = await coffeeProducts.get();
+    const storyItems = db.collection("collection_stories");
+
+    let data = await coffeeProducts.get();
+
     const items = [] as any;
     data.docs.forEach((coffee: any) => {
       items.push(coffee.data());
     });
-    setCoffees(items);
-  }
 
-  async function setStoryItems () {
-    const storyItems = db.collection("collection_stories");
-    const data = await storyItems.get();
-    const items = [] as any;
-    data.docs.forEach((story: any) => {
-      items.push(story.data());
-      // console.log(story.data().dateTime.toDate().getTime());
+    const data2 = await storyItems.get();
+
+    const items2 = [] as any;
+    data2.docs.forEach((story: any) => {
+      items2.push(story.data());
     });
-    setStories(items);
+
+    return {...states, coffees: items, stories: items2};
   }
 
   function toggleSideNav () {
@@ -64,43 +68,44 @@ function App () {
   }
 
   useEffect(() => {
-    setCoffeeItems();
-    setStoryItems();
+    (async () => {
+      setStates(await getAllStates());
+    })();
   }, []);
 
+  const homepage = ((!states.stories.length && !states.coffees.length) ? <div></div> : <Route path="/" exact component={Homepage} />);
+
   return <>
-    <globalState.Provider value={{
-      coffees,
-      setCoffees,
-      stories
-    }}>
+    <globalState.Provider value={
+      states
+    }>
 
       <Router>
         <nav
           id="navbar"
-          className="glass d-flex flex-align-center">
+          className="d-flex flex-align-center">
 
           <Link to="/" className="dark-1 p-3 flex-1">
             <h3>Mascota de Cafe</h3>
           </Link>
-          <Link onClick={() => {set_activeTab(0);}} to="/" className={"dark-1 p-3 nav-link " + (activeTab === 0 ? 'active-link' : '')}> Home </Link>
-          <Link onClick={() => {set_activeTab(1);}} to="/" className={"dark-1 p-3 nav-link " + (activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
-          <Link onClick={() => {set_activeTab(2);}} to="/" className={"dark-1 p-3 nav-link " + (activeTab === 2 ? 'active-link' : '')}> Products </Link>
-          <Link onClick={() => {set_activeTab(3);}} to="/" className={"dark-1 p-3 nav-link " + (activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <Link onClick={() => {set_activeTab(4);}} to="/" className={"dark-1 p-3 nav-link " + (activeTab === 4 ? 'active-link' : '')}> Contact </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 0});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 1});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 2});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 3});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 4});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
           <div onClick={toggleSideNav} id="menu-bar-icon" className="p-2 cur-pointer"> <MenuIcon /> </div>
         </nav>
 
         <nav id="side-nav">
-          <Link onClick={() => {set_activeTab(0);}} to="/" className={"dark-1 p-1 ml-2 " + (activeTab === 0 ? 'active-link' : '')}> Home </Link>
-          <Link onClick={() => {set_activeTab(1);}} to="/" className={"dark-1 p-1 ml-2 " + (activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
-          <Link onClick={() => {set_activeTab(2);}} to="/" className={"dark-1 p-1 ml-2 " + (activeTab === 2 ? 'active-link' : '')}> Products </Link>
-          <Link onClick={() => {set_activeTab(3);}} to="/" className={"dark-1 p-1 ml-2 " + (activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <Link onClick={() => {set_activeTab(4);}} to="/" className={"dark-1 p-1 ml-2 " + (activeTab === 4 ? 'active-link' : '')}> Contact </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 0});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 1});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 2});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 3});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
+          <Link onClick={() => {setStates({...states, activeTab: 4});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
         </nav>
         <div id="dimmer" onClick={toggleSideNav}></div>
 
-        <Route path="/" exact component={Homepage} />
+        {homepage}
 
       </Router>
     </globalState.Provider>

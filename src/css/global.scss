@@ -87,7 +87,8 @@ button.contained {
   top: 0;
   left: 0;
   z-index: 5;
-  border: 1px solid white;
+  // border: 1px solid white;
+  background-color: white;
 }
 #menu-bar-icon {
   display: flex;
@@ -114,7 +115,7 @@ video {
 .slideshow {
   width: calc(6 * (280px + 4rem));
   overflow: hidden;
-  animation: slide 40s infinite;
+  animation: slide 60s infinite;
 }
 
 .dflt-width {
@@ -143,6 +144,32 @@ video {
   100% {
     transform: translateX(0);
   }
+}
+
+.story {
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid $grey-2;
+  margin: auto;
+  overflow: hidden;
+  .photo {
+    width: 100%;
+    height: 100%;
+  }
+}
+.storyGlass {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  * {
+    color: white;
+  }
+}
+.storyGlass {
+  background: url(../assets//stories/s1.jpg) no-repeat;
+  background-size: 200%;
 }
 
 @import "./imports//media_query.scss";

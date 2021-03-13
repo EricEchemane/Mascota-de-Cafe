@@ -16,5 +16,9 @@
   .coffee-card {
     text-align: left;
   }
+  .story {
+    text-align: left;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=media_query.css.map */

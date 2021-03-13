@@ -40,6 +40,21 @@ $thick: 4px 4px 8px $shadow;
   }
 }
 
+.grey {
+  color: $grey-2;
+}
+
+.white {
+  color: white;
+}
+
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+
 .dark-1 {
   color: $dark-1;
 }
@@ -55,6 +70,9 @@ $thick: 4px 4px 8px $shadow;
 
 .bg {
   color: white;
+}
+.bg-w {
+  background-color: white;
 }
 .bg-1 {
   background-color: $grey-1;
@@ -114,6 +132,9 @@ $thick: 4px 4px 8px $shadow;
   overflow: hidden;
 }
 .glass {
+  backdrop-filter: blur(21px) brightness(1.5);
+}
+.glass-dark {
   backdrop-filter: blur(21px);
 }
 .active-link {
@@ -136,10 +157,26 @@ $thick: 4px 4px 8px $shadow;
 .title {
   font-size: 2.5rem;
 }
+.title1 {
+  font-size: 2.7rem;
+}
 
 .opa-7 {
   opacity: 0.7;
 }
 .opa-5 {
   opacity: 0.5;
+}
+
+.avatar-s {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.avatar-m {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
