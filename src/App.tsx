@@ -20,6 +20,7 @@ function App () {
     stories: []
   });
   const sideNav_isClose = useRef(true);
+  const initialScroll = useRef(0);
 
   async function getAllStates () {
     const db = firebase.firestore();
@@ -70,7 +71,17 @@ function App () {
   useEffect(() => {
     (async () => {
       setStates(await getAllStates());
+
     })();
+    window.addEventListener('scroll', () => {
+      const y = window.pageYOffset;
+      if (y < initialScroll.current) var top = '0';
+      else top = '-50px';
+      const nav = document.getElementById('navbar');
+      if (nav) nav.style.top = top;
+      initialScroll.current = y;
+    });
+
   }, []);
 
   const homepage = ((!states.stories.length && !states.coffees.length) ? <div></div> : <Route path="/" exact component={Homepage} />);

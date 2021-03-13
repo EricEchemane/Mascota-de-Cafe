@@ -61,7 +61,7 @@ function Homepage () {
 
     return <>
         <div className="landing-index">
-            <div className="inner p-3 mb-4">
+            <div className="inner p-3 mb-3">
                 <Grid container >
                     <Grid item xs={12} md={6} >
                         <h1 className="title1">
