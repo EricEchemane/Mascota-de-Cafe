@@ -172,5 +172,25 @@ video {
   background: url(../assets//stories/s1.jpg) no-repeat;
   background-size: 200%;
 }
+.feature-card {
+  display: inline-flex;
+  width: 300px;
+  height: 400px;
+  border-radius: 8px;
+  border: 1px solid $grey-2;
+  margin: 2rem;
+  overflow: hidden;
+  flex-direction: column;
+  video {
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    box-shadow: none;
+    transform: translateY(5%)
+  }
+  h2 {
+    transform: translateY(50%)
+  }
+}
 
 @import "./imports//media_query.scss";

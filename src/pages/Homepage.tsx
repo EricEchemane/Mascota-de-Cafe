@@ -5,6 +5,7 @@ import Vid from '../assets/videos/landing-video.mp4';
 
 import Story from '../components/Story';
 import CoffeeCard from '../components/CoffeeCard';
+import FeatureCard from '../components/FeatureCard';
 import globalState from "../api/context";
 
 import cp1 from '../assets/coffeePosters/cp-1.jpg';
@@ -23,6 +24,13 @@ import sp1 from '../assets/profiles/s1.jpg';
 import sp2 from '../assets/profiles/s2.jpg';
 import sp3 from '../assets/profiles/s3.jpg';
 import sp4 from '../assets/profiles/s4.png';
+
+import qualityIngredients from '../assets/videos/features/quality_ingredients.mp4';
+import preciseProcess from '../assets/videos/features/precise_process.mp4';
+import petsInHouse from '../assets/videos/features/pets_in_house.mp4';
+import goodAmbience from '../assets/videos/features/good_ambience.mp4';
+import goodService from '../assets/videos/features/good_service.mp4';
+import adoptPet from '../assets/videos/features/adopt_pet.mp4';
 
 function Homepage () {
 
@@ -98,8 +106,52 @@ function Homepage () {
                 </div>
             </div>
 
+            <div className="outer-w">
+                <h1 className="text-align-center pt-4 title second">What we have?</h1>
+                <div className="inner pb-5 pt-3 pr-3 pl-3">
+                    <Grid container className="d-flex flex-just-center" >
+                        <FeatureCard
+                            title="Quality Products"
+                            video={qualityIngredients}
+                            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+                            route="/"
+                        />
+                        <FeatureCard
+                            title="Precise Process"
+                            video={preciseProcess}
+                            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+                            route="/"
+                        />
+                        <FeatureCard
+                            title="Excellent Service"
+                            video={goodService}
+                            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+                            route="/"
+                        />
+                        <FeatureCard
+                            title="Pets in House"
+                            video={petsInHouse}
+                            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+                            route="/"
+                        />
+                        <FeatureCard
+                            title="Good Ambience"
+                            video={goodAmbience}
+                            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+                            route="/"
+                        />
+                        <FeatureCard
+                            title="You can Adopt a Pet"
+                            video={adoptPet}
+                            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+                            route="/"
+                        />
+                    </Grid>
+                </div>
+            </div>
+
             <div className="outer-g pt-1 pb-2">
-                <h1 className="text-align-center pt-4 title">Our Stories</h1>
+                <h1 className="text-align-center pt-4 title prime">Our Stories</h1>
                 {stories}
             </div>
         </div>
