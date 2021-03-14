@@ -1,5 +1,5 @@
 import globalState from './api/context';
-import {useState, useEffect, useRef} from "react";
+import {useState, useEffect, useRef, useCallback} from "react";
 import firebase from './api/firebase';
 // pages
 import Homepage from '../src/pages/Homepage';
@@ -22,7 +22,7 @@ function App () {
   const sideNav_isClose = useRef(true);
   const initialScroll = useRef(0);
 
-  async function getAllStates () {
+  const getAllStates = useCallback(async () => {
     const db = firebase.firestore();
 
     const coffeeProducts = db.collection("collection_coffee_products");
@@ -43,7 +43,7 @@ function App () {
     });
 
     return {...states, coffees: items, stories: items2};
-  }
+  }, [states]);
 
   function toggleSideNav () {
     const dimmer = document.getElementById('dimmer');
@@ -71,8 +71,8 @@ function App () {
   useEffect(() => {
     (async () => {
       setStates(await getAllStates());
-
     })();
+
     window.addEventListener('scroll', () => {
       const y = window.pageYOffset;
       if (y < initialScroll.current) var top = '0';
@@ -82,7 +82,7 @@ function App () {
       initialScroll.current = y;
     });
 
-  }, []);
+  }, [getAllStates]);
 
   const homepage = ((!states.stories.length && !states.coffees.length) ? <div></div> : <Route path="/" exact component={Homepage} />);
 

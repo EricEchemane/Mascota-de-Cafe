@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 :root {
   font-size: 15px;
 }
@@ -662,6 +663,53 @@ video {
 .feature-card h2 {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+}
+
+.footer {
+  padding: 3rem;
+  background-color: #3a3532;
+}
+
+.footer * {
+  color: #c5c5c5;
+  text-align: left;
+  font-weight: 100;
+}
+
+.footer h2 {
+  font-family: 'Courgette', cursive;
+  margin: 1rem;
+  color: white;
+}
+
+.footer h3 {
+  color: white;
+}
+
+.footer a {
+  margin: .5rem;
+}
+
+.footer a:hover * {
+  color: white;
+}
+
+.footer ul, .footer li {
+  list-style: none;
+  font-size: .9rem;
+}
+
+.footer li {
+  padding: .2rem 1rem;
+}
+
+.foot {
+  font-weight: 100;
+  color: #979797;
+  text-align: center;
+  background-color: #3a3532;
+  padding: .5rem;
+  font-size: .8rem;
 }
 
 @media screen and (max-width: 875px) {
