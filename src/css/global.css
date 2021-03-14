@@ -624,15 +624,13 @@ video {
   position: absolute;
   top: 0;
   left: 0;
+  background-size: 200%;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 .storyGlass * {
   color: white;
-}
-
-.storyGlass {
-  background: url(../assets//stories/s1.jpg) no-repeat;
-  background-size: 200%;
 }
 
 .feature-card {
