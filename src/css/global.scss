@@ -12,6 +12,9 @@
   font-family: "Poppins", sans-serif;
   color: $dark-1;
 }
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
   color: dodgerblue;

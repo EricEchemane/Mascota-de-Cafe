@@ -47,6 +47,22 @@ function App () {
   //   return {...states, coffees: items, stories: items2};
   // }, [states]);
 
+  function dim (open: boolean) {
+    const dimmer = document.getElementById('dimmer');
+    if (dimmer) {
+      let display = 'none';
+      let opa = '0';
+      if (open) {
+        display = 'block';
+        opa = '1';
+      }
+      dimmer.style.display = display;
+      setTimeout(() => {
+        dimmer.style.opacity = opa;
+      }, 100);
+    }
+  }
+
   function toggleSideNav () {
     const dimmer = document.getElementById('dimmer');
     const sideNav = document.getElementById('side-nav');

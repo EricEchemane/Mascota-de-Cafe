@@ -112,7 +112,7 @@ function Homepage () {
                 <div className="inner pb-5 pt-3 pr-3 pl-3">
                     <Grid container className="d-flex flex-just-center" >
                         <FeatureCard
-                            title="Quality Products"
+                            title="Quality Ingredients"
                             video={qualityIngredients}
                             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
                             route="/"

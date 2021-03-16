@@ -3,6 +3,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
+import PhoneIcon from '@material-ui/icons/Phone';
 import {Grid} from '@material-ui/core';
 
 export default function Footer () {
@@ -46,6 +47,13 @@ export default function Footer () {
                         rel="noreferrer"
                         target="_blank">
                         <EmailIcon />
+                    </a>
+                    <a
+                        href="https://mail.google.com"
+                        title="981-4221"
+                        rel="noreferrer"
+                        target="_blank">
+                        <PhoneIcon />
                     </a>
                 </div>
                 <div className="pl-1 pt-3">
