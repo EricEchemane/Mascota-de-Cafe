@@ -20,5 +20,11 @@
     text-align: left;
     width: 100%;
   }
+  .footer-section-1 * {
+    text-align: center;
+  }
+  .footer > div {
+    margin: 1rem;
+  }
 }
 /*# sourceMappingURL=media_query.css.map */

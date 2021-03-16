@@ -1,8 +1,10 @@
 import globalState from './api/context';
-import {useState, useEffect, useRef, useCallback} from "react";
-import firebase from './api/firebase';
+import {useState, useEffect, useRef} from "react";
 // pages
 import Homepage from '../src/pages/Homepage';
+import Footer from '../src/components/Footer';
+
+import {coffees_data, stories_data} from './api/local.data';
 
 import {
   Route,
@@ -14,36 +16,36 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 function App () {
 
-  const [states, setStates] = useState({
+  const [states, setStates] = useState<any>({
     activeTab: 0,
-    coffees: [],
-    stories: []
+    coffees: coffees_data,
+    stories: stories_data
   });
   const sideNav_isClose = useRef(true);
   const initialScroll = useRef(0);
 
-  const getAllStates = useCallback(async () => {
-    const db = firebase.firestore();
+  // const getAllStates = useCallback(async () => {
+  //   const db = firebase.firestore();
 
-    const coffeeProducts = db.collection("collection_coffee_products");
-    const storyItems = db.collection("collection_stories");
+  //   const coffeeProducts = db.collection("collection_coffee_products");
+  //   const storyItems = db.collection("collection_stories");
 
-    let data = await coffeeProducts.get();
+  //   let data = await coffeeProducts.get();
 
-    const items = [] as any;
-    data.docs.forEach((coffee: any) => {
-      items.push(coffee.data());
-    });
+  //   const items = [] as any;
+  //   data.docs.forEach((coffee: any) => {
+  //     items.push(coffee.data());
+  //   });
 
-    const data2 = await storyItems.get();
+  //   const data2 = await storyItems.get();
 
-    const items2 = [] as any;
-    data2.docs.forEach((story: any) => {
-      items2.push(story.data());
-    });
+  //   const items2 = [] as any;
+  //   data2.docs.forEach((story: any) => {
+  //     items2.push(story.data());
+  //   });
 
-    return {...states, coffees: items, stories: items2};
-  }, [states]);
+  //   return {...states, coffees: items, stories: items2};
+  // }, [states]);
 
   function toggleSideNav () {
     const dimmer = document.getElementById('dimmer');
@@ -69,9 +71,6 @@ function App () {
   }
 
   useEffect(() => {
-    (async () => {
-      setStates(await getAllStates());
-    })();
 
     window.addEventListener('scroll', () => {
       const y = window.pageYOffset;
@@ -82,9 +81,13 @@ function App () {
       initialScroll.current = y;
     });
 
-  }, [getAllStates]);
+  });
 
   const homepage = ((!states.stories.length && !states.coffees.length) ? <div></div> : <Route path="/" exact component={Homepage} />);
+
+  function changeTab (n: number) {
+    setStates({...states, activeTab: n});
+  }
 
   return <>
     <globalState.Provider value={
@@ -99,25 +102,28 @@ function App () {
           <Link to="/" className="dark-1 p-3 flex-1">
             <h3>Mascota de Cafe</h3>
           </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 0});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 1});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 2});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 3});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 4});}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
+          <Link onClick={() => {changeTab(0);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
+          <Link onClick={() => {changeTab(1);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
+          <Link onClick={() => {changeTab(2);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
+          <Link onClick={() => {changeTab(3);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
+          <Link onClick={() => {changeTab(4);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
           <div onClick={toggleSideNav} id="menu-bar-icon" className="p-2 cur-pointer"> <MenuIcon /> </div>
         </nav>
 
         <nav id="side-nav">
-          <Link onClick={() => {setStates({...states, activeTab: 0});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 1});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 2});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 3});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <Link onClick={() => {setStates({...states, activeTab: 4});}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
+          <Link onClick={() => {changeTab(0);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
+          <Link onClick={() => {changeTab(1);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
+          <Link onClick={() => {changeTab(2);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
+          <Link onClick={() => {changeTab(3);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
+          <Link onClick={() => {changeTab(4);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
         </nav>
         <div id="dimmer" onClick={toggleSideNav}></div>
 
         {homepage}
 
+        <footer>
+          <Footer />
+        </footer>
       </Router>
     </globalState.Provider>
   </>;

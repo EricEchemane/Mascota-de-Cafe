@@ -6,7 +6,6 @@ import Vid from '../assets/videos/landing-video.mp4';
 import Story from '../components/Story';
 import CoffeeCard from '../components/CoffeeCard';
 import FeatureCard from '../components/FeatureCard';
-import Footer from '../components/Footer';
 import globalState from "../api/context";
 
 import cp1 from '../assets/coffeePosters/cp-1.jpg';
@@ -49,6 +48,7 @@ function Homepage () {
     const storyImageSource = {
         s1: s1, s2: s2, s3: s3, s4: s4
     } as any;
+
     const profilesImageSource = {
         s1: sp1, s2: sp2, s3: sp3, s4: sp4
     } as any;
@@ -155,10 +155,6 @@ function Homepage () {
                 <h1 className="text-align-center pt-4 title prime">Our Stories</h1>
                 {stories}
             </div>
-
-            <footer>
-                <Footer />
-            </footer>
         </div>
     </>;
 }

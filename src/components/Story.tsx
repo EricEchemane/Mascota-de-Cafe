@@ -8,7 +8,7 @@ export default function Story (props: any) {
                     <Grid item xs={12} sm={5} className="pos-rel">
                         <div className="storyGlass" style={{backgroundImage: `url(${props.src})`}}></div>
                         <div className="glass-dark h-100">
-                            <h1 className="p-3 white"> "{props.title}." </h1>
+                            <h1 className="p-3 white"> "{props.title}" </h1>
                             <p className="pl-3 white">Photo by: {props.photoBy} </p>
                             <p className="pl-3 pb-3 white"> @{props.branch} </p>
                         </div>

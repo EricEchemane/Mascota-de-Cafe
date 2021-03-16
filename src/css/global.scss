@@ -217,6 +217,9 @@ video {
   ul, li{
     list-style: none;
     font-size: .9rem;  
+    a {
+      margin: 0;
+    }
   }
   li {
     padding: .2rem 1rem;
@@ -230,6 +233,14 @@ video {
   background-color: $dark-1;
   padding: .5rem;
   font-size: .8rem
+}
+
+.search-input {
+  all: unset;
+  background-color: white;
+  border-radius: 8px;
+  padding: .3rem 1rem;
+  color: $dark-1;
 }
 
 @import "./imports//media_query.scss";

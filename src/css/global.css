@@ -699,6 +699,10 @@ video {
   font-size: .9rem;
 }
 
+.footer ul a, .footer li a {
+  margin: 0;
+}
+
 .footer li {
   padding: .2rem 1rem;
 }
@@ -710,6 +714,14 @@ video {
   background-color: #3a3532;
   padding: .5rem;
   font-size: .8rem;
+}
+
+.search-input {
+  all: unset;
+  background-color: white;
+  border-radius: 8px;
+  padding: .3rem 1rem;
+  color: #3a3532;
 }
 
 @media screen and (max-width: 875px) {
@@ -733,6 +745,12 @@ video {
   .story {
     text-align: left;
     width: 100%;
+  }
+  .footer-section-1 * {
+    text-align: center;
+  }
+  .footer > div {
+    margin: 1rem;
   }
 }
 /*# sourceMappingURL=global.css.map */
