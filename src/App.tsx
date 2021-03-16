@@ -18,11 +18,11 @@ function App () {
 
   const [states, setStates] = useState<any>({
     activeTab: 0,
-    coffees: coffees_data,
-    stories: stories_data
+    coffees: [],
+    stories: []
   });
   const sideNav_isClose = useRef(true);
-  const initialScroll = useRef(0);
+  let initialScroll = 0;
 
   // const getAllStates = useCallback(async () => {
   //   const db = firebase.firestore();
@@ -90,16 +90,20 @@ function App () {
 
     window.addEventListener('scroll', () => {
       const y = window.pageYOffset;
-      if (y < initialScroll.current) var top = '0';
+      if (y < initialScroll) var top = '0';
       else top = '-50px';
       const nav = document.getElementById('navbar');
       if (nav) nav.style.top = top;
-      initialScroll.current = y;
+      initialScroll = y;
     });
 
-  });
+    setStates({
+      activeTab: 0,
+      coffees: coffees_data,
+      stories: stories_data
+    });
 
-  const homepage = ((!states.stories.length && !states.coffees.length) ? <div></div> : <Route path="/" exact component={Homepage} />);
+  }, []);
 
   function changeTab (n: number) {
     setStates({...states, activeTab: n});
@@ -135,7 +139,7 @@ function App () {
         </nav>
         <div id="dimmer" onClick={toggleSideNav}></div>
 
-        {homepage}
+        <Route path="/" exact component={Homepage} />
 
         <footer>
           <Footer />
