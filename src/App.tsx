@@ -1,8 +1,10 @@
 import globalState from './api/context';
 import {useState, useRef} from "react";
+import {Box} from '@material-ui/core';
 // pages
 import Homepage from '../src/pages/Homepage';
 import Footer from '../src/components/Footer';
+import Contact from '../src/components/Contact';
 
 import {coffees_data, stories_data} from './api/local.data';
 
@@ -17,54 +19,62 @@ import MenuIcon from '@material-ui/icons/Menu';
 function App () {
 
   const [states, setStates] = useState<any>({
-    activeTab: 0,
     coffees: coffees_data,
-    stories: stories_data
+    stories: stories_data,
+    activeTab: 0
   });
+  const [contactsHidden, set_contactsHidden] = useState(true);
   const sideNav_isClose = useRef(true);
-
-  function dim (open: boolean) {
-    const dimmer = document.getElementById('dimmer');
-    if (dimmer) {
-      let display = 'none';
-      let opa = '0';
-      if (open) {
-        display = 'block';
-        opa = '1';
-      }
-      dimmer.style.display = display;
-      setTimeout(() => {
-        dimmer.style.opacity = opa;
-      }, 100);
+  
+  function dispatchDimmer() {
+    if (!sideNav_isClose.current) {
+      toggleSideNav();
+    }
+    else if (!contactsHidden) {
+      toggleContacts();
     }
   }
 
   function toggleSideNav () {
-    const dimmer = document.getElementById('dimmer');
     const sideNav = document.getElementById('side-nav');
     if (sideNav_isClose.current) {
       var right = '0';
-      var display = 'block';
-      var opa = '1';
+      var dimmer = true;
     }
     else {
       right = '-260px';
-      display = 'none';
-      opa = '0';
-    }
-    if (dimmer) {
-      dimmer.style.display = display;
-      setTimeout(() => {
-        dimmer.style.opacity = opa;
-      }, 100);
+      dimmer = false;
     }
     if (sideNav) sideNav.style.right = right;
+    dim(dimmer);
     sideNav_isClose.current = !sideNav_isClose.current;
   }
 
-
   function changeTab (n: number) {
     setStates({...states, activeTab: n});
+  }
+
+  function dim(open: boolean = true) {
+    const dimmer = document.getElementById('dimmer');
+    if (open) {
+      var display = "block";
+      var opa = "1";
+    } else {
+      display = "none";
+      opa = "0";
+    }
+    if (dimmer) {
+      dimmer.style.display = display;
+      dimmer.style.opacity = opa;
+    }
+  }
+
+  function toggleContacts() {
+    set_contactsHidden((prev: any) => {
+      if (prev) dim();
+      else dim(false);
+      return !prev;
+    });
   }
 
   return <>
@@ -84,7 +94,7 @@ function App () {
           <Link onClick={() => {changeTab(1);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
           <Link onClick={() => {changeTab(2);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
           <Link onClick={() => {changeTab(3);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <Link onClick={() => {changeTab(4);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
+          <Link onClick={toggleContacts} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
           <div onClick={toggleSideNav} id="menu-bar-icon" className="p-2 cur-pointer"> <MenuIcon /> </div>
         </nav>
 
@@ -93,15 +103,20 @@ function App () {
           <Link onClick={() => {changeTab(1);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
           <Link onClick={() => {changeTab(2);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
           <Link onClick={() => {changeTab(3);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <Link onClick={() => {changeTab(4);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
+          <Link onClick={toggleContacts} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
         </nav>
-        <div id="dimmer" onClick={toggleSideNav}></div>
+        <div id="dimmer" onClick={dispatchDimmer}></div>
 
         <Route path="/" exact component={Homepage} />
 
         <footer>
           <Footer />
         </footer>
+
+        <Box hidden={contactsHidden}>
+          <Contact />
+        </Box>
+
       </Router>
     </globalState.Provider>
   </>;

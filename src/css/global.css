@@ -508,7 +508,7 @@ button.contained {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   opacity: 0;
@@ -541,7 +541,7 @@ button.contained {
 }
 
 .landing-index {
-  background: linear-gradient(120deg, white, #fff0d5);
+  background: linear-gradient(120deg, white, #fcdabf);
   width: 100%;
   padding-top: 5rem;
   -webkit-transition: 0.3s ease;
@@ -681,7 +681,7 @@ video {
 }
 
 .footer h2 {
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
   margin: 1rem;
   color: white;
 }
@@ -691,24 +691,26 @@ video {
 }
 
 .footer a {
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 .footer a:hover * {
   color: white;
 }
 
-.footer ul, .footer li {
+.footer ul,
+.footer li {
   list-style: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-.footer ul a, .footer li a {
+.footer ul a,
+.footer li a {
   margin: 0;
 }
 
 .footer li {
-  padding: .2rem 1rem;
+  padding: 0.2rem 1rem;
 }
 
 .foot {
@@ -716,16 +718,33 @@ video {
   color: #979797;
   text-align: center;
   background-color: #3a3532;
-  padding: .5rem;
-  font-size: .8rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .search-input {
   all: unset;
   background-color: white;
   border-radius: 8px;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
   color: #3a3532;
+}
+
+.contact {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
+  z-index: 7;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 @media screen and (max-width: 875px) {
