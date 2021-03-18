@@ -1,5 +1,5 @@
 import globalState from './api/context';
-import {useState, useEffect, useRef} from "react";
+import {useState, useRef} from "react";
 // pages
 import Homepage from '../src/pages/Homepage';
 import Footer from '../src/components/Footer';
@@ -18,34 +18,10 @@ function App () {
 
   const [states, setStates] = useState<any>({
     activeTab: 0,
-    coffees: [],
-    stories: []
+    coffees: coffees_data,
+    stories: stories_data
   });
   const sideNav_isClose = useRef(true);
-  let initialScroll = 0;
-
-  // const getAllStates = useCallback(async () => {
-  //   const db = firebase.firestore();
-
-  //   const coffeeProducts = db.collection("collection_coffee_products");
-  //   const storyItems = db.collection("collection_stories");
-
-  //   let data = await coffeeProducts.get();
-
-  //   const items = [] as any;
-  //   data.docs.forEach((coffee: any) => {
-  //     items.push(coffee.data());
-  //   });
-
-  //   const data2 = await storyItems.get();
-
-  //   const items2 = [] as any;
-  //   data2.docs.forEach((story: any) => {
-  //     items2.push(story.data());
-  //   });
-
-  //   return {...states, coffees: items, stories: items2};
-  // }, [states]);
 
   function dim (open: boolean) {
     const dimmer = document.getElementById('dimmer');
@@ -86,24 +62,6 @@ function App () {
     sideNav_isClose.current = !sideNav_isClose.current;
   }
 
-  useEffect(() => {
-
-    window.addEventListener('scroll', () => {
-      const y = window.pageYOffset;
-      if (y < initialScroll) var top = '0';
-      else top = '-50px';
-      const nav = document.getElementById('navbar');
-      if (nav) nav.style.top = top;
-      initialScroll = y;
-    });
-
-    setStates({
-      activeTab: 0,
-      coffees: coffees_data,
-      stories: stories_data
-    });
-
-  }, []);
 
   function changeTab (n: number) {
     setStates({...states, activeTab: n});
