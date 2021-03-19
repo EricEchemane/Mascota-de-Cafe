@@ -26,5 +26,8 @@
   .footer > div {
     margin: 1rem;
   }
+  .feature-container {
+    padding: 3rem 0 5rem 0;
+  }
 }
 /*# sourceMappingURL=media_query.css.map */

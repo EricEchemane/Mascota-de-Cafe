@@ -27,12 +27,8 @@ function App () {
   const sideNav_isClose = useRef(true);
   
   function dispatchDimmer() {
-    if (!sideNav_isClose.current) {
-      toggleSideNav();
-    }
-    else if (!contactsHidden) {
-      toggleContacts();
-    }
+    if (!sideNav_isClose.current) toggleSideNav();
+    else if (!contactsHidden) toggleContacts();
   }
 
   function toggleSideNav () {
@@ -54,7 +50,7 @@ function App () {
     setStates({...states, activeTab: n});
   }
 
-  function dim(open: boolean = true) {
+  function dim(open: boolean  = true) {
     const dimmer = document.getElementById('dimmer');
     if (open) {
       var display = "block";
@@ -90,24 +86,24 @@ function App () {
           <Link to="/" className="dark-1 p-3 flex-1">
             <h3>Mascota de Cafe</h3>
           </Link>
-          <Link onClick={() => {changeTab(0);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
+          <Link onClick={() => {changeTab(0);}} to="/Mascota-de-Cafe" className={"dark-1 p-3 nav-link " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
           <Link onClick={() => {changeTab(1);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
           <Link onClick={() => {changeTab(2);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
           <Link onClick={() => {changeTab(3);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <Link onClick={toggleContacts} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
+          <p onClick={toggleContacts} className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </p>
           <div onClick={toggleSideNav} id="menu-bar-icon" className="p-2 cur-pointer"> <MenuIcon /> </div>
         </nav>
 
         <nav id="side-nav">
-          <Link onClick={() => {changeTab(0);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
-          <Link onClick={() => {changeTab(1);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
-          <Link onClick={() => {changeTab(2);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
-          <Link onClick={() => {changeTab(3);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <Link onClick={toggleContacts} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </Link>
+          <Link onClick={() => {toggleSideNav();changeTab(0);}} to="/Mascota-de-Cafe" className={"dark-1 p-1 ml-2 " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
+          <Link onClick={() => {toggleSideNav();changeTab(1);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
+          <Link onClick={() => {toggleSideNav();changeTab(2);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
+          <Link onClick={() => {toggleSideNav();changeTab(3);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
+          <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </p>
         </nav>
         <div id="dimmer" onClick={dispatchDimmer}></div>
 
-        <Route path="/" exact component={Homepage} />
+        <Route path="/Mascota-de-Cafe" exact component={Homepage} />
 
         <footer>
           <Footer />
@@ -121,5 +117,4 @@ function App () {
     </globalState.Provider>
   </>;
 }
-
 export default App;

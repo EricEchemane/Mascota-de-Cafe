@@ -71,6 +71,9 @@ button.contained {
   transition: 0.3s ease;
   display: flex;
   flex-direction: column;
+  p {
+    cursor: pointer;
+  }
 }
 #dimmer {
   z-index: 6;
@@ -94,6 +97,9 @@ button.contained {
   // border: 1px solid white;
   background-color: white;
   transition: 0.3s ease;
+  p {
+    cursor: pointer;
+  }
 }
 #menu-bar-icon {
   display: flex;
@@ -176,7 +182,7 @@ video {
 }
 .feature-card {
   display: inline-flex;
-  width: 300px;
+  width: minmax(300px, 400px);
   height: 400px;
   border-radius: 8px;
   border: 1px solid $grey-2;

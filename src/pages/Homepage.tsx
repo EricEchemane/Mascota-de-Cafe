@@ -109,7 +109,7 @@ function Homepage () {
 
             <div className="outer-w">
                 <h1 className="text-align-center pt-4 title second">What we have?</h1>
-                <div className="inner pb-5 pt-3 pr-3 pl-3">
+                <div className="inner pb-5 pt-3 pr-3 pl-3 feature-container">
                     <Grid container className="d-flex flex-just-center" >
                         <FeatureCard
                             title="Quality Ingredients"

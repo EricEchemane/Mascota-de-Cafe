@@ -502,6 +502,10 @@ button.contained {
           flex-direction: column;
 }
 
+#side-nav p {
+  cursor: pointer;
+}
+
 #dimmer {
   z-index: 6;
   top: 50px;
@@ -525,6 +529,10 @@ button.contained {
   background-color: white;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+#navbar p {
+  cursor: pointer;
 }
 
 #menu-bar-icon {
@@ -642,7 +650,7 @@ video {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 300px;
+  width: minmax(300px, 400px);
   height: 400px;
   border-radius: 8px;
   border: 1px solid #c5c5c5;
@@ -774,6 +782,9 @@ video {
   }
   .footer > div {
     margin: 1rem;
+  }
+  .feature-container {
+    padding: 3rem 0 5rem 0;
   }
 }
 /*# sourceMappingURL=global.css.map */
