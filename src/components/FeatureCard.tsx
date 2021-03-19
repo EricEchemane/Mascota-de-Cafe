@@ -21,7 +21,7 @@ export default function FeatureCard (props: any) {
             <Router>
                 <div className="feature-card ">
                     <h2 className="text-align-center dark-1"> {props.title} </h2>
-                    <video ref={vid} src={props.video} muted loop onMouseEnter={play} onMouseLeave={pause}></video>
+                    <video ref={vid} poster={props.poster} src={props.video} muted loop onMouseEnter={play} onMouseLeave={pause}></video>
                     <p className="pl-2 pr-2 pb-2">
                         {props.content}
                     </p>

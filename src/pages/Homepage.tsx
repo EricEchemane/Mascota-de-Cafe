@@ -1,7 +1,8 @@
 import {Grid} from '@material-ui/core';
 import react, {useContext} from "react";
 
-import Vid from '../assets/videos/landing-video.mp4';
+import Vid from '../assets/videos/landing-video2.mp4';
+import VidPoster from '../assets/videos/features/thumbnails/landing.jpg';
 
 import Story from '../components/Story';
 import CoffeeCard from '../components/CoffeeCard';
@@ -31,6 +32,13 @@ import petsInHouse from '../assets/videos/features/pets_in_house.mp4';
 import goodAmbience from '../assets/videos/features/good_ambience.mp4';
 import goodService from '../assets/videos/features/good_service.mp4';
 import adoptPet from '../assets/videos/features/adopt_pet.mp4';
+
+import fp1 from '../assets/videos/features/thumbnails/a.jpg';
+import fp2 from '../assets/videos/features/thumbnails/b.jpg';
+import fp3 from '../assets/videos/features/thumbnails/c.jpg';
+import fp4 from '../assets/videos/features/thumbnails/d.jpg';
+import fp5 from '../assets/videos/features/thumbnails/e.jpg';
+import fp6 from '../assets/videos/features/thumbnails/f.jpg';
 
 function Homepage () {
 
@@ -85,7 +93,7 @@ function Homepage () {
                         <button className="mt-2 outline"> GET DISCOUNT </button>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <video src={Vid} className="landing-video mt-1" muted autoPlay loop></video>
+                        <video src={Vid} poster={VidPoster} className="landing-video mt-1" muted autoPlay loop></video>
                     </Grid>
                 </Grid>
             </div>
@@ -114,36 +122,42 @@ function Homepage () {
                         <FeatureCard
                             title="Quality Ingredients"
                             video={qualityIngredients}
+                            poster={fp1}
                             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
                             route="/"
                         />
                         <FeatureCard
                             title="Precise Process"
                             video={preciseProcess}
+                            poster={fp2}
                             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
                             route="/"
                         />
                         <FeatureCard
                             title="Excellent Service"
                             video={goodService}
+                            poster={fp3}
                             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
                             route="/"
                         />
                         <FeatureCard
                             title="Pets in House"
                             video={petsInHouse}
+                            poster={fp4}
                             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
                             route="/"
                         />
                         <FeatureCard
                             title="Good Ambience"
                             video={goodAmbience}
+                            poster={fp5}
                             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
                             route="/"
                         />
                         <FeatureCard
                             title="You can Adopt a Pet"
                             video={adoptPet}
+                            poster={fp6}
                             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
                             route="/"
                         />
