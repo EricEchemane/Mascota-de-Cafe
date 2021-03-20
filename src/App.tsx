@@ -31,7 +31,7 @@ function App () {
     else if (!contactsHidden) toggleContacts();
   }
 
-  function toggleSideNav () {
+  function toggleSideNav() {
     const sideNav = document.getElementById('side-nav');
     if (sideNav_isClose.current) {
       var right = '0';
@@ -44,6 +44,7 @@ function App () {
     if (sideNav) sideNav.style.right = right;
     dim(dimmer);
     sideNav_isClose.current = !sideNav_isClose.current;
+    set_contactsHidden(true);
   }
 
   function changeTab (n: number) {
@@ -101,7 +102,6 @@ function App () {
           <Link onClick={() => {toggleSideNav();changeTab(3);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
           <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </p>
         </nav>
-        <div id="dimmer" onClick={dispatchDimmer}></div>
 
         <Route path="/Mascota-de-Cafe" exact component={Homepage} />
 
@@ -115,6 +115,7 @@ function App () {
 
       </Router>
     </globalState.Provider>
+    <div id="dimmer" onClick={dispatchDimmer}></div>
   </>;
 }
 export default App;

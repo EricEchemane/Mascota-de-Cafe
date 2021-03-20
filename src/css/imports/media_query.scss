@@ -29,3 +29,20 @@
     padding: 3rem 0 5rem 0;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .contact {
+    width: 80%;
+    display: block;
+    & > div:nth-child(1) {
+      width: 100%;
+      padding-bottom: 0;
+    }
+    & > div:nth-child(2) {
+      padding: 3rem 0;
+    }
+  }
+  #contacts-social {
+    display: none;
+  }
+}
