@@ -1,6 +1,6 @@
 // variabels
 :root {
-  font-size: 15px;
+	font-size: 15px;
 }
 $prime: #ff8800;
 $second: #ff006f;
@@ -18,168 +18,171 @@ $thin: 0 0 4px $shadow;
 $thick: 4px 4px 8px $shadow;
 
 .text-align-center {
-  text-align: center;
+	text-align: center;
 }
 .text-align-left {
-  text-align: left;
+	text-align: left;
 }
 .text-align-right {
-  text-align: right;
+	text-align: right;
 }
 
 .prime {
-  color: $prime;
-  * {
-    color: $prime;
-  }
+	color: $prime;
+	* {
+		color: $prime;
+	}
 }
 .second {
-  color: $second;
-  * {
-    color: $second;
-  }
+	color: $second;
+	* {
+		color: $second;
+	}
 }
 
 .grey {
-  color: $grey-2;
+	color: $grey-2;
 }
 
 .white {
-  color: white;
+	color: white;
 }
 
 .w-100 {
-  width: 100%;
+	width: 100%;
 }
 .h-100 {
-  height: 100%;
+	height: 100%;
 }
 
 .dark-1 {
-  color: $dark-1;
+	color: $dark-1;
 }
 .dark-2 {
-  color: $dark-2;
+	color: $dark-2;
 }
 .bg-dark-1 {
-  background-color: $dark-1;
+	background-color: $dark-1;
 }
 .bg-dark-2 {
-  background-color: $dark-2;
+	background-color: $dark-2;
 }
 
 .bg {
-  color: white;
+	color: white;
 }
 .bg-w {
-  background-color: white;
+	background-color: white;
 }
 .bg-1 {
-  background-color: $grey-1;
+	background-color: $grey-1;
 }
 .bg-2 {
-  background-color: $grey-2;
+	background-color: $grey-2;
 }
 .bg-3 {
-  background-color: $grey-3;
+	background-color: $grey-3;
 }
 
 .pos-rel {
-  position: relative;
+	position: relative;
 }
 .pos-abs {
-  position: absolute;
+	position: absolute;
 }
 .d-block {
-  display: block;
+	display: block;
 }
 .d-inline {
-  display: inline;
+	display: inline;
 }
 .m-auto {
-  margin: 0 auto;
+	margin: 0 auto;
+}
+.flex-direction-col {
+	flex-direction: column;
 }
 .center-abs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .outer-g {
-  width: 100%;
-  background-color: $grey-1;
+	width: 100%;
+	background-color: $grey-1;
 }
 .outer-w {
-  width: 100%;
-  background-color: white;
+	width: 100%;
+	background-color: white;
 }
 .inner-g {
-  max-width: calc(1080px + 4rem);
-  margin: 0 auto;
-  background-color: $grey-1;
-  overflow: hidden;
+	max-width: calc(1080px + 4rem);
+	margin: 0 auto;
+	background-color: $grey-1;
+	overflow: hidden;
 }
 .inner-w {
-  max-width: calc(1080px + 4rem);
-  background-color: white;
-  margin: 0 auto;
-  overflow: hidden;
+	max-width: calc(1080px + 4rem);
+	background-color: white;
+	margin: 0 auto;
+	overflow: hidden;
 }
 .inner {
-  max-width: calc(1080px + 4rem);
-  margin: 0 auto;
-  overflow: hidden;
+	max-width: calc(1080px + 4rem);
+	margin: 0 auto;
+	overflow: hidden;
 }
 .glass {
-  backdrop-filter: blur(21px) brightness(1.5);
+	backdrop-filter: blur(21px) brightness(1.5);
 }
 .glass-dark {
-  backdrop-filter: blur(21px);
+	backdrop-filter: blur(21px);
 }
 .active-link {
-  color: $prime;
+	color: $prime;
 }
 .d-flex {
-  display: flex;
+	display: flex;
 }
 .flex-1 {
-  flex: 1;
+	flex: 1;
 }
 .flex-align-center {
-  align-items: center;
+	align-items: center;
 }
 .flex-just-center {
-  justify-content: center;
+	justify-content: center;
 }
 
 .cur-pointer {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .title {
-  font-size: 2.5rem;
+	font-size: 2.5rem;
 }
 .title1 {
-  font-size: 2.7rem;
+	font-size: 2.7rem;
 }
 
 .opa-7 {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 .opa-5 {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 .avatar-s {
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
 }
 .avatar-m {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
 }

@@ -4,282 +4,295 @@
 @import "./imports//spacing.scss";
 
 $floating: 0 24px 48px -12px rgba(
-    $color: #000000,
-    $alpha: 0.3,
-  );
+		$color: #000000,
+		$alpha: 0.3,
+	);
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  color: $dark-1;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	color: $dark-1;
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 a {
-  text-decoration: none;
-  color: dodgerblue;
-  font-weight: 500;
-}
-body {
-  height: 200vh;
+	text-decoration: none;
+	color: dodgerblue;
+	font-weight: 500;
 }
 // @@@@@@@@@@@@@@@@@@@@@@@@ COMPONENTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 button {
-  all: unset;
-  min-width: 100px;
-  max-width: 100%;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  &:hover {
-    box-shadow: $thin;
-  }
-  &:active {
-    filter: brightness(0.7);
-  }
+	all: unset;
+	min-width: 100px;
+	max-width: 100%;
+	padding: 0.5rem 1rem;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.3s ease;
+	&:hover {
+		box-shadow: $thin;
+	}
+	&:active {
+		filter: brightness(0.7);
+	}
 }
 
 button.prime {
-  background-color: $prime;
-  color: white;
+	background-color: $prime;
+	color: white;
 }
 button.second {
-  background-color: $second;
-  color: white;
+	background-color: $second;
+	color: white;
 }
 
 button.outline {
-  border: 1px solid $dark-1;
+	border: 1px solid $dark-1;
 }
 
 button.contained {
-  background-color: $dark-2;
-  color: $grey-1;
+	background-color: $dark-2;
+	color: $grey-1;
 }
 
 // =========== Navbar =========
 #side-nav {
-  position: fixed;
-  top: 50px;
-  right: -260px;
-  height: 100%;
-  width: 250px;
-  background-color: white;
-  z-index: 11;
-  box-shadow: -4px 4px 8px rgba($color: #000000, $alpha: 0.1);
-  transition: 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  p {
-    cursor: pointer;
-  }
+	position: fixed;
+	top: 50px;
+	right: -260px;
+	height: 100%;
+	width: 250px;
+	background-color: white;
+	z-index: 11;
+	box-shadow: -4px 4px 8px rgba($color: #000000, $alpha: 0.1);
+	transition: 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	p {
+		cursor: pointer;
+	}
 }
 #dimmer {
-  z-index: 9;
-  top: 50px;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba($color: #000000, $alpha: 0.3);
-  // backdrop-filter: blur(2px);
-  transition: 0.3s ease;
-  opacity: 0;
-  display: none;
+	z-index: 9;
+	top: 50px;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba($color: #000000, $alpha: 0.4);
+	// backdrop-filter: blur(2px);
+	transition: 0.3s ease;
+	opacity: 0;
+	display: none;
 }
 #navbar {
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  // border: 1px solid white;
-  background-color: white;
-  transition: 0.3s ease;
-  p {
-    cursor: pointer;
-  }
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	// border: 1px solid white;
+	background-color: white;
+	transition: 0.3s ease;
+	p {
+		cursor: pointer;
+	}
 }
 #menu-bar-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
 }
 
 // ============ landing page ==================
 .landing-index {
-  background: linear-gradient(120deg, white, #fcdabf);
-  width: 100%;
-  padding-top: 5rem;
-  transition: 0.3s ease;
+	background: linear-gradient(120deg, white, #fcdabf);
+	width: 100%;
+	padding-top: 5rem;
+	transition: 0.3s ease;
 }
 
 video {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 24px 48px -12px rgba($color: $dark-2, $alpha: 0.5);
+	width: 100%;
+	border-radius: 8px;
+	box-shadow: 0 24px 48px -12px rgba($color: $dark-2, $alpha: 0.5);
 }
 
 // slideShow
 .slideshow {
-  width: calc(6 * (280px + 4rem));
-  overflow: hidden;
-  animation: slide 60s infinite;
+	width: calc(6 * (280px + 4rem));
+	overflow: hidden;
+	animation: slide 60s infinite;
 }
 
 .dflt-width {
-  max-width: calc(1080px);
+	max-width: calc(1080px);
 }
 
 .coffee-card {
-  display: inline-block;
-  width: 280px;
-  height: 300px;
-  box-shadow: $floating;
-  margin: 2rem;
-  img {
-    width: 100%;
-    height: 65%;
-  }
+	display: inline-block;
+	width: 280px;
+	height: 300px;
+	box-shadow: $floating;
+	margin: 2rem;
+	img {
+		width: 100%;
+		height: 65%;
+	}
 }
 
 @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-1000px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-1000px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 
 .story {
-  width: 80%;
-  border-radius: 8px;
-  border: 1px solid $grey-2;
-  margin: auto;
-  overflow: hidden;
-  .photo {
-    width: 100%;
-    height: 100%;
-  }
+	width: 80%;
+	border-radius: 8px;
+	border: 1px solid $grey-2;
+	margin: auto;
+	overflow: hidden;
+	.photo {
+		width: 100%;
+		height: 100%;
+	}
 }
 .storyGlass {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 200%;
-  * {
-    color: white;
-  }
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: 200%;
+	* {
+		color: white;
+	}
 }
 .feature-card {
-  display: inline-flex;
-  width: minmax(300px, 400px);
-  height: minmax(400px, 500px);
-  border-radius: 8px;
-  border: 1px solid $grey-2;
-  margin: 2rem;
-  overflow: hidden;
-  flex-direction: column;
-  box-shadow: $floating;
-  video {
-    width: 90%;
-    height: 70%;
-    margin: auto;
-    box-shadow: none;
-  }
+	display: inline-flex;
+	width: minmax(300px, 400px);
+	height: minmax(400px, 500px);
+	border-radius: 8px;
+	border: 1px solid $grey-2;
+	margin: 2rem;
+	overflow: hidden;
+	flex-direction: column;
+	box-shadow: $floating;
+	video {
+		width: 90%;
+		height: 70%;
+		margin: auto;
+		box-shadow: none;
+	}
 }
 
 .footer {
-  padding: 3rem;
-  background-color: $dark-1;
-  * {
-    color: $grey-2;
-    text-align: left;
-    font-weight: 100;
-  }
-  h2 {
-    font-family: "Courgette", cursive;
-    margin: 1rem;
-    color: white;
-  }
-  h3 {
-    color: white;
-  }
-  a {
-    margin: 0.5rem;
-    &:hover * {
-      color: white;
-    }
-  }
-  ul,
-  li {
-    list-style: none;
-    font-size: 0.9rem;
-    a {
-      margin: 0;
-    }
-  }
-  li {
-    padding: 0.2rem 1rem;
-  }
+	padding: 3rem;
+	background-color: $dark-1;
+	* {
+		color: $grey-2;
+		text-align: left;
+		font-weight: 100;
+	}
+	h2 {
+		font-family: "Courgette", cursive;
+		margin: 1rem;
+		color: white;
+	}
+	h3 {
+		color: white;
+	}
+	a {
+		margin: 0.5rem;
+		&:hover * {
+			color: white;
+		}
+	}
+	ul,
+	li {
+		list-style: none;
+		font-size: 0.9rem;
+		a {
+			margin: 0;
+		}
+	}
+	li {
+		padding: 0.2rem 1rem;
+	}
 }
 
 .foot {
-  font-weight: 100;
-  color: $grey-3;
-  text-align: center;
-  background-color: $dark-1;
-  padding: 0.5rem;
-  font-size: 0.8rem;
+	font-weight: 100;
+	color: $grey-3;
+	text-align: center;
+	background-color: $dark-1;
+	padding: 0.5rem;
+	font-size: 0.8rem;
 }
 
 .search-input {
-  all: unset;
-  background-color: white;
-  border-radius: 8px;
-  padding: 0.3rem 1rem;
-  color: $dark-1;
+	all: unset;
+	background-color: white;
+	border-radius: 8px;
+	padding: 0.3rem 1rem;
+	color: $dark-1;
 }
 
 .contact {
-  width: auto;
-  background-color: white;
-  border-radius: 8px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 24px 48px -12px rgba($color: #000000, $alpha: 0.3);
-  z-index: 10;
-  transition: 300ms ease;
-  display: flex;
-  // padding: 2rem;
-  & > div {
-    width: 250px;
-  }
-  button {
-    padding: 0.75rem 0;
-  }
+	width: auto;
+	background-color: white;
+	border-radius: 8px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 24px 48px -12px rgba($color: #000000, $alpha: 0.3);
+	z-index: 10;
+	transition: 300ms ease;
+	display: flex;
+	& > div {
+		width: 250px;
+	}
+	button {
+		padding: 0.75rem 0;
+	}
 }
 
 .fullWidth {
-  width: 100%;
+	width: 100%;
 }
 .float-shadow {
-  box-shadow: $floating;
+	box-shadow: $floating;
+}
+.action {
+	background: url(../assets//coffee_shops//action_bg.jpg);
+}
+.coffee-shop-action {
+	height: 350px;
 }
 
+.branch {
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: $floating;
+	border: 1px solid $grey-2;
+	// height: 350px;
+	img {
+		height: 100%;
+		width: 100%;
+	}
+}
 @import "./imports//media_query.scss";

@@ -76,3 +76,34 @@ export const stories_data = [
         photoBy: 'Toni Rose'
     }
 ]
+
+export const branches = [
+    {
+        id: 'shop_1',
+        name: "Ayala Alabang Branch",
+        address: "Blk 7, Lot 2, Commerce St. Business Avenue, Daang-hari Road, Muntinlupa City",
+        email: "mascota_ayalaAlbang@cafe.ph",
+        phone: '971 7721',
+    },
+    {
+        id: 'shop_2',
+        name: "Filinvest Alabang",
+        address: "Commerce AVenue, Filinvest City, Alabang. Muntinlupa City",
+        email: "mascota_filinvest@cafe.ph",
+        phone: '981 3881',
+    },
+    {
+        id: 'shop_3',
+        name: "Molito Branch",
+        address: "Molito, Alabang-Zapote Road, Muntinlupa City",
+        email: "mascota_molito@cafe.ph",
+        phone: '971 4221',
+    },
+    {
+        id: 'shop_4',
+        name: "Northgate Alabang",
+        address: "Northgate, Filinvest City Alabang, Muntinlupa City",
+        email: "mascota_northgate@cafe.ph",
+        phone: '973 - 7421',
+    }
+]

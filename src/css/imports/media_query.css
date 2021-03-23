@@ -29,6 +29,9 @@
   .feature-container {
     padding: 3rem 0 5rem 0;
   }
+  .action {
+    background: none;
+  }
 }
 
 @media screen and (max-width: 500px) {

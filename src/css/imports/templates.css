@@ -102,6 +102,13 @@
   margin: 0 auto;
 }
 
+.flex-direction-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .center-abs {
   position: absolute;
   top: 50%;

@@ -3,6 +3,8 @@ import {useState, useRef} from "react";
 import {Box} from '@material-ui/core';
 // pages
 import Homepage from '../src/pages/Homepage';
+import Cafe from '../src/pages/Cafe';
+
 import Footer from '../src/components/Footer';
 import Contact from '../src/components/Contact';
 
@@ -21,7 +23,7 @@ function App () {
   const [states, setStates] = useState<any>({
     coffees: coffees_data,
     stories: stories_data,
-    activeTab: 0
+    activeTab: -1
   });
   const [contactsHidden, set_contactsHidden] = useState(true);
   const sideNav_isClose = useRef(true);
@@ -88,22 +90,23 @@ function App () {
             <h3>Mascota de Cafe</h3>
           </Link>
           <Link onClick={() => {changeTab(0);}} to="/Mascota-de-Cafe" className={"dark-1 p-3 nav-link " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
-          <Link onClick={() => {changeTab(1);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
+          <Link onClick={() => {changeTab(1);}} to="/Cafe" className={"dark-1 p-3 nav-link " + (states.activeTab === 1 ? 'active-link' : '')}> Cafe </Link>
           <Link onClick={() => {changeTab(2);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
           <Link onClick={() => {changeTab(3);}} to="/" className={"dark-1 p-3 nav-link " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <p onClick={toggleContacts} className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </p>
+          <p onClick={toggleContacts} className={"dark-1 p-3 nav-link " + (states.activeTab === 4 ? 'active-link' : '')}> Contacts </p>
           <div onClick={toggleSideNav} id="menu-bar-icon" className="p-2 cur-pointer"> <MenuIcon /> </div>
         </nav>
 
         <nav id="side-nav">
           <Link onClick={() => {toggleSideNav();changeTab(0);}} to="/Mascota-de-Cafe" className={"dark-1 p-1 ml-2 " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
-          <Link onClick={() => {toggleSideNav();changeTab(1);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 1 ? 'active-link' : '')}> Coffee Shops </Link>
+          <Link onClick={() => {toggleSideNav();changeTab(1);}} to="/Cafe" className={"dark-1 p-1 ml-2 " + (states.activeTab === 1 ? 'active-link' : '')}> Cafe </Link>
           <Link onClick={() => {toggleSideNav();changeTab(2);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 2 ? 'active-link' : '')}> Products </Link>
           <Link onClick={() => {toggleSideNav();changeTab(3);}} to="/" className={"dark-1 p-1 ml-2 " + (states.activeTab === 3 ? 'active-link' : '')}> Pets </Link>
-          <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contact </p>
+          <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2 " + (states.activeTab === 4 ? 'active-link' : '')}> Contacts </p>
         </nav>
 
         <Route path="/Mascota-de-Cafe" exact component={Homepage} />
+        <Route path="/Cafe" exact component={Cafe} />
 
         <footer>
           <Footer />

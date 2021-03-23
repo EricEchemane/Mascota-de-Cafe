@@ -7,7 +7,7 @@ export default function CoffeeCard (props: any) {
             <h3 className="pl-3 pt-2">{props.name}</h3>
             <div className="d-flex flex-align-center pt-1 pl-3 prime">
                 <FavoriteIcon fontSize="small" color="inherit" />
-                <p> {props.likes} <span className="opa-5">people like this</span> </p>
+                <p> {props.likes} people like this </p>
             </div>
         </div>
     </>;

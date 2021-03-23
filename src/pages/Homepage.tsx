@@ -1,5 +1,5 @@
 import {Grid} from '@material-ui/core';
-import react, {useContext} from "react";
+import react, {useContext, useEffect} from "react";
 
 import Vid from '../assets/videos/landing-video2.mp4';
 import VidPoster from '../assets/videos/features/thumbnails/landing.jpg';
@@ -41,6 +41,11 @@ import fp5 from '../assets/videos/features/thumbnails/e.jpg';
 import fp6 from '../assets/videos/features/thumbnails/f.jpg';
 
 function Homepage () {
+
+    useEffect(() => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
 
     var state = useContext<any>(globalState);
 
