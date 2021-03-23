@@ -90,6 +90,18 @@
   position: absolute;
 }
 
+.pos-fixed {
+  position: fixed;
+}
+
+.center-fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .d-block {
   display: block;
 }
@@ -217,5 +229,17 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.float-top {
+  z-index: 11;
+}
+
+.width-410 {
+  width: 410px;
+}
+
+.fullWidth {
+  width: 100%;
 }
 /*# sourceMappingURL=templates.css.map */

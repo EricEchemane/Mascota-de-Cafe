@@ -90,6 +90,18 @@ $thick: 4px 4px 8px $shadow;
 .pos-abs {
 	position: absolute;
 }
+
+.pos-fixed {
+	position: fixed;
+}
+
+.center-fixed {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .d-block {
 	display: block;
 }
@@ -185,4 +197,15 @@ $thick: 4px 4px 8px $shadow;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
+}
+
+.float-top {
+	z-index: 11;
+}
+.width-410 {
+	width: 410px;
+}
+
+.fullWidth {
+	width: 100%;
 }

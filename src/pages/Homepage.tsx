@@ -94,7 +94,12 @@ function Homepage () {
                         <p className="mt-4"> Get a 5% discount on your first visit. </p>
                         <p> Sign up and join our growing community, it's free! </p>
 
-                        <button className="mt-2 prime"> SIGN UP </button> &nbsp;
+                        <button
+                            className="mt-2 prime"
+                            onClick={state.toggle_signup}
+                        >
+                            SIGN UP 
+                        </button> &nbsp;
                         <button className="mt-2 outline"> GET DISCOUNT </button>
                     </Grid>
                     <Grid item xs={12} md={6}>

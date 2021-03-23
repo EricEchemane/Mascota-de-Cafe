@@ -92,6 +92,18 @@
   position: absolute;
 }
 
+.pos-fixed {
+  position: fixed;
+}
+
+.center-fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .d-block {
   display: block;
 }
@@ -219,6 +231,18 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.float-top {
+  z-index: 11;
+}
+
+.width-410 {
+  width: 410px;
+}
+
+.fullWidth {
+  width: 100%;
 }
 
 /* margins */
@@ -762,15 +786,6 @@ video {
   padding: 0.75rem 0;
 }
 
-.fullWidth {
-  width: 100%;
-}
-
-.float-shadow {
-  -webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
-}
-
 .action {
   background: url(../assets//coffee_shops//action_bg.jpg);
 }
@@ -790,6 +805,16 @@ video {
 .branch img {
   height: 100%;
   width: 100%;
+}
+
+.float-shadow {
+  -webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
+}
+
+.smooth {
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 @media screen and (max-width: 875px) {

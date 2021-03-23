@@ -271,12 +271,6 @@ video {
 	}
 }
 
-.fullWidth {
-	width: 100%;
-}
-.float-shadow {
-	box-shadow: $floating;
-}
 .action {
 	background: url(../assets//coffee_shops//action_bg.jpg);
 }
@@ -294,5 +288,12 @@ video {
 		height: 100%;
 		width: 100%;
 	}
+}
+
+.float-shadow {
+	box-shadow: $floating;
+}
+.smooth {
+	transition: 300ms ease;
 }
 @import "./imports//media_query.scss";

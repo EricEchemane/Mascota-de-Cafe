@@ -7,6 +7,7 @@ import Cafe from '../src/pages/Cafe';
 
 import Footer from '../src/components/Footer';
 import Contact from '../src/components/Contact';
+import Signup from '../src/components/Signup';
 
 import {coffees_data, stories_data} from './api/local.data';
 
@@ -23,7 +24,8 @@ function App () {
   const [states, setStates] = useState<any>({
     coffees: coffees_data,
     stories: stories_data,
-    activeTab: -1
+    activeTab: -1,
+    signupHidden: true
   });
   const [contactsHidden, set_contactsHidden] = useState(true);
   const sideNav_isClose = useRef(true);
@@ -31,6 +33,17 @@ function App () {
   function dispatchDimmer() {
     if (!sideNav_isClose.current) toggleSideNav();
     else if (!contactsHidden) toggleContacts();
+    else if (!states.signupHidden) toggleSignup();
+  }
+
+  function toggleSignup() {
+    setStates((prev: any) => {
+      prev.signupHidden ? dim() : dim(false);
+      return {
+        ...prev,
+        signupHidden: !prev.signupHidden
+      }
+    })
   }
 
   function toggleSideNav() {
@@ -77,9 +90,9 @@ function App () {
   }
 
   return <>
-    <globalState.Provider value={
-      states
-    }>
+    <globalState.Provider value={{
+      ...states, toggle_signup: toggleSignup
+    }}>
 
       <Router>
         <nav
@@ -114,6 +127,9 @@ function App () {
 
         <Box hidden={contactsHidden}>
           <Contact />
+        </Box>
+        <Box hidden={states.signupHidden}>
+          <Signup />
         </Box>
 
       </Router>
