@@ -1,7 +1,7 @@
 import {Grid} from '@material-ui/core';
 import react, {useContext, useEffect} from "react";
 
-import Vid from '../assets/videos/landing-video2.mp4';
+import Vid from '../assets/videos/Landing-Video2.mp4';
 import VidPoster from '../assets/videos/features/thumbnails/landing.jpg';
 
 import Story from '../components/Story';
@@ -100,7 +100,7 @@ function Homepage () {
                         >
                             SIGN UP 
                         </button> &nbsp;
-                        <button className="mt-2 outline"> GET DISCOUNT </button>
+                        <button className="mt-2 outline"> SIGN IN </button>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <video src={Vid} poster={VidPoster} className="landing-video mt-1" muted autoPlay loop></video>

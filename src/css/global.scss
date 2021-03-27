@@ -303,4 +303,28 @@ video {
 	height: 35px;
 }
 
+.icon {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+}
+
+.width-auto {
+	width: auto;
+}
+
+.fullHeight {
+	height: 100%;
+}
+
+.fullWidth-padding {
+	width: calc(100% + 2rem);
+}
+.fullWidth-padding-minus {
+	width: calc(100% - 2rem);
+}
+.blue {
+	color: dodgerblue;
+}
+
 @import "./imports//media_query.scss";

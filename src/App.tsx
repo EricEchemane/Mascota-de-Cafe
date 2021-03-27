@@ -1,7 +1,7 @@
 import globalState from './api/context';
 import {useState, useRef} from "react";
 import {Box} from '@material-ui/core';
-// pages
+// pages 
 import Homepage from '../src/pages/Homepage';
 import Cafe from '../src/pages/Cafe';
 
