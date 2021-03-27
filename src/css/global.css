@@ -841,6 +841,12 @@ video {
   transition: 300ms ease;
 }
 
+.logo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+
 @media screen and (max-width: 875px) {
   .nav-link {
     display: none;

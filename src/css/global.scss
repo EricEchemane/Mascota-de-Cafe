@@ -297,4 +297,10 @@ video {
 	transition: 300ms ease;
 }
 
+.logo {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+}
+
 @import "./imports//media_query.scss";

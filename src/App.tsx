@@ -8,6 +8,7 @@ import Cafe from '../src/pages/Cafe';
 import Footer from '../src/components/Footer';
 import Contact from '../src/components/Contact';
 import Signup from '../src/components/Signup';
+import logo from './assets/illutration/logo192.png';
 
 import {coffees_data, stories_data} from './api/local.data';
 
@@ -99,7 +100,8 @@ function App () {
           id="navbar"
           className="d-flex flex-align-center">
 
-          <Link to="/" className="dark-1 p-3 flex-1">
+          <Link onClick={() => {changeTab(0);}} to="/Mascota-de-Cafe" className="dark-1 p-3 flex-1 d-flex flex-align-center">
+            <img src={logo} className="logo mr-1" alt="mascota de cafe logo"/>
             <h3>Mascota de Cafe</h3>
           </Link>
           <Link onClick={() => {changeTab(0);}} to="/Mascota-de-Cafe" className={"dark-1 p-3 nav-link " + (states.activeTab === 0 ? 'active-link' : '')}> Home </Link>
