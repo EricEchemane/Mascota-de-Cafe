@@ -1,24 +1,18 @@
 import { Grid } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 export default function Signup() {
     return (
         <div className="
-            width-410 p-3
+            width-800
             float-shadow
             center-fixed
             float-top
             bg-w smooth
+            radius-8
         ">
-            <Grid container>
-                <Grid item xs={12} md={6}>
-                    <h1 className="pb-2">
-                        Sign Up
-                    </h1>
-
-                </Grid>
-
-                <Grid item xs={12} md={6}></Grid>
-            </Grid>
+          SIGN UP
 
         </div>
     )

@@ -205,7 +205,26 @@ $thick: 4px 4px 8px $shadow;
 .width-410 {
 	width: 410px;
 }
+.width-800 {
+	width: 800px;
+}
 
 .fullWidth {
 	width: 100%;
+}
+
+.border-1 {
+	border: 1px solid $grey-1;
+}
+.border-2 {
+	border: 1px solid $grey-2;
+}
+.border-3 {
+	border: 1px solid $grey-3;
+}
+.radius-8 {
+	border-radius: 8px;
+}
+.radius-4 {
+	border-radius: 4px;
 }
