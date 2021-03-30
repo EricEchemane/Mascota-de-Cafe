@@ -269,6 +269,30 @@
   border-radius: 4px;
 }
 
+.width-auto {
+  width: auto;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.fullWidth-padding {
+  width: calc(100% + 2rem);
+}
+
+.fullWidth-padding-minus {
+  width: calc(100% - 2rem);
+}
+
+.blue {
+  color: dodgerblue;
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
 /* margins */
 .m-1 {
   margin: 0.5rem;
@@ -851,26 +875,6 @@ video {
   display: inline-block;
   width: 23px;
   height: 23px;
-}
-
-.width-auto {
-  width: auto;
-}
-
-.fullHeight {
-  height: 100%;
-}
-
-.fullWidth-padding {
-  width: calc(100% + 2rem);
-}
-
-.fullWidth-padding-minus {
-  width: calc(100% - 2rem);
-}
-
-.blue {
-  color: dodgerblue;
 }
 
 @media screen and (max-width: 875px) {

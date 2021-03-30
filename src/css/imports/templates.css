@@ -266,4 +266,28 @@
 .radius-4 {
   border-radius: 4px;
 }
+
+.width-auto {
+  width: auto;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.fullWidth-padding {
+  width: calc(100% + 2rem);
+}
+
+.fullWidth-padding-minus {
+  width: calc(100% - 2rem);
+}
+
+.blue {
+  color: dodgerblue;
+}
+
+.small {
+  font-size: 0.9rem;
+}
 /*# sourceMappingURL=templates.css.map */

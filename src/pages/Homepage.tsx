@@ -96,11 +96,14 @@ function Homepage () {
 
                         <button
                             className="mt-2 prime"
-                            onClick={state.toggle_signup}
-                        >
+                            onClick={state.toggle_signup}>
                             SIGN UP 
                         </button> &nbsp;
-                        <button className="mt-2 outline"> SIGN IN </button>
+                        <button 
+                            onClick={state.toggle_login}
+                            className="mt-2 outline"> 
+                            LOG IN 
+                        </button>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <video src={Vid} poster={VidPoster} className="landing-video mt-1" muted autoPlay loop></video>

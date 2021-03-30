@@ -14,11 +14,11 @@ export default function Story (props: any) {
                         </div>
                     </Grid>
                     <Grid item xs={12} sm={7}>
-                        <img src={props.src} alt={props.name} className="photo" />
+                        <img src={props.src} alt={props.name} className="photo" loading="lazy" />
                     </Grid>
                     <Grid item xs={12} className="p-3 bg-w">
                         <div className="d-flex mb-2">
-                            <img src={props.profile} alt={`${props.name} profile`} className="avatar-s" />
+                            <img src={props.profile} alt={`${props.name} profile`} className="avatar-s" loading="lazy" />
                             <div className="pl-2">
                                 <h4 className="d-inline">{props.name}</h4>
                                 <p className="grey">@{props.insta}</p>
