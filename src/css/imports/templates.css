@@ -290,4 +290,8 @@
 .small {
   font-size: 0.9rem;
 }
+
+.no-overflow {
+  overflow: unset;
+}
 /*# sourceMappingURL=templates.css.map */

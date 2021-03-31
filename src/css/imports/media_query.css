@@ -35,6 +35,14 @@
   .sign-up-image {
     display: none;
   }
+  .center-875px {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pad-0-875px {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 500px) {

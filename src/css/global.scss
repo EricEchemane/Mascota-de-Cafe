@@ -309,4 +309,34 @@ video {
 	height: 23px;
 }
 
+.shopBar {
+	display: inline-flex;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	padding: 1rem 2rem;
+	box-shadow: 0 -24px 48px -12px rgba($color: #000000, $alpha: 0.3);
+	border-top: 3px solid $prime;
+}
+
+.all-blue {
+	color: dodgerblue;
+	* {
+		color: dodgerblue;
+	}
+}
+.small {
+	all: unset;
+	padding: 0.3rem 1rem;
+	cursor: pointer;
+	border-radius: 4px;
+	&:hover {
+		box-shadow: none;
+	}
+}
+.active-btn {
+	border: 1px solid $grey-3;
+}
+
 @import "./imports//media_query.scss";
