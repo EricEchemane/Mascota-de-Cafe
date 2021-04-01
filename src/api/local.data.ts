@@ -107,3 +107,93 @@ export const branches = [
         phone: '973 - 7421',
     }
 ]
+
+export const coffeeProducts = [
+    {
+        id: "cp-1",
+        name: "Ohana Capuchino",
+        desc: "Short Description about this Coffee.",
+        rating: 7899,
+        price: 12
+    },
+    {
+        id: "cp-2",
+        name: "Creamy Nuts",
+        desc: "Short Description about this Coffee.",
+        rating: 7519,
+        price: 14
+    },
+    {
+        id: "cp-3",
+        name: "Plain Brewed",
+        desc: "Short Description about this Coffee.",
+        rating: 7341,
+        price: 13
+    },
+    {
+        id: "cp-4",
+        name: "Macchiato",
+        desc: "Short Description about this Coffee.",
+        rating: 7323,
+        price: 14
+    },
+    {
+        id: "cp-5",
+        name: "Chocopino",
+        desc: "Short Description about this Coffee.",
+        rating: 6323,
+        price: 13
+    },
+    {
+        id: "cp-6",
+        name: "Milky Coffee",
+        desc: "Short Description about this Coffee.",
+        rating: 7213,
+        price: 13
+    }
+]
+
+export const pastries = [
+    {
+        id: "pastry1",
+        name: "Dark Chocolate Cream",
+        desc: "Short Description about this Pastry.",
+        rating: 7899,
+        price: 12
+    },
+    {
+        id: "pastry2",
+        name: "Dense Chess Cake",
+        desc: "Short Description about this pastry.",
+        rating: 7519,
+        price: 14
+    },
+    {
+        id: "pastry3",
+        name: "Choco Waffer Bars",
+        desc: "Short Description about this pastry.",
+        rating: 7341,
+        price: 13
+    },
+    {
+        id: "pastry4",
+        name: "Fruit Cake",
+        desc: "Short Description about this pastry.",
+        rating: 7323,
+        price: 14
+    },
+    {
+        id: "pastry5",
+        name: "Cheese Cake",
+        desc: "Short Description about this pastry.",
+        rating: 6323,
+        price: 13
+    },
+    {
+        id: "pastry6",
+        name: "Milky Creamy Cake",
+        desc: "Short Description about this pastry.",
+        rating: 7213,
+        price: 13
+    }
+]

@@ -121,8 +121,8 @@ function App () {
   const urls = {
     0: "http://localhost:3000/Mascota-de-Cafe/",
     10: "http://localhost:3000/Mascota-de-Cafe",
-    1: "http://localhost:3000/Cafe",
-    2: "http://localhost:3000/Shop",
+    1: "http://localhost:3000/Mascota-de-Cafe/Cafe",
+    2: "http://localhost:3000/Mascota-de-Cafe/Shop",
   } as any;
 
   function setActiveLink(n: number) {
@@ -154,8 +154,8 @@ function App () {
             <h3>Mascota de Cafe</h3>
           </Link>
           <Link onClick={() => {setActiveLink(0)}} to="/Mascota-de-Cafe" className={"dark-1 p-3 nav-link " + (activeUrlIndex[0]) }> Home </Link>
-          <Link onClick={() => {setActiveLink(1)}} to="/Cafe" className={"dark-1 p-3 nav-link " + (activeUrlIndex[1]) }> Cafe </Link>
-          <Link onClick={() => {setActiveLink(2)}} to="/Shop" className={"dark-1 p-3 nav-link " + (activeUrlIndex[2]) }> Shop </Link>
+          <Link onClick={() => {setActiveLink(1)}} to="/Mascota-de-Cafe/Cafe" className={"dark-1 p-3 nav-link " + (activeUrlIndex[1]) }> Cafe </Link>
+          <Link onClick={() => {setActiveLink(2)}} to="/Mascota-de-Cafe/Shop" className={"dark-1 p-3 nav-link " + (activeUrlIndex[2]) }> Shop </Link>
           <Link onClick={() => {setActiveLink(3)}} to="/" className={"dark-1 p-3 nav-link " + (activeUrlIndex[3]) }> Pets </Link>
           <p onClick={toggleContacts} className={"dark-1 p-3 nav-link"}> Contacts </p>
           <div onClick={toggleSideNav} id="menu-bar-icon" className="p-2 cur-pointer"> <MenuIcon /> </div>
@@ -163,15 +163,15 @@ function App () {
 
         <nav id="side-nav">
           <Link onClick={() => {toggleSideNav();setActiveLink(0);}} to="/Mascota-de-Cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[0])}> Home </Link>
-          <Link onClick={() => {toggleSideNav();setActiveLink(1);}} to="/Cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
-          <Link onClick={() => {toggleSideNav();setActiveLink(2);}} to="/Shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
+          <Link onClick={() => {toggleSideNav();setActiveLink(1);}} to="/Mascota-de-Cafe/Cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
+          <Link onClick={() => {toggleSideNav();setActiveLink(2);}} to="/Mascota-de-Cafe/Shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
           <Link onClick={() => {toggleSideNav();setActiveLink(3);}} to="/" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
           <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2"}> Contacts </p>
         </nav>
 
         <Route path="/Mascota-de-Cafe" exact component={Homepage} />
-        <Route path="/Cafe" exact component={Cafe} />
-        <Route path="/Shop" exact component={Shop} />
+        <Route path="/Mascota-de-Cafe/Cafe" exact component={Cafe} />
+        <Route path="/Mascota-de-Cafe/Shop" exact component={Shop} />
 
         <footer>
           <Footer />

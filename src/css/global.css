@@ -885,14 +885,16 @@ video {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 100%;
   position: fixed;
   bottom: 0;
+  right: 0;
   background-color: white;
-  padding: 1rem 2rem;
-  -webkit-box-shadow: 0 -24px 48px -12px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 -24px 48px -12px rgba(0, 0, 0, 0.3);
-  border-top: 3px solid #ff8800;
+  padding: 1rem;
+  -webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ff006f;
+  border-radius: 8px;
+  margin: 1rem;
 }
 
 .all-blue {
@@ -901,6 +903,14 @@ video {
 
 .all-blue * {
   color: dodgerblue;
+}
+
+.all-white {
+  color: white;
+}
+
+.all-white * {
+  color: white;
 }
 
 .small {
@@ -917,6 +927,53 @@ video {
 
 .active-btn {
   border: 1px solid #979797;
+}
+
+.descale-9 {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.hover-lift:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: white;
+  -webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
+}
+
+.trans-3 {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.hover-prime:hover {
+  color: #ff8800;
+}
+
+.hover-prime:hover * {
+  color: #ff8800;
+}
+
+.hover-blue:hover {
+  color: dodgerblue;
+}
+
+.hover-blue:hover * {
+  color: dodgerblue;
+}
+
+.f-size-small {
+  font-size: 0.1rem;
+}
+
+.f-size-small * {
+  font-size: 0.1rem;
+}
+
+.active-effect:active {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
 @media screen and (max-width: 875px) {
