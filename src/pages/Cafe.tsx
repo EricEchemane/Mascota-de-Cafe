@@ -1,6 +1,5 @@
 import { branches } from '../api/local.data';
 import Branch from '../components/Branch';
-import { useEffect } from 'react';
 
 import shop1 from '../assets/coffee_shops/shop_1.jpg';
 import shop2 from '../assets/coffee_shops/shop_2.jpg';
@@ -8,11 +7,6 @@ import shop3 from '../assets/coffee_shops/shop_3.jpg';
 import shop4 from '../assets/coffee_shops/shop_4.jpg';
 
 export default function Cafe() {
-
-    useEffect(() => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    })
 
     const shops = {
         shop_1: shop1, shop_2: shop2, shop_3: shop3, shop_4: shop4

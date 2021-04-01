@@ -943,8 +943,8 @@ video {
 }
 
 .trans-3 {
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .hover-prime:hover {

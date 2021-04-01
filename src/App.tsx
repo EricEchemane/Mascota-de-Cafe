@@ -32,10 +32,17 @@ function App () {
     loginHidden: true
   });
 
+  function scrollToTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   const [contactsHidden, set_contactsHidden] = useState(true);
   const sideNav_isClose = useRef(true);
   const [activeUrlIndex, set_activeUrlIndex] = useState([
-    "active-link", "", "", ""
+    "dark-1 p-3 nav-link active-link", 
+    "dark-1 p-3 nav-link ", 
+    "dark-1 p-3 nav-link ", 
+    "dark-1 p-3 nav-link "
   ]);
   
   function dispatchDimmer() {
@@ -126,8 +133,12 @@ function App () {
   } as any;
 
   function setActiveLink(n: number) {
-    let x = ["","","",""];
-    x[n] = "active-link";
+    let x = [
+      "dark-1 p-3 nav-link ",
+      "dark-1 p-3 nav-link ",
+      "dark-1 p-3 nav-link ",
+      "dark-1 p-3 nav-link "];
+    x[n] = "dark-1 p-3 nav-link active-link";
     set_activeUrlIndex(x);
   }
 
@@ -137,6 +148,16 @@ function App () {
     else if(url === urls[1]) setActiveLink(1);
     else if(url === urls[2]) setActiveLink(2);
   }, []);
+
+  function handleNavbarClick(n: number) {
+    scrollToTop();
+    setActiveLink(n);
+  }
+  function handleSideNavClick(n: number) {
+    scrollToTop();
+    toggleSideNav();
+    setActiveLink(n);
+  }
 
   return <>
     <globalState.Provider value={{
@@ -153,19 +174,19 @@ function App () {
             <img src={logo} className="logo mr-1" alt="mascota de cafe logo"/>
             <h3>Mascota de Cafe</h3>
           </Link>
-          <Link onClick={() => {setActiveLink(0)}} to="/Mascota-de-Cafe" className={"dark-1 p-3 nav-link " + (activeUrlIndex[0]) }> Home </Link>
-          <Link onClick={() => {setActiveLink(1)}} to="/Mascota-de-Cafe/Cafe" className={"dark-1 p-3 nav-link " + (activeUrlIndex[1]) }> Cafe </Link>
-          <Link onClick={() => {setActiveLink(2)}} to="/Mascota-de-Cafe/Shop" className={"dark-1 p-3 nav-link " + (activeUrlIndex[2]) }> Shop </Link>
-          <Link onClick={() => {setActiveLink(3)}} to="/" className={"dark-1 p-3 nav-link " + (activeUrlIndex[3]) }> Pets </Link>
+          <Link onClick={() => {handleNavbarClick(0)}} to="/Mascota-de-Cafe" className={activeUrlIndex[0]}> Home </Link>
+          <Link onClick={() => {handleNavbarClick(1)}} to="/Mascota-de-Cafe/Cafe" className={activeUrlIndex[1]}> Cafe </Link>
+          <Link onClick={() => {handleNavbarClick(2)}} to="/Mascota-de-Cafe/Shop" className={activeUrlIndex[2]}> Shop </Link>
+          <Link onClick={() => {handleNavbarClick(3)}} to="/" className={activeUrlIndex[3]}> Pets </Link>
           <p onClick={toggleContacts} className={"dark-1 p-3 nav-link"}> Contacts </p>
           <div onClick={toggleSideNav} id="menu-bar-icon" className="p-2 cur-pointer"> <MenuIcon /> </div>
         </nav>
 
         <nav id="side-nav">
-          <Link onClick={() => {toggleSideNav();setActiveLink(0);}} to="/Mascota-de-Cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[0])}> Home </Link>
-          <Link onClick={() => {toggleSideNav();setActiveLink(1);}} to="/Mascota-de-Cafe/Cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
-          <Link onClick={() => {toggleSideNav();setActiveLink(2);}} to="/Mascota-de-Cafe/Shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
-          <Link onClick={() => {toggleSideNav();setActiveLink(3);}} to="/" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
+          <Link onClick={() => {handleSideNavClick(0)}} to="/Mascota-de-Cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[0])}> Home </Link>
+          <Link onClick={() => {handleSideNavClick(1)}} to="/Mascota-de-Cafe/Cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
+          <Link onClick={() => {handleSideNavClick(2)}} to="/Mascota-de-Cafe/Shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
+          <Link onClick={() => {handleSideNavClick(3)}} to="/" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
           <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2"}> Contacts </p>
         </nav>
 
