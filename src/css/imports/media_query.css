@@ -43,6 +43,9 @@
   .pad-0-875px {
     padding: 0;
   }
+  .coffeeProducts {
+    padding: .3rem;
+  }
 }
 
 @media screen and (max-width: 500px) {

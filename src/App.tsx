@@ -1,6 +1,6 @@
 import globalState from './api/context';
 import {useState, useRef, useEffect} from "react";
-import {Box} from '@material-ui/core';
+import {Box, Tooltip, Badge} from '@material-ui/core';
 // pages 
 import Homepage from '../src/pages/Homepage';
 import Cafe from '../src/pages/Cafe';
@@ -11,7 +11,7 @@ import Contact from '../src/components/Contact';
 import Signup from '../src/components/Signup';
 import Login from '../src/components/Login';
 import logo from './assets/illutration/logo192.png';
-
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {coffees_data, stories_data} from './api/local.data';
 
 import {
@@ -25,12 +25,30 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 function App () {
 
+  const [cartItems, set_cartItems] = useState<any>([]);
+
   const [states, setStates] = useState<any>({
     coffees: coffees_data,
     stories: stories_data,
     signupHidden: true,
     loginHidden: true
   });
+
+  function addToCart(
+    _id:string, 
+    _name:string, 
+    _price:string, 
+    _desc: string) {
+
+    const items = cartItems.slice();
+    items.push({
+        id:_id, name:_name,
+        desc:_desc, price:_price,
+        quantity: 1
+    })
+    set_cartItems(items);
+    console.log(items);
+  }
 
   function scrollToTop(){
     document.body.scrollTop = 0;
@@ -39,10 +57,7 @@ function App () {
   const [contactsHidden, set_contactsHidden] = useState(true);
   const sideNav_isClose = useRef(true);
   const [activeUrlIndex, set_activeUrlIndex] = useState([
-    "dark-1 p-3 nav-link active-link", 
-    "dark-1 p-3 nav-link ", 
-    "dark-1 p-3 nav-link ", 
-    "dark-1 p-3 nav-link "
+    "active-link", "", "", ""
   ]);
   
   function dispatchDimmer() {
@@ -152,7 +167,8 @@ function App () {
   return <>
     <globalState.Provider value={{
       ...states, toggle_signup: toggleSignup,
-      toggle_login: toggleLogin, set_ActiveLink: setActiveLink
+      toggle_login: toggleLogin, set_ActiveLink: setActiveLink,
+      setCartItems: set_cartItems, addCart: addToCart
     }}>
 
       <Router>
@@ -164,11 +180,22 @@ function App () {
             <img src={logo} className="logo mr-1" alt="mascota de cafe logo"/>
             <h3>Mascota de Cafe</h3>
           </Link>
+
           <Link onClick={() => {handleNavbarClick(0)}} to="/" className={"dark-1 p-3 nav-link " + activeUrlIndex[0]}> Home </Link>
           <Link onClick={() => {handleNavbarClick(1)}} to="/Cafe" className={"dark-1 p-3 nav-link " + activeUrlIndex[1]}> Cafe </Link>
           <Link onClick={() => {handleNavbarClick(2)}} to="/Shop" className={"dark-1 p-3 nav-link " + activeUrlIndex[2]}> Shop </Link>
           <Link onClick={() => {handleNavbarClick(3)}} to="/" className={"dark-1 p-3 nav-link " + activeUrlIndex[3]}> Pets </Link>
+
           <p onClick={toggleContacts} className={"dark-1 p-3 nav-link"}> Contacts </p>
+
+          <Link to="/Cart" className={"dark-1 pr-3 pl-2 " + activeUrlIndex[4]}> 
+            <Tooltip title="Your Cart" >
+                <Badge badgeContent={cartItems.length} color="secondary"> 
+                    <ShoppingCartIcon /> &nbsp;
+                </Badge>
+            </Tooltip>
+          </Link>
+
           <div onClick={toggleSideNav} id="menu-bar-icon" className="p-2 cur-pointer"> <MenuIcon /> </div>
         </nav>
 
@@ -178,6 +205,7 @@ function App () {
           <Link onClick={() => {handleSideNavClick(2)}} to="/Shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
           <Link onClick={() => {handleSideNavClick(3)}} to="/" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
           <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2"}> Contacts </p>
+          
         </nav>
 
         <Route path="/" exact component={Homepage} />

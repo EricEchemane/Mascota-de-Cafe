@@ -1,12 +1,11 @@
-import {useState, useEffect, useContext} from "react";
-import {Grid} from "@material-ui/core";
+import {useState, useEffect, useContext, useRef} from "react";
+import {Grid, Snackbar} from "@material-ui/core";
+import MuiAlert from '@material-ui/lab/Alert';
+
 import s4 from "../assets/stories/s4.jpg";
 import {coffeeProducts as CF, pastries as PST} from "../api/local.data";
 import CoffeeProduct from "../components/CoffeeProduct";
 import globalState from "../api/context";
-// icons
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import Badge from '@material-ui/core/Badge';
 // photos (Coffee)
 import cp1 from "../assets/coffeeProducts/cp-1.png";
 import cp2 from "../assets/coffeeProducts/cp-2.png";
@@ -22,24 +21,28 @@ import p4 from "../assets/pastry/pastry4.png";
 import p5 from "../assets/pastry/pastry5.png";
 import p6 from "../assets/pastry/pastry6.png";
 
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
-import Tooltip from '@material-ui/core/Tooltip';
-
 function Alert(props: any) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
 export default function Shop() {
     const state = useContext<any>(globalState);
+
     useEffect(()=>{
         state.set_ActiveLink(2);
     }, []);
+    
     const rootClasses = "outer-g";
     const [activeTab, set_activeTab] = useState(0);
-    const [cartItems, set_cartItems] = useState<any>([]);
+    
     const [open, setOpen] = useState(false);
-    const handleClick = () => {
+    const handleClick = (
+        itemID: string, 
+        itemName: string, 
+        itemPrice: number, 
+        itemDesc: string) => {
+
+        state.addCart(itemID,itemName, itemPrice, itemDesc);
         setOpen(true);
     };
     const handleClose = (event: any, reason: any) => {
@@ -48,16 +51,6 @@ export default function Shop() {
         }
         setOpen(false);
     };
-    function addToCart(_id:string, _name:string, _desc: string, _price:string, _quantity: number = 1) {
-        const items = cartItems.slice();
-        items.push({
-            id:_id, name:_name,
-            desc:_desc, price:_price,
-            quantity: _quantity
-        })
-        set_cartItems(items);
-        handleClick();
-    }
     const coffeePosters = {
         "cp-1": cp1,
         "cp-2": cp2,
@@ -76,10 +69,10 @@ export default function Shop() {
     } as any;
     const coffeeProducts = CF.map((each: any) => 
         <CoffeeProduct 
-            handleCart={handleClick}
             imgSrc={coffeePosters[each.id]}
+            id={each.id}
             key={each.id}
-            handleAddToCart={addToCart}
+            handleAddToCart={handleClick}
             name={each.name}
             desc={each.desc}
             rating={each.rating}
@@ -87,10 +80,10 @@ export default function Shop() {
     )
     const pastries = PST.map((each: any) => 
         <CoffeeProduct 
-            handleCart={handleClick}
             imgSrc={pastryPosters[each.id]}
+            id={each.id}
             key={each.id}
-            handleAddToCart={addToCart}
+            handleAddToCart={handleClick}
             name={each.name}
             desc={each.desc}
             rating={each.rating}
@@ -110,6 +103,7 @@ export default function Shop() {
                         <p className="pl-3 pt-3 pb-3 center-875px">
                             <cite>
                                 Scene from Filinvest City Branch <br/>
+                                March 29, 2021 <br/>
                                 Sunday | 2:00 PM
                             </cite>
                         </p>
@@ -142,20 +136,6 @@ export default function Shop() {
                     </Grid>
                 </div>
             </div>
-
-            <Tooltip title={
-                (cartItems.length === 0 ? 
-                    "Add to cart now.":
-                    "You have few items in the cart."
-                    )}>
-                <div className="shopBar cur-pointer">
-                    <div className="d-flex flex-align-center">
-                        <Badge badgeContent={cartItems.length} color="secondary">
-                            Your Cart &nbsp; <ShoppingCartIcon /> &nbsp;
-                        </Badge>
-                    </div>
-                </div>
-            </Tooltip>
 
             <Snackbar 
                 open={open} 

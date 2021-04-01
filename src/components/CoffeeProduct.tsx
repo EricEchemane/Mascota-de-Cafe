@@ -1,24 +1,37 @@
 import {Grid} from "@material-ui/core";
-import StarIcon from '@material-ui/icons/Star';
 import StarRateIcon from '@material-ui/icons/StarRate';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Tooltip from '@material-ui/core/Tooltip';
 
 export default function CoffeeProduct(props: any) {
+    function handleAdd(){
+        props.handleAddToCart(
+            props.id,
+            props.name,
+            props.price,
+            props.desc,
+        );
+    }
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className="p-3">
+        <Grid item xs={6} sm={4} lg={3} className="p-3 coffeeProducts">
             <div className="bg-1 cur-pointer hover-lift trans-3 active-effect">
-                <img src={props.imgSrc} alt={props.name} className="fullWidth" title={props.desc} />
-                    <h3 className="pl-2" title={props.desc}>{props.name}</h3>
+                <img 
+                    src={props.imgSrc} 
+                    alt={props.name} 
+                    className="fullWidth" 
+                    title={props.desc} />
+
+                    <h3 className="pl-2" title={props.desc}> {props.name} </h3>
+
                     <Tooltip title={`${props.rating} people like this.`}>
                         <p className="prime d-flex flex-align-center pl-2 pr-2">
-                            <div className="flex-1 pt-1">
+                            <span className="flex-1 pt-1">
                                 <StarRateIcon fontSize="small" />
                                 <StarRateIcon fontSize="small" />
                                 <StarRateIcon fontSize="small" />
                                 <StarRateIcon fontSize="small" />
                                 <StarRateIcon fontSize="small" /> 
-                            </div>
+                            </span>
                             <span>{props.rating}</span>
                         </p>
                     </Tooltip>
@@ -29,7 +42,7 @@ export default function CoffeeProduct(props: any) {
                         <p className="cur-pointer flex-1 hover-blue f-size-small">Order now</p>
                         <Tooltip title="Add to cart" placement="left-end">
                             <span 
-                                onClick={props.handleAddToCart}
+                                onClick={handleAdd}
                                 className="cur-pointer hover-blue pr-2" >
                                 <AddShoppingCartIcon fontSize="small" />
                             </span>
