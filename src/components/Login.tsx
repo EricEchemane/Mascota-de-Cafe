@@ -4,7 +4,6 @@ import GoogleIcon from '../assets/illutration/google-icon.png';
 
 export default function Login() {
     const classes = "width-410 float-shadow center-fixed float-top bg-w smooth radius-8 p-3";
-
     return (
         <div className={classes}>
                 <h2 className="prime mb-1">
@@ -34,10 +33,10 @@ export default function Login() {
                         <div className="mt-3">
                             <button className="prime fullWidth-padding-minus">LOG IN</button>
                         </div>
+                        <p className="text-align-center mt-2">
+                            Forgot password? <span className="blue cur-pointer">Reset here.</span>
+                        </p>
                     </form>
-                    <p className="small text-align-center mt-1">
-                        Forgot password? <span className="blue cur-pointer">Reset here.</span>
-                    </p>
                 </div>
         </div>
     )

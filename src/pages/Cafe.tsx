@@ -1,4 +1,7 @@
 import { branches } from '../api/local.data';
+import {useEffect, useContext} from "react";
+
+import globalState from "../api/context";
 import Branch from '../components/Branch';
 
 import shop1 from '../assets/coffee_shops/shop_1.jpg';
@@ -8,9 +11,15 @@ import shop4 from '../assets/coffee_shops/shop_4.jpg';
 
 export default function Cafe() {
 
-    const shops = {
+    const state = useContext<any>(globalState);
+
+    const shops = { 
         shop_1: shop1, shop_2: shop2, shop_3: shop3, shop_4: shop4
     } as any;
+
+    useEffect(()=>{
+        state.set_ActiveLink(1);
+    }, []);
 
     const branchesElements = branches.map((branch: any) => 
         <Branch

@@ -5,17 +5,10 @@ import {useContext} from 'react';
 import globalState from '../api/context';
 
 export default function Signup() {
-
+    const rootClasses = "width-410 float-shadow center-fixed float-top bg-w smooth radius-8 p-3";
     const state = useContext<any>(globalState);
     return (
-        <div className="
-            width-410
-            float-shadow
-            center-fixed
-            float-top
-            bg-w smooth
-            radius-8 p-3">
-          
+        <div className={rootClasses} >
                     <h2 className="prime text-align-center">Join our growing community for free!</h2>
                     <p className="mt-3 text-align-center">
                         We love to here about our customers.

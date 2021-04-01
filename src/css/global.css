@@ -571,8 +571,8 @@ button.contained {
   z-index: 11;
   -webkit-box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
           box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -943,8 +943,8 @@ video {
 }
 
 .trans-3 {
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .hover-prime:hover {
@@ -964,11 +964,11 @@ video {
 }
 
 .f-size-small {
-  font-size: 0.1rem;
+  font-size: 0.9rem;
 }
 
 .f-size-small * {
-  font-size: 0.1rem;
+  font-size: 0.9rem;
 }
 
 .active-effect:active {

@@ -1,8 +1,9 @@
-import {useState} from "react";
+import {useState, useEffect, useContext} from "react";
 import {Grid} from "@material-ui/core";
 import s4 from "../assets/stories/s4.jpg";
 import {coffeeProducts as CF, pastries as PST} from "../api/local.data";
 import CoffeeProduct from "../components/CoffeeProduct";
+import globalState from "../api/context";
 // icons
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Badge from '@material-ui/core/Badge';
@@ -30,6 +31,10 @@ function Alert(props: any) {
 }
 
 export default function Shop() {
+    const state = useContext<any>(globalState);
+    useEffect(()=>{
+        state.set_ActiveLink(2);
+    }, []);
     const rootClasses = "outer-g";
     const [activeTab, set_activeTab] = useState(0);
     const [cartItems, set_cartItems] = useState<any>([]);

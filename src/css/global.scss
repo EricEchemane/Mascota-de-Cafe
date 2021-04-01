@@ -70,7 +70,7 @@ button.contained {
 	background-color: white;
 	z-index: 11;
 	box-shadow: -4px 4px 8px rgba($color: #000000, $alpha: 0.1);
-	transition: 0.3s ease;
+	transition: 0.1s ease;
 	display: flex;
 	flex-direction: column;
 	p {
@@ -355,7 +355,7 @@ video {
 	box-shadow: $floating;
 }
 .trans-3 {
-	transition: 0.3s ease;
+	transition: 0.2s ease;
 }
 .hover-prime:hover {
 	color: $prime;
@@ -371,9 +371,9 @@ video {
 }
 
 .f-size-small {
-	font-size: 0.1rem;
+	font-size: 0.9rem;
 	* {
-		font-size: 0.1rem;
+		font-size: 0.9rem;
 	}
 }
 

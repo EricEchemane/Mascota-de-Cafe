@@ -20,6 +20,9 @@ export default function CoffeeProduct(props: any) {
                     </p>
                     <div className="d-flex pl-2 pt-2 pb-2">
                         <h3 className="second flex-1">$ {props.price}</h3>
+                    </div>
+                    <div className="pl-2 pb-2 d-flex">
+                        <p className="cur-pointer flex-1 hover-blue f-size-small">Buy now</p>
                         <Tooltip title="Add to cart" placement="left-end">
                             <span 
                                 onClick={props.handleAddToCart}
