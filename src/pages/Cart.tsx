@@ -60,6 +60,7 @@ export default function Cart(){
                 state.set_totalPrice((prevPrice: number) => {
                     return prevPrice += each.price * n;
                 });
+                localStorage.setItem("MDC_cartItems", JSON.stringify(itemsCopy));
                 state.setCartItems(itemsCopy);
             }
         }
@@ -71,6 +72,7 @@ export default function Cart(){
             if(each.id === id) priceDeduction = each.price * each.quantity;
             return each.id !== id;
         });
+        localStorage.setItem("MDC_cartItems", JSON.stringify(copy));
         state.setCartItems(copy);
         state.set_totalPrice((prev: number) => prev - priceDeduction);
     }

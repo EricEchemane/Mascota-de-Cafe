@@ -51,6 +51,7 @@ function App () {
         desc:_desc, price:_price,
         quantity: 1
     })
+    localStorage.setItem("MDC_cartItems", JSON.stringify(items));
     set_cartItems(items);
   }
 
@@ -157,7 +158,20 @@ function App () {
     else if(url.toLowerCase().endsWith("#/cafe")) setActiveLink(1);
     else if(url.toLowerCase().endsWith("#/shop")) setActiveLink(2);
     else if(url.toLowerCase().endsWith("#/cart")) setActiveLink(5);
+
+    const mdc_items = localStorage.getItem("MDC_cartItems");
+    if(mdc_items !== null) {
+      const items = JSON.parse(mdc_items);
+      setTotalPrice(getTotalPrice(items));
+      set_cartItems(items);
+    }
   }, []);
+
+  function getTotalPrice(items: any) {
+    let total = 0;
+    for(const each of items) total += (each.quantity * each.price);
+    return total;
+  }
 
   function handleNavbarClick(n: number) {
     scrollToTop();
