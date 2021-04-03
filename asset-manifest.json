@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Mascota-de-Cafe/static/css/main.0b553129.chunk.css",
-    "main.js": "/Mascota-de-Cafe/static/js/main.8f84d745.chunk.js",
-    "main.js.map": "/Mascota-de-Cafe/static/js/main.8f84d745.chunk.js.map",
-    "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.1ff4bb7b.js",
-    "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.1ff4bb7b.js.map",
-    "static/js/2.07408847.chunk.js": "/Mascota-de-Cafe/static/js/2.07408847.chunk.js",
-    "static/js/2.07408847.chunk.js.map": "/Mascota-de-Cafe/static/js/2.07408847.chunk.js.map",
-    "static/js/3.f6c927b3.chunk.js": "/Mascota-de-Cafe/static/js/3.f6c927b3.chunk.js",
-    "static/js/3.f6c927b3.chunk.js.map": "/Mascota-de-Cafe/static/js/3.f6c927b3.chunk.js.map",
+    "main.js": "/Mascota-de-Cafe/static/js/main.f9f0cc16.chunk.js",
+    "main.js.map": "/Mascota-de-Cafe/static/js/main.f9f0cc16.chunk.js.map",
+    "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.ad9dc659.js",
+    "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.ad9dc659.js.map",
+    "static/js/2.f5271aa8.chunk.js": "/Mascota-de-Cafe/static/js/2.f5271aa8.chunk.js",
+    "static/js/2.f5271aa8.chunk.js.map": "/Mascota-de-Cafe/static/js/2.f5271aa8.chunk.js.map",
+    "static/js/3.037b109f.chunk.js": "/Mascota-de-Cafe/static/js/3.037b109f.chunk.js",
+    "static/js/3.037b109f.chunk.js.map": "/Mascota-de-Cafe/static/js/3.037b109f.chunk.js.map",
     "index.html": "/Mascota-de-Cafe/index.html",
     "static/css/main.0b553129.chunk.css.map": "/Mascota-de-Cafe/static/css/main.0b553129.chunk.css.map",
-    "static/js/2.07408847.chunk.js.LICENSE.txt": "/Mascota-de-Cafe/static/js/2.07408847.chunk.js.LICENSE.txt",
+    "static/js/2.f5271aa8.chunk.js.LICENSE.txt": "/Mascota-de-Cafe/static/js/2.f5271aa8.chunk.js.LICENSE.txt",
     "static/media/Landing-Video2.e8a482d6.mp4": "/Mascota-de-Cafe/static/media/Landing-Video2.e8a482d6.mp4",
     "static/media/a.712cb706.jpg": "/Mascota-de-Cafe/static/media/a.712cb706.jpg",
     "static/media/global.css": "/Mascota-de-Cafe/static/media/action_bg.ea4cdea5.jpg",
@@ -60,9 +60,9 @@
     "static/media/shop_4.01e273be.jpg": "/Mascota-de-Cafe/static/media/shop_4.01e273be.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1ff4bb7b.js",
-    "static/js/2.07408847.chunk.js",
+    "static/js/runtime-main.ad9dc659.js",
+    "static/js/2.f5271aa8.chunk.js",
     "static/css/main.0b553129.chunk.css",
-    "static/js/main.8f84d745.chunk.js"
+    "static/js/main.f9f0cc16.chunk.js"
   ]
 }
