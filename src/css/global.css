@@ -1010,10 +1010,19 @@ video {
   border: none;
 }
 
+.btn-counter:active {
+  background-color: none;
+}
+
 .quantity {
   display: inline-block;
   width: 50px;
   text-align: center;
+}
+
+.height-40 {
+  display: inline-block;
+  height: 60px;
 }
 
 @media screen and (max-width: 875px) {
@@ -1084,6 +1093,9 @@ video {
   .pad-x-1 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .d-block-500 {
+    display: block;
   }
 }
 /*# sourceMappingURL=global.css.map */

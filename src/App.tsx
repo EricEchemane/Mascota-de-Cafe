@@ -156,6 +156,7 @@ function App () {
     if(url.toLowerCase().endsWith("#/")) setActiveLink(0);
     else if(url.toLowerCase().endsWith("#/cafe")) setActiveLink(1);
     else if(url.toLowerCase().endsWith("#/shop")) setActiveLink(2);
+    else if(url.toLowerCase().endsWith("#/cart")) setActiveLink(5);
   }, []);
 
   function handleNavbarClick(n: number) {

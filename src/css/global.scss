@@ -399,11 +399,17 @@ video {
 .btn-counter {
 	background-color: $grey-1;
 	border: none;
+	&:active {
+		background-color: none;
+	}
 }
 .quantity {
 	display: inline-block;
 	width: 50px;
 	text-align: center;
 }
-
+.height-40 {
+	display: inline-block;
+	height: 60px;
+}
 @import "./imports//media_query.scss";

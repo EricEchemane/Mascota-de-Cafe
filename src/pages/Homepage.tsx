@@ -1,6 +1,11 @@
 import {Grid} from '@material-ui/core';
 import react, {useContext, useEffect} from "react";
 
+import {
+    HashRouter as Router,
+    Link
+  } from 'react-router-dom';
+
 import Vid from '../assets/videos/Landing-Video2.mp4';
 import VidPoster from '../assets/videos/features/thumbnails/landing.jpg';
 
@@ -124,6 +129,11 @@ function Homepage () {
                                 likes={coffee.likes} />;
                         })}
                     </div>
+                    <Router>
+                        <Link to="/shop">
+                            <button className="prime d-block m-auto mt-3">Shop now!</button>
+                        </Link>
+                    </Router>
                 </div>
             </div>
 
