@@ -30,7 +30,11 @@
   color: #ff006f;
 }
 
-.grey {
+.grey-3 {
+  color: #979797;
+}
+
+.grey-2 {
   color: #c5c5c5;
 }
 
@@ -173,6 +177,10 @@
   color: #ff8800;
 }
 
+.active-link * {
+  color: #ff8800;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,5 +301,11 @@
 
 .no-overflow {
   overflow: unset;
+}
+
+.flex-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 /*# sourceMappingURL=templates.css.map */

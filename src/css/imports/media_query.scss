@@ -39,11 +39,11 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-	.pad-0-875px{
+	.pad-0-875px {
 		padding: 0;
 	}
 	.coffeeProducts {
-		padding: .3rem;
+		padding: 0.3rem;
 	}
 }
 
@@ -61,5 +61,9 @@
 	}
 	#contacts-social {
 		display: none;
+	}
+	.pad-x-1 {
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 }

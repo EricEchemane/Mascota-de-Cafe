@@ -1,4 +1,4 @@
-import {useState, useEffect, useContext, useRef} from "react";
+import {useState, useEffect, useContext} from "react";
 import {Grid, Snackbar} from "@material-ui/core";
 import MuiAlert from '@material-ui/lab/Alert';
 
@@ -36,20 +36,33 @@ export default function Shop() {
     const [activeTab, set_activeTab] = useState(0);
     
     const [open, setOpen] = useState(false);
+    const [openA, setOpenA] = useState(false);
+
     const handleClick = (
         itemID: string, 
         itemName: string, 
         itemPrice: number, 
         itemDesc: string) => {
-
+        if(itemIsOnTheCart(itemID)) {
+            setOpenA(true);
+            return;
+        }
         state.addCart(itemID,itemName, itemPrice, itemDesc);
         setOpen(true);
     };
-    const handleClose = (event: any, reason: any) => {
-        if (reason === 'clickaway') {
-        return;
+    function itemIsOnTheCart(_id: string) {
+        for(const each of state.cart_items) {
+          if(_id === each.id) return true;
         }
+        return false;
+      }
+    const handleClose = (event: any, reason: any) => {
+        if (reason === 'clickaway') return;
         setOpen(false);
+    };
+    const handleCloseA = (event: any, reason: any) => {
+        if (reason === 'clickaway') return;
+        setOpenA(false);
     };
     const coffeePosters = {
         "cp-1": cp1,
@@ -102,6 +115,7 @@ export default function Shop() {
                         </h1>
                         <p className="pl-3 pt-3 pb-3 center-875px">
                             <cite>
+                                Photo on the right/below:  <br/>
                                 Scene from Filinvest City Branch <br/>
                                 March 29, 2021 <br/>
                                 Sunday | 2:00 PM
@@ -139,11 +153,20 @@ export default function Shop() {
 
             <Snackbar 
                 open={open} 
-                autoHideDuration={5000} 
+                autoHideDuration={3000} 
                 onClose={handleClose} 
                 className="all-white width-auto">
                 <Alert onClose={handleClose} severity="success">
                     Item successfully added to cart.
+                </Alert>
+            </Snackbar>
+            <Snackbar 
+                open={openA} 
+                autoHideDuration={3000} 
+                onClose={handleCloseA} 
+                className="all-white width-auto">
+                <Alert onClose={handleCloseA} severity="warning">
+                    This Item is already in the cart.
                 </Alert>
             </Snackbar>
         </div>

@@ -40,7 +40,10 @@ $thick: 4px 4px 8px $shadow;
 	}
 }
 
-.grey {
+.grey-3 {
+	color: $grey-3;
+}
+.grey-2 {
 	color: $grey-2;
 }
 
@@ -154,6 +157,9 @@ $thick: 4px 4px 8px $shadow;
 }
 .active-link {
 	color: $prime;
+	* {
+		color: $prime;
+	}
 }
 .d-flex {
 	display: flex;
@@ -251,4 +257,7 @@ $thick: 4px 4px 8px $shadow;
 }
 .no-overflow {
 	overflow: unset;
+}
+.flex-end {
+	align-items: flex-end;
 }

@@ -32,7 +32,11 @@
   color: #ff006f;
 }
 
-.grey {
+.grey-3 {
+  color: #979797;
+}
+
+.grey-2 {
   color: #c5c5c5;
 }
 
@@ -175,6 +179,10 @@
   color: #ff8800;
 }
 
+.active-link * {
+  color: #ff8800;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,6 +303,12 @@
 
 .no-overflow {
   overflow: unset;
+}
+
+.flex-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 /* margins */
@@ -925,6 +939,12 @@ video {
           box-shadow: none;
 }
 
+.click-effect:active {
+  -webkit-transition: 100ms ease;
+  transition: 100ms ease;
+  background-color: #f2f2f2;
+}
+
 .active-btn {
   border: 1px solid #979797;
 }
@@ -976,6 +996,26 @@ video {
           filter: brightness(0.8);
 }
 
+.min-height-100 {
+  min-height: calc(100vh - 50px);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn-counter {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.quantity {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+
 @media screen and (max-width: 875px) {
   .nav-link {
     display: none;
@@ -1022,7 +1062,7 @@ video {
     padding: 0;
   }
   .coffeeProducts {
-    padding: .3rem;
+    padding: 0.3rem;
   }
 }
 
@@ -1040,6 +1080,10 @@ video {
   }
   #contacts-social {
     display: none;
+  }
+  .pad-x-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 /*# sourceMappingURL=global.css.map */

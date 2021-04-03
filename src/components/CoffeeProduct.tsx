@@ -14,7 +14,7 @@ export default function CoffeeProduct(props: any) {
     }
     return (
         <Grid item xs={6} sm={4} lg={3} className="p-3 coffeeProducts">
-            <div className="bg-1 cur-pointer hover-lift trans-3 active-effect">
+            <div className="bg-1 hover-lift trans-3 active-effect">
                 <img 
                     src={props.imgSrc} 
                     alt={props.name} 

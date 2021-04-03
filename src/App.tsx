@@ -5,6 +5,7 @@ import {Box, Tooltip, Badge} from '@material-ui/core';
 import Homepage from '../src/pages/Homepage';
 import Cafe from '../src/pages/Cafe';
 import Shop from '../src/pages/Shop';
+import Cart from '../src/pages/Cart';
 
 import Footer from '../src/components/Footer';
 import Contact from '../src/components/Contact';
@@ -26,6 +27,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 function App () {
 
   const [cartItems, set_cartItems] = useState<any>([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const [states, setStates] = useState<any>({
     coffees: coffees_data,
@@ -37,9 +39,12 @@ function App () {
   function addToCart(
     _id:string, 
     _name:string, 
-    _price:string, 
+    _price: number, 
     _desc: string) {
-
+    
+    setTotalPrice((prevPrice: number) => {
+      return prevPrice+=_price;
+    })
     const items = cartItems.slice();
     items.push({
         id:_id, name:_name,
@@ -47,7 +52,6 @@ function App () {
         quantity: 1
     })
     set_cartItems(items);
-    console.log(items);
   }
 
   function scrollToTop(){
@@ -142,7 +146,7 @@ function App () {
 
   function setActiveLink(n: number) {
     let x = [
-      "","","",""];
+      "","","","","",""];
     x[n] = "active-link";
     set_activeUrlIndex(x);
   }
@@ -168,7 +172,8 @@ function App () {
     <globalState.Provider value={{
       ...states, toggle_signup: toggleSignup,
       toggle_login: toggleLogin, set_ActiveLink: setActiveLink,
-      setCartItems: set_cartItems, addCart: addToCart
+      cart_items: cartItems, setCartItems: set_cartItems, addCart: addToCart,
+      total_price: totalPrice, set_totalPrice: setTotalPrice
     }}>
 
       <Router>
@@ -176,22 +181,25 @@ function App () {
           id="navbar"
           className="d-flex flex-align-center">
 
-          <Link to="/Mascota-de-Cafe" className="dark-1 p-3 flex-1 d-flex flex-align-center">
+          <Link to="/shop" className="dark-1 p-3 flex-1 d-flex flex-align-center">
             <img src={logo} className="logo mr-1" alt="mascota de cafe logo"/>
             <h3>Mascota de Cafe</h3>
           </Link>
 
           <Link onClick={() => {handleNavbarClick(0)}} to="/" className={"dark-1 p-3 nav-link " + activeUrlIndex[0]}> Home </Link>
-          <Link onClick={() => {handleNavbarClick(1)}} to="/Cafe" className={"dark-1 p-3 nav-link " + activeUrlIndex[1]}> Cafe </Link>
-          <Link onClick={() => {handleNavbarClick(2)}} to="/Shop" className={"dark-1 p-3 nav-link " + activeUrlIndex[2]}> Shop </Link>
-          <Link onClick={() => {handleNavbarClick(3)}} to="/" className={"dark-1 p-3 nav-link " + activeUrlIndex[3]}> Pets </Link>
+          <Link onClick={() => {handleNavbarClick(1)}} to="/cafe" className={"dark-1 p-3 nav-link " + activeUrlIndex[1]}> Cafe </Link>
+          <Link onClick={() => {handleNavbarClick(2)}} to="/shop" className={"dark-1 p-3 nav-link " + activeUrlIndex[2]}> Shop </Link>
+          <Link onClick={() => {handleNavbarClick(3)}} to="/pets" className={"dark-1 p-3 nav-link " + activeUrlIndex[3]}> Pets </Link>
 
           <p onClick={toggleContacts} className={"dark-1 p-3 nav-link"}> Contacts </p>
 
-          <Link to="/Cart" className={"dark-1 pr-3 pl-2 " + activeUrlIndex[4]}> 
+          <Link 
+            to="/cart" 
+            className={"dark-1 pr-3 pl-2 " + activeUrlIndex[5]} 
+            onClick={() => {handleNavbarClick(5)}}> 
             <Tooltip title="Your Cart" >
                 <Badge badgeContent={cartItems.length} color="secondary"> 
-                    <ShoppingCartIcon /> &nbsp;
+                    <ShoppingCartIcon /> 
                 </Badge>
             </Tooltip>
           </Link>
@@ -201,16 +209,17 @@ function App () {
 
         <nav id="side-nav">
           <Link onClick={() => {handleSideNavClick(0)}} to="/" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[0])}> Home </Link>
-          <Link onClick={() => {handleSideNavClick(1)}} to="/Cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
-          <Link onClick={() => {handleSideNavClick(2)}} to="/Shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
-          <Link onClick={() => {handleSideNavClick(3)}} to="/" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
+          <Link onClick={() => {handleSideNavClick(1)}} to="/cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
+          <Link onClick={() => {handleSideNavClick(2)}} to="/shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
+          <Link onClick={() => {handleSideNavClick(3)}} to="/pets" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
           <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2"}> Contacts </p>
           
         </nav>
 
         <Route path="/" exact component={Homepage} />
-        <Route path="/Cafe" exact component={Cafe} />
-        <Route path="/Shop" exact component={Shop} />
+        <Route path="/cafe" exact component={Cafe} />
+        <Route path="/shop" exact component={Shop} />
+        <Route path="/cart" exact component={Cart} />
 
         <footer>
           <Footer />
