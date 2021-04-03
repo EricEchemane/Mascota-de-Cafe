@@ -1,4 +1,4 @@
-import {useContext, useEffect} from "react";
+import {useContext, useEffect, useState, useRef} from "react";
 import globalState from "../api/context";
 import Tooltip from "@material-ui/core/Tooltip";
 import {
@@ -6,6 +6,7 @@ import {
     Link
 } from 'react-router-dom';
 import CartItem from "../components/CartItem";
+import ConfirmDialog from "../components/ConfirmDialog";
 
 // photos (Coffee)
 import cp1 from "../assets/coffeeProducts/cp-1.png";
@@ -31,6 +32,20 @@ export default function Cart(){
     const state = useContext<any>(globalState);
     const rootClasses = "outer-w mt-4 mb-2";
     const commonClass = "pl-3 pr-3 pt-2 pb-2 mt-1 pad-x-1";
+    const [openConfirmation, setOpenConfirmation] = useState(false);
+    const idTobeDelete = useRef<string>("");
+
+    function handleOpen(id: string){
+        idTobeDelete.current = id;
+        setOpenConfirmation(true);
+    }
+    function handleYes(_id: string){
+        removeITem(idTobeDelete.current);
+        setOpenConfirmation(false);
+    }
+    function handleNo(){
+        setOpenConfirmation(false);
+    }
 
     const items = state.cart_items;
     const coffeePosters = {
@@ -89,7 +104,7 @@ export default function Cart(){
         price={each.price}
         desc={each.desc}
         quantity={each.quantity}
-        removeItem={removeITem}
+        handleOpen={handleOpen}
         updateQuantity={handleQuantityUpdate}
         />
     }
@@ -113,7 +128,7 @@ export default function Cart(){
             <div className="flex-1">
                 <h3> Item </h3>
             </div>
-            <span className="pr-4 mr-3">Price</span>
+            <span className="pr-4 mr-3">Price/piece</span>
             <span className="pr-3 mr-1">Quantity</span>
         </div>
     );
@@ -124,7 +139,7 @@ export default function Cart(){
 
             <div className={"inner " + commonClass}>
                 <div className="d-flex flex-align-center">
-                    <h2 className="mb-2 flex-1">Your Cart</h2>
+                    <h2 className="mb-2 flex-1">My Cart</h2>
                     <h4 className="grey-3">You have {items.length} {items.length > 1 ? "items":"item" }</h4>
                 </div>
                 <hr/>
@@ -150,6 +165,14 @@ export default function Cart(){
                     </Router>
                 </div>
             </div>
+
+            <ConfirmDialog 
+                title="Confirm"
+                prompt="Are you sure you want to remove this item?"
+                open={openConfirmation}
+                handleYes={handleYes}
+                handleNo={handleNo}
+            />
         </div>
     )
 }

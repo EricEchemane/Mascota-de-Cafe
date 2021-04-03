@@ -32,7 +32,7 @@ export default function CartItem(props: any) {
                 </span>
                 <Tooltip title="Remove to cart">
                     <span 
-                        onClick={() => {props.removeItem(id)}}
+                        onClick={() => {props.handleOpen(id)}}
                         className="ml-2 cur-pointer click-effect">
                         <DeleteOutlineIcon fontSize="small"/>
                     </span>
