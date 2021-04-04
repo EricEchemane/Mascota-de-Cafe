@@ -1,6 +1,8 @@
 import globalState from './api/context';
 import {useState, useRef, useEffect} from "react";
-import {Box, Tooltip, Badge} from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Tooltip from '@material-ui/core/Tooltip';
+import Badge from '@material-ui/core/Badge';
 import {AnimatePresence} from "framer-motion";
 // pages 
 import Homepage from '../src/pages/Homepage';
@@ -203,8 +205,8 @@ function App () {
           </Link>
 
           <Link onClick={() => {handleNavbarClick(0)}} to="/" className={"dark-1 p-3 nav-link " + activeUrlIndex[0]}> Home </Link>
-          <Link onClick={() => {handleNavbarClick(1)}} to="/cafe" className={"dark-1 p-3 nav-link " + activeUrlIndex[1]}> Cafe </Link>
           <Link onClick={() => {handleNavbarClick(2)}} to="/shop" className={"dark-1 p-3 nav-link " + activeUrlIndex[2]}> Shop </Link>
+          <Link onClick={() => {handleNavbarClick(1)}} to="/cafe" className={"dark-1 p-3 nav-link " + activeUrlIndex[1]}> Cafe </Link>
           <Link onClick={() => {handleNavbarClick(3)}} to="/pets" className={"dark-1 p-3 nav-link " + activeUrlIndex[3]}> Pets </Link>
 
           <p onClick={toggleContacts} className={"dark-1 p-3 nav-link"}> Contacts </p>
@@ -225,8 +227,8 @@ function App () {
 
         <nav id="side-nav">
           <Link onClick={() => {handleSideNavClick(0)}} to="/" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[0])}> Home </Link>
-          <Link onClick={() => {handleSideNavClick(1)}} to="/cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
           <Link onClick={() => {handleSideNavClick(2)}} to="/shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
+          <Link onClick={() => {handleSideNavClick(1)}} to="/cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
           <Link onClick={() => {handleSideNavClick(3)}} to="/pets" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
           <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2"}> Contacts </p>
           
@@ -245,15 +247,17 @@ function App () {
           <Footer />
         </footer> 
 
-        <Box hidden={contactsHidden}>
-          <Contact />
-        </Box>
-        <Box hidden={states.signupHidden}>
-          <Signup />
-        </Box>
-        <Box hidden={states.loginHidden}>
-          <Login />
-        </Box>
+        <AnimatePresence>
+              <Box hidden={contactsHidden}>
+                <Contact />
+              </Box>
+              <Box hidden={states.signupHidden}>
+                <Signup />
+              </Box>
+              <Box hidden={states.loginHidden}>
+                <Login />
+              </Box>
+      </AnimatePresence>
 
       </Router>
     </globalState.Provider>

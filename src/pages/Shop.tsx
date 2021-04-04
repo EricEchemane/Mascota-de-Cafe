@@ -1,6 +1,8 @@
 import {useState, useEffect, useContext} from "react";
-import {Grid, Snackbar} from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
+import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from '@material-ui/lab/Alert';
+import {motion} from "framer-motion";
 
 import s4 from "../assets/stories/s4.jpg";
 import {coffeeProducts as CF, pastries as PST} from "../api/local.data";
@@ -103,7 +105,11 @@ export default function Shop() {
             price={each.price} />
     )
     return (
-        <div className={rootClasses}>
+        <motion.div className={rootClasses}
+            initial={{opacity: 0}} 
+            animate={{opacity: 1}} 
+            exit={{opacity: .5}}
+            transition={{duration: .7}}>
             <div className="inner">
                 <Grid container>
                     <Grid item xs={12} md={5}>
@@ -169,6 +175,6 @@ export default function Shop() {
                     This Item is already in the cart.
                 </Alert>
             </Snackbar>
-        </div>
+        </motion.div>
     )   
 }

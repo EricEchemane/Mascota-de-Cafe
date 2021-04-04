@@ -1,4 +1,4 @@
-import {Grid} from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
 
 export default function Story (props: any) {
     return <>

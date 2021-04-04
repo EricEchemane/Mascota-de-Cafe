@@ -1,4 +1,4 @@
-import {Grid} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 import react, {useContext, useEffect} from "react";
 import {motion} from "framer-motion";
 
@@ -86,7 +86,11 @@ function Homepage () {
         />
     );
 
-    return <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+    return <motion.div 
+        initial={{opacity: 0}} 
+        animate={{opacity: 1}} 
+        exit={{opacity: .5}}
+        transition={{duration: .7}}>
         <div className="landing-index">
             <div className="inner p-3 mb-3">
                 <Grid container >

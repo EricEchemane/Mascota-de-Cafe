@@ -4,7 +4,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
-import {Grid} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
 export default function Footer () {
     return <>

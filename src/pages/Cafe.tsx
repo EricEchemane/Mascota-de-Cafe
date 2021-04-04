@@ -1,5 +1,6 @@
 import { branches } from '../api/local.data';
 import {useEffect, useContext} from "react";
+import {motion} from  "framer-motion";
 
 import globalState from "../api/context";
 import Branch from '../components/Branch';
@@ -32,7 +33,11 @@ export default function Cafe() {
         />
     )
 
-    return <>
+    return <motion.div
+            initial={{opacity: 0}} 
+            animate={{opacity: 1}} 
+            exit={{opacity: .5}}
+            transition={{duration: .7}}>
         <div className="
             action mt-3    
             outer-w coffee-shop-action
@@ -50,5 +55,5 @@ export default function Cafe() {
         <div className="outer-g pt-5 pb-4">
             {branchesElements}
         </div>
-    </>
+    </motion.div>
 }

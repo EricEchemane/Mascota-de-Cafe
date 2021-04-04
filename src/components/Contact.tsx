@@ -1,4 +1,4 @@
-import { TextField } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneIcon from '@material-ui/icons/Phone';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';

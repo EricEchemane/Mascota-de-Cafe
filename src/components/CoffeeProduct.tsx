@@ -1,4 +1,4 @@
-import {Grid} from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
 import StarRateIcon from '@material-ui/icons/StarRate';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Tooltip from '@material-ui/core/Tooltip';

@@ -1,6 +1,7 @@
 import {useContext, useEffect, useState, useRef} from "react";
 import globalState from "../api/context";
 import Tooltip from "@material-ui/core/Tooltip";
+import {motion} from "framer-motion";
 import {
     HashRouter as Router,
     Link
@@ -135,7 +136,11 @@ export default function Cart(){
     
 
     return (
-        <div className={rootClasses}>
+        <motion.div className={rootClasses}
+        initial={{opacity: 0}} 
+        animate={{opacity: 1}} 
+        exit={{opacity: .5}}
+        transition={{duration: .7}}>
 
             <div className={"inner " + commonClass}>
                 <div className="d-flex flex-align-center">
@@ -173,6 +178,6 @@ export default function Cart(){
                 handleYes={handleYes}
                 handleNo={handleNo}
             />
-        </div>
+        </motion.div>
     )
 }

@@ -1,5 +1,4 @@
-import { Grid } from '@material-ui/core';
-
+import Grid from '@material-ui/core/Grid';
 export default function Branch(props: any) {
     return  <>
         <div className="branch inner-w mb-5 ">

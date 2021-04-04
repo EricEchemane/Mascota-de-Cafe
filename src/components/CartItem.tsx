@@ -1,6 +1,5 @@
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-import {Tooltip} from "@material-ui/core";
-
+import Tooltip from "@material-ui/core/Tooltip";
 export default function CartItem(props: any) {
     const name = props.name;
     const id = props.id;
