@@ -1,6 +1,7 @@
 import globalState from './api/context';
 import {useState, useRef, useEffect} from "react";
 import {Box, Tooltip, Badge} from '@material-ui/core';
+import {AnimatePresence} from "framer-motion";
 // pages 
 import Homepage from '../src/pages/Homepage';
 import Cafe from '../src/pages/Cafe';
@@ -16,7 +17,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {coffees_data, stories_data} from './api/local.data';
 
 import {
-  Route,
+  Route, Switch,
   HashRouter as Router,
   Link
 } from 'react-router-dom';
@@ -231,10 +232,14 @@ function App () {
           
         </nav>
 
-        <Route path="/" exact component={Homepage} />
-        <Route path="/cafe" exact component={Cafe} />
-        <Route path="/shop" exact component={Shop} />
-        <Route path="/cart" exact component={Cart} />
+        <AnimatePresence>
+          <Switch>
+            <Route path="/" exact component={Homepage} />
+            <Route path="/cafe" exact component={Cafe} />
+            <Route path="/shop" exact component={Shop} />
+            <Route path="/cart" exact component={Cart} />
+          </Switch>
+        </AnimatePresence>
 
         <footer>
           <Footer />

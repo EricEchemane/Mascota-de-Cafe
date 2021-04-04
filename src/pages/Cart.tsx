@@ -167,8 +167,8 @@ export default function Cart(){
             </div>
 
             <ConfirmDialog 
-                title="Confirm"
-                prompt="Are you sure you want to remove this item?"
+                title="Please confirm"
+                prompt="Are you sure you want to remove this item from your cart?"
                 open={openConfirmation}
                 handleYes={handleYes}
                 handleNo={handleNo}
