@@ -198,6 +198,69 @@ export const pastries = [
     }
 ]
 
+export const pets = [
+    {
+        name: "Jenny",
+        type: "cat",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Happy",
+        type: "dog",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Shaky",
+        type: "dog",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Flute",
+        type: "cat",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Billy",
+        type: "dog",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Bully",
+        type: "dog",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Shana",
+        type: "dog",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Rose",
+        type: "cat",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Shyne",
+        type: "cat",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+    {
+        name: "Stuart",
+        type: "cat",
+        breed: "whatever",
+        about: "Short information about the pet."
+    },
+]
+
 export const localUser = {
     userID: "19126222",
     firstname: "Eric",

@@ -1,5 +1,4 @@
 @media screen and (max-width: 875px) {
-	// nav bar
 	.nav-link {
 		display: none;
 	}
@@ -44,6 +43,11 @@
 	}
 	.coffeeProducts {
 		padding: 0.3rem;
+	}
+	.center-btn-875px {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

@@ -1074,6 +1074,11 @@ video {
   .coffeeProducts {
     padding: 0.3rem;
   }
+  .center-btn-875px {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (max-width: 500px) {

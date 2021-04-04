@@ -9,6 +9,7 @@ import Homepage from '../src/pages/Homepage';
 import Cafe from '../src/pages/Cafe';
 import Shop from '../src/pages/Shop';
 import Cart from '../src/pages/Cart';
+import Pets from '../src/pages/Pets';
 
 import Footer from '../src/components/Footer';
 import Contact from '../src/components/Contact';
@@ -256,6 +257,7 @@ function App () {
             <Route path="/" exact component={Homepage} />
             <Route path="/cafe" exact component={Cafe} />
             <Route path="/shop" exact component={Shop} />
+            <Route path="/pets" exact component={Pets} />
             <Route path="/cart" exact component={Cart} />
           </Switch>
         </AnimatePresence>
