@@ -16,7 +16,7 @@ import Signup from '../src/components/Signup';
 import Login from '../src/components/Login';
 import logo from './assets/illutration/logo192.png';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import {coffees_data, stories_data} from './api/local.data';
+import {coffees_data, stories_data, localUser} from './api/local.data';
 
 import {
   Route, Switch,
@@ -31,12 +31,14 @@ function App () {
 
   const [cartItems, set_cartItems] = useState<any>([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [userIsLogin, setUserIsLogin] = useState(false);
 
   const [states, setStates] = useState<any>({
     coffees: coffees_data,
     stories: stories_data,
     signupHidden: true,
-    loginHidden: true
+    loginHidden: true,
+    currentUser: {}
   });
 
   function addToCart(
@@ -58,15 +60,15 @@ function App () {
     set_cartItems(items);
   }
 
-  function scrollToTop(){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
   const [contactsHidden, set_contactsHidden] = useState(true);
   const sideNav_isClose = useRef(true);
   const [activeUrlIndex, set_activeUrlIndex] = useState([
     "active-link", "", "", ""
   ]);
+  function scrollToTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   
   function dispatchDimmer() {
     if (!sideNav_isClose.current) toggleSideNav();
@@ -103,7 +105,7 @@ function App () {
       var dimmer = true;
     }
     else {
-      right = '-260px';
+      right = '-310px';
       dimmer = false;
     }
     if (sideNav) sideNav.style.right = right;
@@ -162,12 +164,20 @@ function App () {
     else if(url.toLowerCase().endsWith("#/shop")) setActiveLink(2);
     else if(url.toLowerCase().endsWith("#/cart")) setActiveLink(5);
 
+    /* check cart items in the localStorage */
     const mdc_items = localStorage.getItem("MDC_cartItems");
     if(mdc_items !== null) {
       const items = JSON.parse(mdc_items);
       setTotalPrice(getTotalPrice(items));
       set_cartItems(items);
     }
+    
+    /* Check existing user */
+    const existingUser = localStorage.getItem("MDC_user");
+    if(existingUser) {
+      setUserIsLogin(true);
+      window.location.href = "http://localhost:3000/Mascota-de-Cafe#/shop";
+    } 
   }, []);
 
   function getTotalPrice(items: any) {
@@ -188,10 +198,16 @@ function App () {
 
   return <>
     <globalState.Provider value={{
-      ...states, toggle_signup: toggleSignup,
-      toggle_login: toggleLogin, set_ActiveLink: setActiveLink,
-      cart_items: cartItems, setCartItems: set_cartItems, addCart: addToCart,
-      total_price: totalPrice, set_totalPrice: setTotalPrice
+      ...states, 
+      cart_items: cartItems, 
+      total_price: totalPrice, 
+      user_is_login: userIsLogin, 
+      toggle_signup: toggleSignup,
+      toggle_login: toggleLogin, 
+      set_ActiveLink: setActiveLink,
+      setCartItems: set_cartItems, 
+      addCart: addToCart,
+      set_totalPrice: setTotalPrice
     }}>
 
       <Router>
@@ -202,6 +218,7 @@ function App () {
           <Link to="/shop" className="dark-1 p-3 flex-1 d-flex flex-align-center">
             <img src={logo} className="logo mr-1" alt="mascota de cafe logo"/>
             <h3>Mascota de Cafe</h3>
+            <span className="ml-2 second">{userIsLogin ? `Hi, ${states.currentUser.firstname}!`:""}</span>
           </Link>
 
           <Link onClick={() => {handleNavbarClick(0)}} to="/" className={"dark-1 p-3 nav-link " + activeUrlIndex[0]}> Home </Link>
@@ -226,11 +243,11 @@ function App () {
         </nav>
 
         <nav id="side-nav">
-          <Link onClick={() => {handleSideNavClick(0)}} to="/" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[0])}> Home </Link>
-          <Link onClick={() => {handleSideNavClick(2)}} to="/shop" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
-          <Link onClick={() => {handleSideNavClick(1)}} to="/cafe" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
-          <Link onClick={() => {handleSideNavClick(3)}} to="/pets" className={"dark-1 p-1 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
-          <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-1 ml-2"}> Contacts </p>
+          <Link onClick={() => {handleSideNavClick(0)}} to="/" className={"dark-1 p-2 ml-2 " + (activeUrlIndex[0])}> Home </Link>
+          <Link onClick={() => {handleSideNavClick(2)}} to="/shop" className={"dark-1 p-2 ml-2 " + (activeUrlIndex[2])}> Shop </Link>
+          <Link onClick={() => {handleSideNavClick(1)}} to="/cafe" className={"dark-1 p-2 ml-2 " + (activeUrlIndex[1])}> Cafe </Link>
+          <Link onClick={() => {handleSideNavClick(3)}} to="/pets" className={"dark-1 p-2 ml-2 " + (activeUrlIndex[3])}> Pets </Link>
+          <p onClick={() => {toggleSideNav();toggleContacts()}} className={"dark-1 p-2 ml-2"}> Contacts </p>
           
         </nav>
 
@@ -247,17 +264,15 @@ function App () {
           <Footer />
         </footer> 
 
-        <AnimatePresence>
-              <Box hidden={contactsHidden}>
-                <Contact />
-              </Box>
-              <Box hidden={states.signupHidden}>
-                <Signup />
-              </Box>
-              <Box hidden={states.loginHidden}>
-                <Login />
-              </Box>
-      </AnimatePresence>
+        <Box hidden={contactsHidden}>
+          <Contact />
+        </Box>
+        <Box hidden={states.signupHidden}>
+          <Signup />
+        </Box>
+        <Box hidden={states.loginHidden}>
+          <Login />
+        </Box>
 
       </Router>
     </globalState.Provider>

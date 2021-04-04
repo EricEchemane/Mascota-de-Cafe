@@ -197,3 +197,19 @@ export const pastries = [
         price: 13
     }
 ]
+
+export const localUser = {
+    userID: "19126222",
+    firstname: "Eric",
+    lastname: "Echemane",
+    mobileNumber: "09394228185",
+    username: "eric",
+    password: "mascota-cafe",
+    // city address
+    // district
+    // brgy 
+    // subdivision
+    // street
+    // house number
+    // typeOfEstablishment
+}

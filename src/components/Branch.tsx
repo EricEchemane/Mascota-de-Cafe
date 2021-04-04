@@ -3,8 +3,8 @@ export default function Branch(props: any) {
     return  <>
         <div className="branch inner-w mb-5 ">
             <Grid container>
-                <Grid item xs={12} md={6}>
-                    <img src={props.src} alt={props.name} loading="lazy" />
+                <Grid item xs={12} md={6} className="p-3">
+                    <img src={props.src} alt={props.name} loading="lazy" className="radius-8" />
                 </Grid>
                 <Grid item xs={12} md={6} className="p-3">
                     <h1 className="prime">{props.name}</h1>

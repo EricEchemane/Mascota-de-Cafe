@@ -64,9 +64,9 @@ button.contained {
 #side-nav {
 	position: fixed;
 	top: 50px;
-	right: -260px;
+	right: -310px;
 	height: 100%;
-	width: 250px;
+	width: 300px;
 	background-color: white;
 	z-index: 11;
 	box-shadow: -4px 4px 8px rgba($color: #000000, $alpha: 0.1);
@@ -96,7 +96,6 @@ button.contained {
 	top: 0;
 	left: 0;
 	z-index: 5;
-	// border: 1px solid white;
 	background-color: white;
 	transition: 0.3s ease;
 	p {
@@ -124,7 +123,6 @@ video {
 	box-shadow: 0 24px 48px -12px rgba($color: $dark-2, $alpha: 0.5);
 }
 
-// slideShow
 .slideshow {
 	width: calc(6 * (280px + 4rem));
 	overflow: hidden;
@@ -141,7 +139,9 @@ video {
 	height: 300px;
 	box-shadow: $floating;
 	margin: 2rem;
+	border-radius: 8px;
 	img {
+		border-radius: 8px 8px 0 0;
 		width: 100%;
 		height: 65%;
 	}
@@ -279,11 +279,9 @@ video {
 }
 
 .branch {
-	border-radius: 8px;
+	border-radius: 14px;
 	overflow: hidden;
 	box-shadow: $floating;
-	border: 1px solid $grey-2;
-	// height: 350px;
 	img {
 		height: 100%;
 		width: 100%;

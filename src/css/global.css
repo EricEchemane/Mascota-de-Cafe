@@ -578,9 +578,9 @@ button.contained {
 #side-nav {
   position: fixed;
   top: 50px;
-  right: -260px;
+  right: -310px;
   height: 100%;
-  width: 250px;
+  width: 300px;
   background-color: white;
   z-index: 11;
   -webkit-box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
@@ -675,9 +675,11 @@ video {
   -webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
           box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
   margin: 2rem;
+  border-radius: 8px;
 }
 
 .coffee-card img {
+  border-radius: 8px 8px 0 0;
   width: 100%;
   height: 65%;
 }
@@ -861,11 +863,10 @@ video {
 }
 
 .branch {
-  border-radius: 8px;
+  border-radius: 14px;
   overflow: hidden;
   -webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
           box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
-  border: 1px solid #c5c5c5;
 }
 
 .branch img {

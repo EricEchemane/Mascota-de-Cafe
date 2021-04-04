@@ -47,7 +47,7 @@ export default function Cafe() {
                 Let's have some coffee together!
             </h1>
             <p>
-                Find nearest cafe from your location.
+                Find nearest cafe from my location.
             </p>
             <button className="prime mt-2">Sure!</button>
         </div>

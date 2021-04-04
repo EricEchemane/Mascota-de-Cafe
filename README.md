@@ -2,4 +2,12 @@
 
 Coffee Shop Website / E-commerce website
 
-[Build Test](https://ericechemane.github.io/Mascota-de-Cafe/);
+### Members
+
+- Eric Echemane
+- Mark Alcel Bautista
+- Allaiza Miranda
+- Toni Rose Gonzales
+- Sarah Jane Libunao
+
+[VISIT THE ACTUAL WEBSITE HERE](https://ericechemane.github.io/Mascota-de-Cafe/)

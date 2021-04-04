@@ -124,7 +124,7 @@ function Homepage () {
                 <div className="inner">
                     <h1 className="prime text-align-center pt-3 title">Our Bests</h1>
                 </div>
-                <div className="inner pl-3 pr-3 pb-3 pt-2 dflt-width">
+                <div className="inner pl-3 pr-3 pb-3 pt-2 dflt-width ">
                     <div className="slideshow ">
                         {state.coffees.map((coffee: any) => {
                             return <CoffeeCard
