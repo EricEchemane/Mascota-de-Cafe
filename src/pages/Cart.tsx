@@ -4,6 +4,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import {motion} from "framer-motion";
 import {
     HashRouter as Router,
+    Route,
     Link
 } from 'react-router-dom';
 import CartItem from "../components/CartItem";
@@ -157,10 +158,12 @@ export default function Cart(){
                     <h3 className="flex-1">Total </h3>
                     <h3 className="prime ml-1 mr-2">$ {state.total_price}.00</h3>
                     <Tooltip title="Proceed to payment" placement="top">
-                        <button 
-                            className={"outline small click-effect " + (items.length === 0 ? "disabled":"")}>
-                                Checkout
-                        </button> 
+                        <Link to="/cart/checkout">
+                            <button 
+                                className={"outline small click-effect " + (items.length === 0 ? "disabled":"")}>
+                                    Checkout
+                            </button> 
+                        </Link>
                     </Tooltip>
                     &nbsp;&nbsp;
                     <Router>

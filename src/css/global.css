@@ -1026,6 +1026,14 @@ video {
   height: 60px;
 }
 
+.step-label {
+  color: #ff006f;
+}
+
+.step-label * {
+  color: #ff006f;
+}
+
 @media screen and (max-width: 875px) {
   .nav-link {
     display: none;

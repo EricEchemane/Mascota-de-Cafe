@@ -410,4 +410,14 @@ video {
 	display: inline-block;
 	height: 60px;
 }
+
+.step-label {
+	& {
+		color: $second;
+		* {
+			color: $second;
+		}
+	}
+}
+
 @import "./imports//media_query.scss";
