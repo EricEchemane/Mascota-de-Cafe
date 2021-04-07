@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Mascota-de-Cafe/static/css/main.43e5e8bb.chunk.css",
-    "main.js": "/Mascota-de-Cafe/static/js/main.45fd77f1.chunk.js",
-    "main.js.map": "/Mascota-de-Cafe/static/js/main.45fd77f1.chunk.js.map",
-    "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.a9645f74.js",
-    "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.a9645f74.js.map",
-    "static/js/2.b54032e3.chunk.js": "/Mascota-de-Cafe/static/js/2.b54032e3.chunk.js",
-    "static/js/2.b54032e3.chunk.js.map": "/Mascota-de-Cafe/static/js/2.b54032e3.chunk.js.map",
-    "static/js/3.b4400683.chunk.js": "/Mascota-de-Cafe/static/js/3.b4400683.chunk.js",
-    "static/js/3.b4400683.chunk.js.map": "/Mascota-de-Cafe/static/js/3.b4400683.chunk.js.map",
+    "main.css": "/Mascota-de-Cafe/static/css/main.8ffc3cf6.chunk.css",
+    "main.js": "/Mascota-de-Cafe/static/js/main.c639581e.chunk.js",
+    "main.js.map": "/Mascota-de-Cafe/static/js/main.c639581e.chunk.js.map",
+    "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js",
+    "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js.map",
+    "static/js/2.ea12df3c.chunk.js": "/Mascota-de-Cafe/static/js/2.ea12df3c.chunk.js",
+    "static/js/2.ea12df3c.chunk.js.map": "/Mascota-de-Cafe/static/js/2.ea12df3c.chunk.js.map",
+    "static/js/3.a0c79978.chunk.js": "/Mascota-de-Cafe/static/js/3.a0c79978.chunk.js",
+    "static/js/3.a0c79978.chunk.js.map": "/Mascota-de-Cafe/static/js/3.a0c79978.chunk.js.map",
     "index.html": "/Mascota-de-Cafe/index.html",
-    "static/css/main.43e5e8bb.chunk.css.map": "/Mascota-de-Cafe/static/css/main.43e5e8bb.chunk.css.map",
-    "static/js/2.b54032e3.chunk.js.LICENSE.txt": "/Mascota-de-Cafe/static/js/2.b54032e3.chunk.js.LICENSE.txt",
+    "static/css/main.8ffc3cf6.chunk.css.map": "/Mascota-de-Cafe/static/css/main.8ffc3cf6.chunk.css.map",
+    "static/js/2.ea12df3c.chunk.js.LICENSE.txt": "/Mascota-de-Cafe/static/js/2.ea12df3c.chunk.js.LICENSE.txt",
     "static/media/Landing-Video2.79f96e86.mp4": "/Mascota-de-Cafe/static/media/Landing-Video2.79f96e86.mp4",
     "static/media/a.712cb706.jpg": "/Mascota-de-Cafe/static/media/a.712cb706.jpg",
     "static/media/global.css": "/Mascota-de-Cafe/static/media/action_bg.ea4cdea5.jpg",
@@ -70,9 +70,9 @@
     "static/media/stuart.140fe249.png": "/Mascota-de-Cafe/static/media/stuart.140fe249.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a9645f74.js",
-    "static/js/2.b54032e3.chunk.js",
-    "static/css/main.43e5e8bb.chunk.css",
-    "static/js/main.45fd77f1.chunk.js"
+    "static/js/runtime-main.2e449eb9.js",
+    "static/js/2.ea12df3c.chunk.js",
+    "static/css/main.8ffc3cf6.chunk.css",
+    "static/js/main.c639581e.chunk.js"
   ]
 }
