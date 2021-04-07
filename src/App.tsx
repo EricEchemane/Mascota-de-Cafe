@@ -177,6 +177,7 @@ function App() {
 		if (existingUser) {
 			setUserIsLogin(true);
 			window.location.href = "http://localhost:3000/Mascota-de-Cafe#/shop";
+			// window.location.href = "http://ericechemane.github.io/Mascota-de-Cafe#/shop";
 		}
 	}, []);
 
@@ -215,14 +216,14 @@ function App() {
 					<nav id="navbar" className="d-flex flex-align-center">
 						<Link
 							to="/shop"
-							className="dark-1 p-3 flex-1 d-flex flex-align-center">
+							className="dark-1 p-3 flex-1 d-flex flex-align-center link-title">
 							<img
 								src={logo}
 								className="logo mr-1"
 								alt="mascota de cafe logo"
 							/>
 							<h3>Mascota de Cafe</h3>
-							<span className="ml-2 second">
+							<span className="ml-1 second f-size-small">
 								{userIsLogin ? `Hi, ${states.currentUser.firstname}!` : ""}
 							</span>
 						</Link>
@@ -271,7 +272,7 @@ function App() {
 
 						<Link
 							to="/cart"
-							className={"dark-1 pr-3 pl-2 " + activeUrlIndex[5]}
+							className={"dark-1 pl-2 pr-3 link-title " + activeUrlIndex[5]}
 							onClick={() => {
 								handleNavbarClick(5);
 							}}>

@@ -293,6 +293,10 @@
   width: calc(100% - 2rem);
 }
 
+.fullWidth-padding-minus3 {
+  width: calc(100% - 3rem);
+}
+
 .blue {
   color: dodgerblue;
 }
@@ -1110,6 +1114,9 @@ video {
   }
   .d-block-500 {
     display: block;
+  }
+  .link-title {
+    padding: 1rem;
   }
 }
 /*# sourceMappingURL=global.css.map */

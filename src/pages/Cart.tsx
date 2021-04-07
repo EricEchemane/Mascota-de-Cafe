@@ -161,7 +161,7 @@ export default function Cart(){
                         <Link to="/cart/checkout">
                             <button 
                                 className={"outline small click-effect " + (items.length === 0 ? "disabled":"")}>
-                                    Checkout
+                                    Check Out
                             </button> 
                         </Link>
                     </Tooltip>

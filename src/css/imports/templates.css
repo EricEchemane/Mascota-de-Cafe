@@ -291,6 +291,10 @@
   width: calc(100% - 2rem);
 }
 
+.fullWidth-padding-minus3 {
+  width: calc(100% - 3rem);
+}
+
 .blue {
   color: dodgerblue;
 }
