@@ -151,14 +151,10 @@ export default function Cart() {
 					<h3 className="flex-1">Total </h3>
 					<h3 className="prime ml-1 mr-2">$ {state.total_price}.00</h3>
 					<Tooltip title="Proceed to payment" placement="top">
-						<Link to="/cart/checkout">
-							<button
-								className={
-									"outline small click-effect " +
-									(items.length === 0 ? "disabled" : "")
-								}>
-								Check Out
-							</button>
+						<Link
+							to="/cart/checkout"
+							className={items.length === 0 ? "disabled" : ""}>
+							<button className="outline small click-effect">Check Out</button>
 						</Link>
 					</Tooltip>
 					&nbsp;&nbsp;

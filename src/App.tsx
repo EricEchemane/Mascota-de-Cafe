@@ -369,7 +369,12 @@ function App() {
 						/>
 					</Box>
 					<Box hidden={states.loginHidden}>
-						<Login />
+						<Login
+							dim={dispatchDimmer}
+							setUserLoginProps={setUserIsLogin}
+							localData={localUser}
+							setStateProp={setStates}
+						/>
 					</Box>
 				</Router>
 			</globalState.Provider>

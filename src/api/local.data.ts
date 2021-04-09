@@ -267,10 +267,8 @@ export const pets = [
 
 export const localUser = {
 	userID: "19126222",
-	firstname: "Eric",
-	lastname: "Echemane",
 	mobileNumber: "09394228185",
-	username: "eric",
+	username: "coffee_lover",
 	password: "mascota-cafe",
 	// city address
 	// district

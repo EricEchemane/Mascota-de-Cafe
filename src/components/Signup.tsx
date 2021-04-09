@@ -37,23 +37,30 @@ export default function Signup({ setUserLoginProps, setStateProp }: any) {
 	}
 
 	function isValid() {
-		if (!usernameRef.current.trim().length)
+		const validUSername = usernameRef.current.trim().length;
+		const hasEmail = emailRef.current.trim().length;
+		const validEmail = validateEmail(emailRef.current.trim());
+		const hasPassword = passwordRef.current.trim().length;
+		const strongPassword = passwordRef.current.trim().length >= 8;
+
+		if (!validUSername)
 			setUsernameInput({ label: "Username is required", error: true });
 		else setUsernameInput({ label: "A username", error: false });
 
-		if (!emailRef.current.trim().length)
-			setEmailInput({ label: "Email is required", error: true });
-		else if (!validateEmail(emailRef.current.trim()))
+		if (!hasEmail) setEmailInput({ label: "Email is required", error: true });
+		else if (!validEmail)
 			setEmailInput({ label: "Invalid e-mail address", error: true });
 		else setEmailInput({ label: "E-mail", error: false });
 
-		if (!passwordRef.current.trim().length)
+		if (!hasPassword)
 			setPasswordInput({ label: "Password is required", error: true });
-		else if (passwordRef.current.trim().length < 8)
+		else if (!strongPassword)
 			setPasswordInput({ label: "Password is too short", error: true });
 		else setPasswordInput({ label: "Password", error: false });
 
-		return !usernameInput.error && !emailInput.error && !passwordInput.error;
+		return (
+			validUSername && hasEmail && validEmail && hasPassword && strongPassword
+		);
 	}
 
 	function handleSave() {
@@ -73,6 +80,7 @@ export default function Signup({ setUserLoginProps, setStateProp }: any) {
 				};
 			});
 			setUserLoginProps(true);
+			window.location.reload();
 		}
 	}
 
