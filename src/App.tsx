@@ -66,6 +66,7 @@ function App() {
 		"",
 		"",
 	]);
+
 	function scrollToTop() {
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
@@ -175,9 +176,15 @@ function App() {
 		/* Check existing user */
 		const existingUser = localStorage.getItem("MDC_user");
 		if (existingUser) {
+			setStates((prev: any) => {
+				return {
+					...prev,
+					currentUser: JSON.parse(existingUser),
+				};
+			});
 			setUserIsLogin(true);
-			window.location.href = "http://localhost:3000/Mascota-de-Cafe#/shop";
-			// window.location.href = "http://ericechemane.github.io/Mascota-de-Cafe#/shop";
+			window.location.href = "http://localhost:3000/Mascota-de-Cafe/#/shop";
+			// window.location.href = "https://ericechemane.github.io/Mascota-de-Cafe/#/shop";
 		}
 	}, []);
 
@@ -223,9 +230,6 @@ function App() {
 								alt="mascota de cafe logo"
 							/>
 							<h3>Mascota de Cafe</h3>
-							<span className="ml-1 second f-size-small">
-								{userIsLogin ? `Hi, ${states.currentUser.firstname}!` : ""}
-							</span>
 						</Link>
 
 						<Link
@@ -359,7 +363,10 @@ function App() {
 						<Contact />
 					</Box>
 					<Box hidden={states.signupHidden}>
-						<Signup />
+						<Signup
+							setUserLoginProps={setUserIsLogin}
+							setStateProp={setStates}
+						/>
 					</Box>
 					<Box hidden={states.loginHidden}>
 						<Login />
