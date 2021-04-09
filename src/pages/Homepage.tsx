@@ -100,7 +100,9 @@ function Homepage() {
 					<Grid container>
 						<Grid item xs={12} md={6}>
 							<Box hidden={!state.user_is_login}>
-								<h3 className="second">Hi, {state.currentUser.username}!</h3>
+								<h3 className="second center-875px">
+									Hi, {state.currentUser.username}!
+								</h3>
 							</Box>
 							<h1 className="title1">
 								Coffee and Pets <br />
