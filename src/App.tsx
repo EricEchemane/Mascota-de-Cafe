@@ -183,8 +183,8 @@ function App() {
 				};
 			});
 			setUserIsLogin(true);
-			window.location.href = "http://localhost:3000/Mascota-de-Cafe/#/shop";
-			// window.location.href = "https://ericechemane.github.io/Mascota-de-Cafe/#/shop";
+			// window.location.href = "http://localhost:3000/Mascota-de-Cafe/#/shop";
+			window.location.href = "https://ericechemane.github.io/Mascota-de-Cafe/#/shop";
 		}
 	}, []);
 
