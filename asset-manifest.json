@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Mascota-de-Cafe/static/css/main.5604530a.chunk.css",
-    "main.js": "/Mascota-de-Cafe/static/js/main.da98efef.chunk.js",
-    "main.js.map": "/Mascota-de-Cafe/static/js/main.da98efef.chunk.js.map",
+    "main.js": "/Mascota-de-Cafe/static/js/main.f6979181.chunk.js",
+    "main.js.map": "/Mascota-de-Cafe/static/js/main.f6979181.chunk.js.map",
     "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js",
     "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js.map",
     "static/js/2.b97362f2.chunk.js": "/Mascota-de-Cafe/static/js/2.b97362f2.chunk.js",
@@ -73,6 +73,6 @@
     "static/js/runtime-main.2e449eb9.js",
     "static/js/2.b97362f2.chunk.js",
     "static/css/main.5604530a.chunk.css",
-    "static/js/main.da98efef.chunk.js"
+    "static/js/main.f6979181.chunk.js"
   ]
 }
