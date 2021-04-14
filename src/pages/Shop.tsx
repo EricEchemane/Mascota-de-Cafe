@@ -142,7 +142,7 @@ export default function Shop() {
 			</div>
 
 			<div className="outer-w">
-				<div className="inner pl-3 pt-4">
+				<div className="inner pl-3 pt-4 mb-1">
 					<div className="flex-1">
 						<button
 							onClick={() => {

@@ -64,9 +64,9 @@ button.contained {
 #side-nav {
 	position: fixed;
 	top: 50px;
-	right: -310px;
+	right: -260px;
 	height: 100%;
-	width: 300px;
+	width: 250px;
 	background-color: white;
 	z-index: 11;
 	box-shadow: -4px 4px 8px rgba($color: #000000, $alpha: 0.1);
@@ -403,7 +403,7 @@ video {
 }
 .quantity {
 	display: inline-block;
-	width: 50px;
+	width: 30px;
 	text-align: center;
 }
 .height-40 {

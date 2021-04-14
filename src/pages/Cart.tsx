@@ -125,9 +125,9 @@ export default function Cart() {
 	const cartItemsHeader = (
 		<div className="d-flex flex-align-center mt-2 mb-2">
 			<div className="flex-1">
-				<h3> Item </h3>
+				<h3> Items </h3>
 			</div>
-			<span className="pr-4 mr-3">Price/piece</span>
+			<span className="pr-4 mr-1">Price/piece</span>
 			<span className="pr-3 mr-1">Quantity</span>
 		</div>
 	);
@@ -148,8 +148,14 @@ export default function Cart() {
 
 			<div className={"inner-g " + commonClass}>
 				<div className="d-flex flex-align-center">
-					<h3 className="flex-1">Total </h3>
-					<h3 className="prime ml-1 mr-2">$ {state.total_price}.00</h3>
+					<h4 className="flex-1">Total </h4>
+					<h3 className="second mr-1">${state.total_price}.00</h3>
+					<Router>
+						<Link to="/Shop">
+							<button className="prime small">Shop more!</button>
+						</Link>
+					</Router>
+					&nbsp;&nbsp;
 					<Tooltip title="Proceed to payment" placement="top">
 						<Link
 							to="/cart/checkout"
@@ -157,12 +163,6 @@ export default function Cart() {
 							<button className="outline small click-effect">Check Out</button>
 						</Link>
 					</Tooltip>
-					&nbsp;&nbsp;
-					<Router>
-						<Link to="/Shop">
-							<button className="second small">Shop more!</button>
-						</Link>
-					</Router>
 				</div>
 			</div>
 

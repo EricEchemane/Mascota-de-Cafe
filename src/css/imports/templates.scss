@@ -152,9 +152,6 @@ $thick: 4px 4px 8px $shadow;
 .glass {
 	backdrop-filter: blur(21px) brightness(1.5);
 }
-.glass-dark {
-	backdrop-filter: blur(21px);
-}
 .active-link {
 	color: $prime;
 	* {

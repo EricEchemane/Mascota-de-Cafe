@@ -18,6 +18,9 @@
 		text-align: left;
 		width: 100%;
 	}
+	.footer {
+		padding: 1rem;
+	}
 	.footer-section-1 * {
 		text-align: center;
 	}
@@ -75,5 +78,14 @@
 	}
 	.link-title {
 		padding: 1rem;
+	}
+	:root {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	:root {
+		font-size: 12px;
 	}
 }

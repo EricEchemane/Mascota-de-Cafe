@@ -106,7 +106,7 @@ function App() {
 			var right = "0";
 			var dimmer = true;
 		} else {
-			right = "-310px";
+			right = "-260px";
 			dimmer = false;
 		}
 		if (sideNav) sideNav.style.right = right;
@@ -184,7 +184,8 @@ function App() {
 			});
 			setUserIsLogin(true);
 			// window.location.href = "http://localhost:3000/Mascota-de-Cafe/#/shop";
-			window.location.href = "https://ericechemane.github.io/Mascota-de-Cafe/#/shop";
+			// window.location.href =
+			// 	"https://ericechemane.github.io/Mascota-de-Cafe/#/shop";
 		}
 	}, []);
 
@@ -231,7 +232,6 @@ function App() {
 							/>
 							<h3>Mascota de Cafe</h3>
 						</Link>
-
 						<Link
 							onClick={() => {
 								handleNavbarClick(0);
@@ -268,15 +268,13 @@ function App() {
 							{" "}
 							Pets{" "}
 						</Link>
-
 						<p onClick={toggleContacts} className={"dark-1 p-3 nav-link"}>
 							{" "}
 							Contacts{" "}
 						</p>
-
 						<Link
 							to="/cart"
-							className={"dark-1 pl-2 pr-3 link-title " + activeUrlIndex[5]}
+							className={"dark-1 pl-2 pr-2 link-title " + activeUrlIndex[5]}
 							onClick={() => {
 								handleNavbarClick(5);
 							}}>
@@ -286,11 +284,11 @@ function App() {
 								</Badge>
 							</Tooltip>
 						</Link>
-
+						&nbsp;
 						<div
 							onClick={toggleSideNav}
 							id="menu-bar-icon"
-							className="p-2 cur-pointer">
+							className="pt-1 pr-2 pb-2 pl-1 cur-pointer">
 							{" "}
 							<MenuIcon />{" "}
 						</div>

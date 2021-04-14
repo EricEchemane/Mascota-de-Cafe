@@ -170,11 +170,6 @@
           backdrop-filter: blur(21px) brightness(1.5);
 }
 
-.glass-dark {
-  -webkit-backdrop-filter: blur(21px);
-          backdrop-filter: blur(21px);
-}
-
 .active-link {
   color: #ff8800;
 }
@@ -582,9 +577,9 @@ button.contained {
 #side-nav {
   position: fixed;
   top: 50px;
-  right: -310px;
+  right: -260px;
   height: 100%;
-  width: 300px;
+  width: 250px;
   background-color: white;
   z-index: 11;
   -webkit-box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
@@ -1021,7 +1016,7 @@ video {
 
 .quantity {
   display: inline-block;
-  width: 50px;
+  width: 30px;
   text-align: center;
 }
 
@@ -1059,6 +1054,9 @@ video {
   .story {
     text-align: left;
     width: 100%;
+  }
+  .footer {
+    padding: 1rem;
   }
   .footer-section-1 * {
     text-align: center;
@@ -1117,6 +1115,15 @@ video {
   }
   .link-title {
     padding: 1rem;
+  }
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  :root {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=global.css.map */
