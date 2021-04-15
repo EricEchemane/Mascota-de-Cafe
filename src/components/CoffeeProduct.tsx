@@ -31,7 +31,7 @@ export default function CoffeeProduct(props: any) {
 							<StarRateIcon fontSize="small" />
 							<StarRateIcon fontSize="small" />
 						</span>
-						<span>{props.rating}</span> 
+						<span>{props.rating}</span>
 					</p>
 				</Tooltip>
 				<div className="d-flex pl-2 pt-2 pb-1">

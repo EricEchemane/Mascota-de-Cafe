@@ -419,5 +419,7 @@ video {
 		}
 	}
 }
-
+.flex-grow {
+	flex-grow: 1;
+}
 @import "./imports//media_query.scss";

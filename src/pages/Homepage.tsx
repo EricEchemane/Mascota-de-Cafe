@@ -110,10 +110,17 @@ function Homepage() {
 								<span className="second"> Love</span> and{" "}
 								<span className="prime">Energy</span>
 							</h1>
-							<p className="mt-4"> Get a 5% discount on your first visit. </p>
-							<p> Sign up and join our growing community, it's free! </p>
 
+							<Box hidden={!state.user_is_login}>
+								<Router>
+									<Link to="/shop">
+										<button className="prime mt-3">Shop now!</button>
+									</Link>
+								</Router>
+							</Box>
 							<Box hidden={state.user_is_login}>
+								<p className="mt-4"> Get a 5% discount on your first visit. </p>
+								<p> Sign up and join our growing community, it's free! </p>
 								<button className="mt-2 prime" onClick={state.toggle_signup}>
 									SIGN UP
 								</button>{" "}

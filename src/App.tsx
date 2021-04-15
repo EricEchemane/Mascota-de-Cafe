@@ -224,7 +224,7 @@ function App() {
 					<nav id="navbar" className="d-flex flex-align-center">
 						<Link
 							to="/shop"
-							className="dark-1 p-3 flex-1 d-flex flex-align-center link-title">
+							className="dark-1 p-3 d-flex flex-align-center link-title">
 							<img
 								src={logo}
 								className="logo mr-1"
@@ -232,6 +232,7 @@ function App() {
 							/>
 							<h3>Mascota de Cafe</h3>
 						</Link>
+						<div className="flex-grow"></div>
 						<Link
 							onClick={() => {
 								handleNavbarClick(0);
@@ -247,7 +248,7 @@ function App() {
 							}}
 							to="/shop"
 							className={"dark-1 p-3 nav-link " + activeUrlIndex[2]}>
-							{" "}
+							{" "}      
 							Shop{" "}
 						</Link>
 						<Link
