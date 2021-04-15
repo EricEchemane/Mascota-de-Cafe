@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Mascota-de-Cafe/static/css/main.5604530a.chunk.css",
-    "main.js": "/Mascota-de-Cafe/static/js/main.f6979181.chunk.js",
-    "main.js.map": "/Mascota-de-Cafe/static/js/main.f6979181.chunk.js.map",
+    "main.css": "/Mascota-de-Cafe/static/css/main.0bab2b70.chunk.css",
+    "main.js": "/Mascota-de-Cafe/static/js/main.d07ff67a.chunk.js",
+    "main.js.map": "/Mascota-de-Cafe/static/js/main.d07ff67a.chunk.js.map",
     "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js",
     "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js.map",
-    "static/js/2.b97362f2.chunk.js": "/Mascota-de-Cafe/static/js/2.b97362f2.chunk.js",
-    "static/js/2.b97362f2.chunk.js.map": "/Mascota-de-Cafe/static/js/2.b97362f2.chunk.js.map",
+    "static/js/2.e7367801.chunk.js": "/Mascota-de-Cafe/static/js/2.e7367801.chunk.js",
+    "static/js/2.e7367801.chunk.js.map": "/Mascota-de-Cafe/static/js/2.e7367801.chunk.js.map",
     "static/js/3.a0c79978.chunk.js": "/Mascota-de-Cafe/static/js/3.a0c79978.chunk.js",
     "static/js/3.a0c79978.chunk.js.map": "/Mascota-de-Cafe/static/js/3.a0c79978.chunk.js.map",
     "index.html": "/Mascota-de-Cafe/index.html",
-    "static/css/main.5604530a.chunk.css.map": "/Mascota-de-Cafe/static/css/main.5604530a.chunk.css.map",
-    "static/js/2.b97362f2.chunk.js.LICENSE.txt": "/Mascota-de-Cafe/static/js/2.b97362f2.chunk.js.LICENSE.txt",
+    "static/css/main.0bab2b70.chunk.css.map": "/Mascota-de-Cafe/static/css/main.0bab2b70.chunk.css.map",
+    "static/js/2.e7367801.chunk.js.LICENSE.txt": "/Mascota-de-Cafe/static/js/2.e7367801.chunk.js.LICENSE.txt",
     "static/media/Landing-Video2.79f96e86.mp4": "/Mascota-de-Cafe/static/media/Landing-Video2.79f96e86.mp4",
     "static/media/a.712cb706.jpg": "/Mascota-de-Cafe/static/media/a.712cb706.jpg",
     "static/media/global.css": "/Mascota-de-Cafe/static/media/action_bg.ea4cdea5.jpg",
@@ -22,6 +22,9 @@
     "static/media/c.093196ef.jpg": "/Mascota-de-Cafe/static/media/c.093196ef.jpg",
     "static/media/cp-1.9cf898b7.jpg": "/Mascota-de-Cafe/static/media/cp-1.9cf898b7.jpg",
     "static/media/cp-1.d887a31e.png": "/Mascota-de-Cafe/static/media/cp-1.d887a31e.png",
+    "static/media/cp-10.85f97d1c.png": "/Mascota-de-Cafe/static/media/cp-10.85f97d1c.png",
+    "static/media/cp-11.47355e98.png": "/Mascota-de-Cafe/static/media/cp-11.47355e98.png",
+    "static/media/cp-12.4f1834ed.png": "/Mascota-de-Cafe/static/media/cp-12.4f1834ed.png",
     "static/media/cp-2.341384c3.jpg": "/Mascota-de-Cafe/static/media/cp-2.341384c3.jpg",
     "static/media/cp-2.50140052.png": "/Mascota-de-Cafe/static/media/cp-2.50140052.png",
     "static/media/cp-3.05e0bd10.png": "/Mascota-de-Cafe/static/media/cp-3.05e0bd10.png",
@@ -32,6 +35,9 @@
     "static/media/cp-5.4bffbf2b.png": "/Mascota-de-Cafe/static/media/cp-5.4bffbf2b.png",
     "static/media/cp-6.482727b8.png": "/Mascota-de-Cafe/static/media/cp-6.482727b8.png",
     "static/media/cp-6.d1585ade.jpg": "/Mascota-de-Cafe/static/media/cp-6.d1585ade.jpg",
+    "static/media/cp-7.3abfbd9f.png": "/Mascota-de-Cafe/static/media/cp-7.3abfbd9f.png",
+    "static/media/cp-8.243dc5c0.png": "/Mascota-de-Cafe/static/media/cp-8.243dc5c0.png",
+    "static/media/cp-9.0cc1a135.png": "/Mascota-de-Cafe/static/media/cp-9.0cc1a135.png",
     "static/media/d.bf35d664.jpg": "/Mascota-de-Cafe/static/media/d.bf35d664.jpg",
     "static/media/e.6eaa5d4e.jpg": "/Mascota-de-Cafe/static/media/e.6eaa5d4e.jpg",
     "static/media/f.92e7de52.jpg": "/Mascota-de-Cafe/static/media/f.92e7de52.jpg",
@@ -71,8 +77,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2e449eb9.js",
-    "static/js/2.b97362f2.chunk.js",
-    "static/css/main.5604530a.chunk.css",
-    "static/js/main.f6979181.chunk.js"
+    "static/js/2.e7367801.chunk.js",
+    "static/css/main.0bab2b70.chunk.css",
+    "static/js/main.d07ff67a.chunk.js"
   ]
 }
