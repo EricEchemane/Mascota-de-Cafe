@@ -19,9 +19,10 @@ export default function CoffeeProduct(props: any) {
 	}
 
 	return (
-		<Grid item xs={6} sm={4} lg={3} className="p-3 coffeeProducts">
+		<Grid item xs={6} sm={4} md={3} className="p-3 coffeeProducts">
 			<div className="bg-1 trans-3 hover-lift coffee-product">
 				<img
+					loading="lazy"
 					src={props.imgSrc}
 					alt={props.name}
 					className="fullWidth"
@@ -60,9 +61,8 @@ export default function CoffeeProduct(props: any) {
 					)}
 				</div>
 				<div className="pl-2 pb-2 d-flex flex-align-center">
-					<p className="cur-pointer flex-1 hover-blue f-size-small">
-						Order now
-					</p>
+					<p className="cur-pointer hover-blue f-size-small">Order now</p>
+					<div className="flex-grow"></div>
 					<Tooltip title="Add to cart" placement="left-end">
 						<span onClick={handleAdd} className="cur-pointer hover-blue pr-2">
 							<AddShoppingCartIcon />

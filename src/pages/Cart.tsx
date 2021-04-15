@@ -13,6 +13,11 @@ import cp4 from "../assets/coffeeProducts/cp-4.png";
 import cp5 from "../assets/coffeeProducts/cp-5.png";
 import cp6 from "../assets/coffeeProducts/cp-6.png";
 import cp7 from "../assets/coffeeProducts/cp-7.png";
+import cp8 from "../assets/coffeeProducts/cp-8.png";
+import cp9 from "../assets/coffeeProducts/cp-9.png";
+import cp10 from "../assets/coffeeProducts/cp-10.png";
+import cp11 from "../assets/coffeeProducts/cp-11.png";
+import cp12 from "../assets/coffeeProducts/cp-12.png";
 // photos (Pastry)
 import p1 from "../assets/pastry/pastry1.png";
 import p2 from "../assets/pastry/pastry2.png";
@@ -54,6 +59,11 @@ export default function Cart() {
 		"cp-5": cp5,
 		"cp-6": cp6,
 		"cp-7": cp7,
+		"cp-8": cp8,
+		"cp-9": cp9,
+		"cp-10": cp10,
+		"cp-11": cp11,
+		"cp-12": cp12,
 	} as any;
 
 	const pastryPosters = {
