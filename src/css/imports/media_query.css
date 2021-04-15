@@ -86,6 +86,22 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .cart-item-desc {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .coffee-product:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 @media screen and (max-width: 330px) {
   :root {
     font-size: 12px;

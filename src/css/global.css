@@ -995,6 +995,10 @@ video {
   font-size: 0.8rem;
 }
 
+.f-size-xs * {
+  font-size: 0.8rem;
+}
+
 .active-effect:active {
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
@@ -1135,6 +1139,22 @@ select {
   }
   :root {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cart-item-desc {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .coffee-product:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #f2f2f2;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 

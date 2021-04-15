@@ -9,9 +9,12 @@ export default function CartItem(props: any) {
 	const updateQuanity = props.updateQuantity;
 
 	const rootClasses = "d-flex flex-align-center pt-1 pb-2";
+
 	return (
 		<div className={rootClasses}>
-			<div className="flex-1 d-flex d-block-500 flex-align-center">
+			<div
+				className="flex-1 d-flex d-block-500 flex-align-center"
+				title={props.desc}>
 				<img
 					src={props.imageSrc}
 					alt={name}
@@ -19,7 +22,7 @@ export default function CartItem(props: any) {
 				/>
 				<div>
 					<h4>{name}</h4>
-					<p className="f-size-small grey-2 pr-2">{desc}</p>
+					<p className={"f-size-small grey-2 pr-2 cart-item-desc"}>{desc}</p>
 				</div>
 			</div>
 			<div className="d-flex flex-align-center">

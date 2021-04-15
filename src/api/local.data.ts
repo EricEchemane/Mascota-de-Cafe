@@ -149,9 +149,17 @@ export const coffeeProducts = [
 	},
 	{
 		id: "cp-6",
-		name: "Milky Coffee",
-		desc: "Thick creamy mlik over coffee",
+		name: "Espresso",
+		desc: "A coffee with a kiss of foamy crema and a lingering after taste.",
 		rating: 7213,
+		price: [120, 140],
+	},
+	{
+		id: "cp-7",
+		name: "Ice Americano",
+		desc:
+			"Espresso shots topped with cold water produce a light layer of crema, then served over ice.",
+		rating: 7690,
 		price: [120, 140],
 	},
 ];
