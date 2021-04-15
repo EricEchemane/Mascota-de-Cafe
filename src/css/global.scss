@@ -381,6 +381,10 @@ video {
 	}
 }
 
+.f-size-xs {
+	font-size: 0.8rem;
+}
+
 .active-effect {
 	&:active {
 		filter: brightness(0.8);
@@ -421,5 +425,11 @@ video {
 }
 .flex-grow {
 	flex-grow: 1;
+}
+select {
+	border-radius: 4px;
+	border: 1px solid $grey-3;
+	background-color: inherit;
+	outline: none;
 }
 @import "./imports//media_query.scss";

@@ -23,7 +23,7 @@ export default function CartItem(props: any) {
 				</div>
 			</div>
 			<div className="d-flex flex-align-center">
-				<span className="pr-3 pl-1"> $ {price} </span>
+				<span className="pr-3 pl-1"> PHP {price} </span>
 				<span>
 					<button
 						onClick={() => {

@@ -148,11 +148,11 @@ export default function Cart() {
 
 			<div className={"inner-g " + commonClass}>
 				<div className="d-flex flex-align-center">
-					<h4 className="flex-1">Total </h4>
-					<h3 className="second mr-1">${state.total_price}.00</h3>
+					<h4 className="flex-1 ">Total </h4>
+					<h4 className="second mr-1 ">PHP {state.total_price}.00</h4>
 					<Router>
 						<Link to="/Shop">
-							<button className="prime small">Shop more!</button>
+							<button className="prime small f-size-small">Shop more!</button>
 						</Link>
 					</Router>
 					&nbsp;&nbsp;
@@ -160,7 +160,9 @@ export default function Cart() {
 						<Link
 							to="/cart/checkout"
 							className={items.length === 0 ? "disabled" : ""}>
-							<button className="outline small click-effect">Check Out</button>
+							<button className="outline small click-effect f-size-small">
+								Check Out
+							</button>
 						</Link>
 					</Tooltip>
 				</div>
