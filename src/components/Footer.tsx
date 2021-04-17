@@ -77,11 +77,38 @@ export default function Footer() {
 				<Grid item xs={12} md={3}>
 					<h3 className="p-2">Partners</h3>
 					<ul>
-						<li>Eric Echemane</li>
-						<li>Mark Alcel Bautista</li>
-						<li>Toni Rose Gonzales</li>
-						<li>Allaiza Miranda</li>
-						<li>Sarah Jane Libunao</li>
+						<li>
+							<a href="https://www.facebook.com/e.echemane" target="_blank">
+								Eric Echemane
+							</a>
+						</li>
+
+						<li>
+							<a
+								href="https://www.facebook.com/alcelbautista26"
+								target="_blank">
+								Mark Alcel Bautista
+							</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/Aziablck" target="_blank">
+								Allaiza Miranda
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.facebook.com/toni.gonzales15"
+								target="_blank">
+								Toni Rose Gonzales
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.facebook.com/sarahjane.libunao.56"
+								target="_blank">
+								Sarah Jane Libunao
+							</a>
+						</li>
 					</ul>
 				</Grid>
 				<Grid item xs={12} md={3}>

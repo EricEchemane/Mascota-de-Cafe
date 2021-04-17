@@ -9,7 +9,6 @@ export default function CartItem(props: any) {
 	const updateQuanity = props.updateQuantity;
 
 	const rootClasses = "d-flex flex-align-center pt-1 pb-2";
-
 	return (
 		<div className={rootClasses}>
 			<div

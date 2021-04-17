@@ -169,48 +169,48 @@ function Homepage() {
 
 				<div className="outer-w">
 					<h1 className="text-align-center pt-4 title second">What we have?</h1>
-					<div className="inner pb-5 pt-3 pr-3 pl-3 feature-container">
+					<div className="inner pb-4 pt-3 pr-3 pl-3 feature-container">
 						<Grid container className="d-flex flex-just-center">
 							<FeatureCard
 								title="Quality Ingredients"
 								video={qualityIngredients}
 								poster={fp1}
-								content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+								content="The ingredients use was base on our preference as a customer not as an business man. We may have affordable products but we a sure that did'nt skimp the ingredients and we use a quality ingredients that makes our pastry and coffee the best."
 								route="/"
 							/>
 							<FeatureCard
 								title="Precise Process"
 								video={preciseProcess}
 								poster={fp2}
-								content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+								content="First we make sure that everyone inside the kitchen are all sanitazed and cleaned. Each of the staff have there own works and the manager are the one checking if everyone doing was right. By making our pastry we have our own recipe to follow. While in coffee we are preparing the coffee beans that was available in our menu and check if our coffee mixer and doing its job. We also checking our inventory for our stocks in everything. Specially the takeout cups and bags. We always make sure that we have everything prepared to lessen our works."
 								route="/"
 							/>
 							<FeatureCard
 								title="Excellent Service"
 								video={goodService}
 								poster={fp3}
-								content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+								content="Every member of our team has passed a customer service examination. We are confident in our ability to provide you with unwavering service and are delighted to provide you with our goods."
 								route="/"
 							/>
 							<FeatureCard
 								title="Pets in House"
 								video={petsInHouse}
 								poster={fp4}
-								content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+								content="We have pets area to the right and left near the entrance to maintain the cleanliness.The pets are only from the streets in our neighborhood, but we will a sure you that they are clean and well-trained before they reach the cafe to prevent any problems. They also don't take food from customers because we check to see if they're full before placing them in the cafe. Also you customers can play with them in pets area where there toys are place. "
 								route="/"
 							/>
 							<FeatureCard
 								title="Good Ambience"
 								video={goodAmbience}
 								poster={fp5}
-								content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+								content="Our cafe was designed with the help of professionals, and all of the furniture is focused on our preferences for where customers would feel most at ease. It is important to us that our customers feel at ease so that they can focus on their jobs or studies. We want them to be in the best possible shape."
 								route="/"
 							/>
 							<FeatureCard
 								title="You can Adopt a Pet"
 								video={adoptPet}
 								poster={fp6}
-								content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis reprehenderit officia reiciendis quaerat repudiandae."
+								content="Yes, you can adopt a pet with our loyalty card. Loyalty card have ten slot for Mascota stamp. One stamp if you reach five hundred peso in a single bill. Fill the loyalty card and you can adopt a pet for free, you just have to sign the pet adoption contract for you to be the official owner of the pet."
 								route="/"
 							/>
 						</Grid>

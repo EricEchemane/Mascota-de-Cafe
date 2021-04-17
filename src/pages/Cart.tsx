@@ -19,12 +19,25 @@ import cp10 from "../assets/coffeeProducts/cp-10.png";
 import cp11 from "../assets/coffeeProducts/cp-11.png";
 import cp12 from "../assets/coffeeProducts/cp-12.png";
 // photos (Pastry)
-import p1 from "../assets/pastry/pastry1.png";
-import p2 from "../assets/pastry/pastry2.png";
-import p3 from "../assets/pastry/pastry3.png";
-import p4 from "../assets/pastry/pastry4.png";
-import p5 from "../assets/pastry/pastry5.png";
-import p6 from "../assets/pastry/pastry6.png";
+import p1 from "../assets/pastry/ChocolateFudgeWaffle.jpg";
+import p2 from "../assets/pastry/ChocoWaferBars.jpg";
+import p3 from "../assets/pastry/ClassicCroissant.jpg";
+import p4 from "../assets/pastry/Macaroons.jpg";
+import p5 from "../assets/pastry/ChocolateChipCookies.jpg";
+import p6 from "../assets/pastry/ChocolateBrownies.jpg";
+import p7 from "../assets/pastry/BlueberryCheesecake.jpg";
+import p8 from "../assets/pastry/StrawberryCheesecake.jpg";
+import p9 from "../assets/pastry/CinnamonRolls.jpg";
+import p10 from "../assets/pastry/FrenchToast.jpg";
+import p11 from "../assets/pastry/WhiteChocolateAndCranberryCookie.jpg";
+import p12 from "../assets/pastry/SmoresBar.jpg";
+import p13 from "../assets/pastry/BananaLoaf.jpg";
+import p14 from "../assets/pastry/UbeCheesecake.jpg";
+import p15 from "../assets/pastry/OriginalGlazeDonuts.jpg";
+import p16 from "../assets/pastry/ChocolateDonuts.jpg";
+import p17 from "../assets/pastry/Pancake.jpg";
+import p18 from "../assets/pastry/MatchaDonuts.jpg";
+import p19 from "../assets/pastry/StrawberryDonuts.jpg";
 
 export default function Cart() {
 	useEffect(() => {
@@ -73,6 +86,19 @@ export default function Cart() {
 		pastry4: p4,
 		pastry5: p5,
 		pastry6: p6,
+		pastry7: p7,
+		pastry8: p8,
+		pastry9: p9,
+		pastry10: p10,
+		pastry11: p11,
+		pastry12: p12,
+		pastry13: p13,
+		pastry14: p14,
+		pastry15: p15,
+		pastry16: p16,
+		pastry17: p17,
+		pastry18: p18,
+		pastry19: p19,
 	} as any;
 
 	function handleQuantityUpdate(id: number, n: number) {

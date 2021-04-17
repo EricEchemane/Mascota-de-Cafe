@@ -52,8 +52,8 @@ export default function CoffeeProduct(props: any) {
 								name="size"
 								className="mr-2 mb-2 f-size-xs cur-pointer"
 								onChange={handleChange}>
-								<option value="0">Regular</option>
-								<option value="1">Large</option>
+								<option value="0">Regular ({props.price[0]}) </option>
+								<option value="1">Large ({props.price[1]}) </option>
 							</select>
 						</>
 					) : (

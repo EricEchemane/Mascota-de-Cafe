@@ -740,29 +740,22 @@ video {
 }
 
 .feature-card {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   width: minmax(300px, 400px);
-  height: minmax(400px, 500px);
   border-radius: 8px;
   border: 1px solid #c5c5c5;
   margin: 2rem;
   overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
           box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.3);
 }
 
 .feature-card video {
-  width: 90%;
-  height: 70%;
-  margin: auto;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  all: unset;
+  width: 100%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .footer {

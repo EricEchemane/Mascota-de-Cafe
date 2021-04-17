@@ -182,20 +182,18 @@ video {
 	}
 }
 .feature-card {
-	display: inline-flex;
 	width: minmax(300px, 400px);
-	height: minmax(400px, 500px);
 	border-radius: 8px;
 	border: 1px solid $grey-2;
 	margin: 2rem;
 	overflow: hidden;
-	flex-direction: column;
 	box-shadow: $floating;
 	video {
-		width: 90%;
-		height: 70%;
-		margin: auto;
-		box-shadow: none;
+		all: unset;
+		width: 100%;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
 
