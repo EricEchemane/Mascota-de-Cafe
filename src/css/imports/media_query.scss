@@ -1,4 +1,9 @@
 @media screen and (max-width: 875px) {
+	.coffee-product:hover {
+		transform: scale(1);
+		background-color: $grey-1;
+		box-shadow: none;
+	}
 	.nav-link {
 		display: none;
 	}
@@ -90,11 +95,6 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-	}
-	.coffee-product:hover {
-		transform: scale(1);
-		background-color: $grey-1;
-		box-shadow: none;
 	}
 }
 @media screen and (max-width: 330px) {

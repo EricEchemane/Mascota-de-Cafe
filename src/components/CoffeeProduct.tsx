@@ -4,6 +4,11 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import Tooltip from "@material-ui/core/Tooltip";
 import { useState } from "react";
 
+import Accordion from "@material-ui/core/Accordion";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
 export default function CoffeeProduct(props: any) {
 	const [price, setPrice] = useState(props.price[0]);
 	function handleAdd() {
@@ -29,13 +34,30 @@ export default function CoffeeProduct(props: any) {
 					title={props.desc}
 				/>
 
-				<h3 className="pl-2"> {props.name} </h3>
-
-				<p className="pl-2 pr-2 f-size-xs grey-3">{props.desc}</p>
+				<Accordion
+					square={true}
+					elevation={0}
+					style={{
+						backgroundColor: "transparent",
+						boxShadow: "none",
+						border: "none",
+						margin: "0",
+						top: "-5px",
+					}}>
+					<AccordionSummary
+						expandIcon={<ExpandMoreIcon />}
+						aria-controls="panel1a-content"
+						id="panel1a-header">
+						<h4> {props.name} </h4>
+					</AccordionSummary>
+					<AccordionDetails>
+						<p>{props.desc}</p>
+					</AccordionDetails>
+				</Accordion>
 
 				<Tooltip title={`${props.rating} people like this.`}>
 					<p className="prime d-flex flex-align-center pl-2 pr-2">
-						<span className="flex-1 pt-1 f-size-xs">
+						<span className="flex-1 f-size-xs">
 							<StarRateIcon fontSize="small" className="f-size-xs" />
 							<StarRateIcon fontSize="small" className="f-size-xs" />
 							<StarRateIcon fontSize="small" className="f-size-xs" />
@@ -47,17 +69,17 @@ export default function CoffeeProduct(props: any) {
 				<div className="d-flex pl-2 pt-1">
 					{props.id.startsWith("cp") ? (
 						<>
-							<h3 className="second flex-1">PHP {price}</h3>
+							<h4 className="second flex-1">PHP {price}</h4>
 							<select
 								name="size"
 								className="mr-2 mb-2 f-size-xs cur-pointer"
 								onChange={handleChange}>
-								<option value="0">Regular ({props.price[0]}) </option>
-								<option value="1">Large ({props.price[1]}) </option>
+								<option value="0">Regular {props.price[0]} </option>
+								<option value="1">Large {props.price[1]} </option>
 							</select>
 						</>
 					) : (
-						<h3 className="second flex-1">PHP {props.price}</h3>
+						<h4 className="second flex-1">PHP {props.price}</h4>
 					)}
 				</div>
 				<div className="pl-2 pb-2 d-flex flex-align-center">

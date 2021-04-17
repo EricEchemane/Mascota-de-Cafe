@@ -13,23 +13,21 @@ export default function FeatureCard(props: any) {
 				<Router>
 					<div className="feature-card">
 						<video src={props.video} muted loop autoPlay></video>
-						<div>
-							<Accordion>
-								<AccordionSummary
-									expandIcon={<ExpandMoreIcon />}
-									aria-controls="panel1a-content"
-									id="panel1a-header">
-									<h3> {props.title} </h3>
-								</AccordionSummary>
-								<AccordionDetails>
-									<p>{props.content}</p>
-								</AccordionDetails>
-								<Link to={props.route} className="pl-2">
-									Learn more
-								</Link>
-								<div className="p-1"></div>
-							</Accordion>
-						</div>
+						<Accordion>
+							<AccordionSummary
+								expandIcon={<ExpandMoreIcon />}
+								aria-controls="panel1a-content"
+								id="panel1a-header">
+								<h3> {props.title} </h3>
+							</AccordionSummary>
+							<AccordionDetails>
+								<p>{props.content}</p>
+							</AccordionDetails>
+							<Link to={props.route} className="pl-2">
+								Learn more
+							</Link>
+							<div className="p-1"></div>
+						</Accordion>
 					</div>
 				</Router>
 			</Grid>

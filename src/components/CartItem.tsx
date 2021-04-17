@@ -14,11 +14,7 @@ export default function CartItem(props: any) {
 			<div
 				className="flex-1 d-flex d-block-500 flex-align-center"
 				title={props.desc}>
-				<img
-					src={props.imageSrc}
-					alt={name}
-					className="height-40 radius-8 pr-2"
-				/>
+				<img src={props.imageSrc} alt={name} className="cart-image" />
 				<div>
 					<h4>{name}</h4>
 					<p className={"f-size-small grey-2 pr-2 cart-item-desc"}>{desc}</p>
