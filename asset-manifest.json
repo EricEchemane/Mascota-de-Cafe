@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Mascota-de-Cafe/static/css/main.cfb7a51a.chunk.css",
-    "main.js": "/Mascota-de-Cafe/static/js/main.eaccfa73.chunk.js",
-    "main.js.map": "/Mascota-de-Cafe/static/js/main.eaccfa73.chunk.js.map",
+    "main.js": "/Mascota-de-Cafe/static/js/main.63a023f4.chunk.js",
+    "main.js.map": "/Mascota-de-Cafe/static/js/main.63a023f4.chunk.js.map",
     "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js",
     "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js.map",
     "static/js/2.c9614d2d.chunk.js": "/Mascota-de-Cafe/static/js/2.c9614d2d.chunk.js",
@@ -63,14 +63,14 @@
     "static/media/flute.942933df.png": "/Mascota-de-Cafe/static/media/flute.942933df.png",
     "static/media/good_ambience.ec79a72a.mp4": "/Mascota-de-Cafe/static/media/good_ambience.ec79a72a.mp4",
     "static/media/good_service.cfc5c7d7.mp4": "/Mascota-de-Cafe/static/media/good_service.cfc5c7d7.mp4",
-    "static/media/happy.946caa4e.png": "/Mascota-de-Cafe/static/media/happy.946caa4e.png",
-    "static/media/jenny.63392ac9.png": "/Mascota-de-Cafe/static/media/jenny.63392ac9.png",
+    "static/media/happy.2c81db37.png": "/Mascota-de-Cafe/static/media/happy.2c81db37.png",
+    "static/media/jenny.4acf8cc7.png": "/Mascota-de-Cafe/static/media/jenny.4acf8cc7.png",
     "static/media/landing.b9bf8431.jpg": "/Mascota-de-Cafe/static/media/landing.b9bf8431.jpg",
     "static/media/logo192.2ea9b40d.png": "/Mascota-de-Cafe/static/media/logo192.2ea9b40d.png",
     "static/media/pets_in_house.c43ab0d3.mp4": "/Mascota-de-Cafe/static/media/pets_in_house.c43ab0d3.mp4",
     "static/media/precise_process.e2b25d9b.mp4": "/Mascota-de-Cafe/static/media/precise_process.e2b25d9b.mp4",
     "static/media/quality_ingredients.43a76ea5.mp4": "/Mascota-de-Cafe/static/media/quality_ingredients.43a76ea5.mp4",
-    "static/media/rose.d5bee930.png": "/Mascota-de-Cafe/static/media/rose.d5bee930.png",
+    "static/media/rose.46fdbacd.png": "/Mascota-de-Cafe/static/media/rose.46fdbacd.png",
     "static/media/s1.f87255b0.jpg": "/Mascota-de-Cafe/static/media/s1.f87255b0.jpg",
     "static/media/s1.f8ebd61e.jpg": "/Mascota-de-Cafe/static/media/s1.f8ebd61e.jpg",
     "static/media/s2.01bf911d.jpg": "/Mascota-de-Cafe/static/media/s2.01bf911d.jpg",
@@ -79,19 +79,19 @@
     "static/media/s3.ee690eb1.jpg": "/Mascota-de-Cafe/static/media/s3.ee690eb1.jpg",
     "static/media/s4.142e653c.png": "/Mascota-de-Cafe/static/media/s4.142e653c.png",
     "static/media/s4.ea9755d0.jpg": "/Mascota-de-Cafe/static/media/s4.ea9755d0.jpg",
-    "static/media/shaky.ba625fe2.png": "/Mascota-de-Cafe/static/media/shaky.ba625fe2.png",
-    "static/media/shana.606cc49f.png": "/Mascota-de-Cafe/static/media/shana.606cc49f.png",
+    "static/media/shaky.1803f8ca.png": "/Mascota-de-Cafe/static/media/shaky.1803f8ca.png",
+    "static/media/shana.1227716b.png": "/Mascota-de-Cafe/static/media/shana.1227716b.png",
     "static/media/shop_1.5f42c58c.jpg": "/Mascota-de-Cafe/static/media/shop_1.5f42c58c.jpg",
     "static/media/shop_2.f423e0f3.jpg": "/Mascota-de-Cafe/static/media/shop_2.f423e0f3.jpg",
     "static/media/shop_3.38ac0518.jpg": "/Mascota-de-Cafe/static/media/shop_3.38ac0518.jpg",
     "static/media/shop_4.01e273be.jpg": "/Mascota-de-Cafe/static/media/shop_4.01e273be.jpg",
-    "static/media/shyne.332574c5.png": "/Mascota-de-Cafe/static/media/shyne.332574c5.png",
+    "static/media/shyne.fbb583fa.png": "/Mascota-de-Cafe/static/media/shyne.fbb583fa.png",
     "static/media/stuart.140fe249.png": "/Mascota-de-Cafe/static/media/stuart.140fe249.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2e449eb9.js",
     "static/js/2.c9614d2d.chunk.js",
     "static/css/main.cfb7a51a.chunk.css",
-    "static/js/main.eaccfa73.chunk.js"
+    "static/js/main.63a023f4.chunk.js"
   ]
 }
