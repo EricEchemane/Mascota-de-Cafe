@@ -369,14 +369,14 @@ export const pets = [
 		sex: "She",
 		name: "Jade",
 		type: "cat",
-		breed: "Van cat",
+		breed: "Aspin",
 		about: "Jade was took from underpass",
 	},
 	{
 		sex: "He",
 		name: "Glister",
 		type: "dog",
-		breed: "Aspin",
+		breed: "Puspin",
 		about: "Glister was took from public market",
 	},
 	{
@@ -404,7 +404,7 @@ export const pets = [
 		sex: "She",
 		name: "Mallow",
 		type: "cat",
-		breed: "Van cat",
+		breed: "Puspin",
 		about: "Mallow was took from near the mall",
 	},
 	{
