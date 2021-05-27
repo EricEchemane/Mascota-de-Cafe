@@ -519,7 +519,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #3a3532;
 }
 
@@ -771,7 +771,7 @@ video {
 }
 
 .footer h2 {
-  font-family: "Courgette", cursive;
+  font-family: 'Courgette', cursive;
   margin: 1rem;
   color: white;
 }
@@ -1052,6 +1052,63 @@ select {
   max-width: 75px;
   border-radius: 8px;
   padding-right: 1rem;
+}
+
+.courgette {
+  font-family: 'Courgette', cursive;
+}
+
+.width-400 {
+  width: 300px;
+}
+
+.owners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.owners img {
+  margin-top: 1rem;
+  width: 60%;
+  -webkit-filter: contrast(1.1) brightness(0.9);
+          filter: contrast(1.1) brightness(0.9);
+}
+
+.owner-image-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.owner {
+  background-color: white;
+  margin: 3rem auto;
+}
+
+.owner .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.owner .about {
+  padding: 3rem;
 }
 
 @media screen and (max-width: 875px) {

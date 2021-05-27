@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
-@import "./imports//templates.scss";
-@import "./imports//spacing.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import './imports//templates.scss';
+@import './imports//spacing.scss';
 
 $floating: 0 24px 48px -12px rgba(
 		$color: #000000,
@@ -13,7 +13,7 @@ $floating: 0 24px 48px -12px rgba(
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 	color: $dark-1;
 }
 html {
@@ -207,7 +207,7 @@ video {
 		font-weight: 100;
 	}
 	h2 {
-		font-family: "Courgette", cursive;
+		font-family: 'Courgette', cursive;
 		margin: 1rem;
 		color: white;
 	}
@@ -439,4 +439,45 @@ select {
 	border-radius: 8px;
 	padding-right: 1rem;
 }
-@import "./imports//media_query.scss";
+.courgette {
+	font-family: 'Courgette', cursive;
+}
+
+.width-400 {
+	width: 300px;
+}
+
+.owners {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	img {
+		margin-top: 1rem;
+		width: 60%;
+		filter: contrast(1.1) brightness(0.9);
+	}
+}
+.owner-image-container {
+	max-width: 800px;
+	margin: auto;
+}
+
+.row-reverse {
+	flex-direction: row-reverse;
+}
+
+.owner {
+	background-color: white;
+	margin: 3rem auto;
+	.image {
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.about {
+		padding: 3rem;
+	}
+}
+@import './imports//media_query.scss';
