@@ -353,7 +353,7 @@ export const pets = [
 		sex: 'He',
 		name: 'Prince',
 		type: 'Dog',
-		breed: 'Aspin',
+		breed: 'Puspin',
 		about: 'Prince was took from public market',
 	},
 	{
@@ -426,10 +426,7 @@ export const companyOwners = [
 		id: 'alcel',
 		fullname: 'Mark Alcel Bautista',
 		position: 'Marketing Assistant Manager',
-		about: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ipsam
-					neque aliquid nesciunt doloremque quas fuga placeat. Adipisci odit,
-					dolore vel impedit corrupti libero architecto? Incidunt at minima
-					eligendi eaque?`,
+		about: `I am a Second year Computer Science student at Pamantasan ng Lungod ng Muntinlupa. My passion for helping others has been evident in my past experience of teaching to those fortunate kids and as youth leader in our church. Through those experiences I have learned to interact with a diverse group of people, which has increased my ability to relate to others. I have also had life skills like teamwork, communication, and time management that i can apply to my team. I hope this Coffee shop will be the way to create a new chapter of happiness in my life.`,
 		instagramAcc: 'https://www.instagram.com/bautistaalcel/',
 		instaName: 'bautistaalcel',
 	},
@@ -437,10 +434,7 @@ export const companyOwners = [
 		id: 'toni',
 		fullname: 'Toni Rose Gonzales',
 		position: 'General Manager',
-		about: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ipsam
-					neque aliquid nesciunt doloremque quas fuga placeat. Adipisci odit,
-					dolore vel impedit corrupti libero architecto? Incidunt at minima
-					eligendi eaque?`,
+		about: `Good day, I am one of the Founder and the General Manager of "The Mascota Café" 20 years old taking my college course (Computer Science) at Pamantasan ng Lungsod ng Muntinlupa. A student-athlete of my chosen sport since High School. In College I got the best colleagues and we came with the idea of this Pet-Café where we all know people will love, They love Coffee and Pets and i love baking pastries. Communicating to people and helping them gave me satisfaction. So, once you visit to our shop, I hope you don't forget to smile!`,
 		instagramAcc: 'https://www.instagram.com/trgonzaies/',
 		instaName: 'trgonzaies',
 	},
@@ -448,10 +442,7 @@ export const companyOwners = [
 		id: 'allaiza',
 		fullname: 'Allaiza Miranda',
 		position: 'Operation and Finance Manager',
-		about: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ipsam
-					neque aliquid nesciunt doloremque quas fuga placeat. Adipisci odit,
-					dolore vel impedit corrupti libero architecto? Incidunt at minima
-					eligendi eaque?`,
+		about: `I’m currently taking computer science in pamantasan ng lungsod ng muntinlupa in my second year. I’m 20 years old and I believe that age is an issue of mind over matter. If you don’t mind, it doesn’t matter. You shouldn’t put an age limit on your dreams. As long as you have your ideas and your plan it well I think that’s enough to try it and grab the opportunity. The Mascota de Café was the ideas of five members who was my classmate and also may friends. It’s good to have friends where you can share your goals and success.`,
 		instagramAcc: 'https://www.instagram.com/llz.mrnd/',
 		instaName: 'llz.mrnd',
 	},
@@ -467,10 +458,7 @@ export const companyOwners = [
 		id: 'sarah',
 		fullname: 'Sarah Jane Libunao',
 		position: 'Production Manager',
-		about: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ipsam
-					neque aliquid nesciunt doloremque quas fuga placeat. Adipisci odit,
-					dolore vel impedit corrupti libero architecto? Incidunt at minima
-					eligendi eaque?`,
+		about: `20 years of age from Laguna. I am a Bachelor of Science in Computer Science student in Pamantasan Lungsod ng Muntinlupa. I love pets especially dogs.I am grateful to my team for starting a business like this because we do not just enjoy working but helping animals to have their new home and to those pet lovers out there.`,
 		instagramAcc: 'https://www.instagram.com/srhjnlbn/',
 		instaName: 'srhjnlbn',
 	},

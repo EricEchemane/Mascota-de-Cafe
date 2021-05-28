@@ -44,7 +44,7 @@ export default function CompanyOwners() {
 				<img src={pictures[owner.id]} alt='' />
 			</Grid>
 			<Grid item xs={12} sm={7} className='about'>
-				<h2>{owner.fullname}</h2>
+				<h2 className='dark-2'>{owner.fullname}</h2>
 				<h3 className='grey-2 mb-3'>{owner.position}</h3>
 				<p>{owner.about}</p>
 				<div className='mt-2 d-flex flex-align-center'>
@@ -66,18 +66,20 @@ export default function CompanyOwners() {
 			transition={{ duration: 0.7 }}>
 			<div className='outer-w owners'>
 				<p className='text-align-center mt-5'>
-					<i>"Mascota de Cafe Coffee Company"</i>
+					<i>
+						"Poeple do not buy goods and services. <br /> They buy Relations,
+						Stories and Magic."
+					</i>
 				</p>
 				<img src={Owners} alt='Mascota de Cafe Owners' />
 
 				<h2 className='text-algin-center p-2 second'>Who are We?</h2>
 				<p className='text-align-center p-2 mb-3'>
-					<i>
-						"During college, we met each other. With common interests, <br />
-						we enjoy being together. Regardless of our differences
-						<br />
-						we had founded our company."
-					</i>
+					"During college, we met each other. <br />
+					With common interests, we enjoy being together. Regardless of our
+					differences
+					<br />
+					we had founded our company."
 				</p>
 			</div>
 

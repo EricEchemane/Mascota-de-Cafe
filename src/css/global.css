@@ -1086,7 +1086,7 @@ select {
 }
 
 .owner-image-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -1100,6 +1100,7 @@ select {
 .owner {
   background-color: white;
   margin: 3rem auto;
+  border-radius: 30px;
 }
 
 .owner .image img {
