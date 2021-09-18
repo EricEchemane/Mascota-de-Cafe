@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 import { HashRouter as Router, Link } from 'react-router-dom';
 
-import Vid from '../assets/videos/Landing-Video2.mp4';
+import Vid from '../assets/videos/landing-video2.mp4';
 import VidPoster from '../assets/videos/features/thumbnails/landing.jpg';
 
 import Story from '../components/Story';

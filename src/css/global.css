@@ -818,6 +818,8 @@ video {
   border-radius: 8px;
   padding: 0.3rem 1rem;
   color: #3a3532;
+  width: calc(100% - 4rem);
+  display: block;
 }
 
 .contact {

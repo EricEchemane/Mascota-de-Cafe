@@ -62,7 +62,7 @@ export default function Footer() {
 							<PhoneIcon />
 						</a>
 					</div>
-					<div className='pl-1 pt-3'>
+					<div className='pt-3'>
 						<input
 							list='search'
 							placeholder='Search '
