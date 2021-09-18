@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Mascota-de-Cafe/static/css/main.522bc848.chunk.css",
-    "main.js": "/Mascota-de-Cafe/static/js/main.bd3f248a.chunk.js",
-    "main.js.map": "/Mascota-de-Cafe/static/js/main.bd3f248a.chunk.js.map",
-    "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js",
-    "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.2e449eb9.js.map",
-    "static/js/2.fe64dc4b.chunk.js": "/Mascota-de-Cafe/static/js/2.fe64dc4b.chunk.js",
-    "static/js/2.fe64dc4b.chunk.js.map": "/Mascota-de-Cafe/static/js/2.fe64dc4b.chunk.js.map",
-    "static/js/3.a0c79978.chunk.js": "/Mascota-de-Cafe/static/js/3.a0c79978.chunk.js",
-    "static/js/3.a0c79978.chunk.js.map": "/Mascota-de-Cafe/static/js/3.a0c79978.chunk.js.map",
+    "main.css": "/Mascota-de-Cafe/static/css/main.1eba28fb.chunk.css",
+    "main.js": "/Mascota-de-Cafe/static/js/main.6407ab95.chunk.js",
+    "main.js.map": "/Mascota-de-Cafe/static/js/main.6407ab95.chunk.js.map",
+    "runtime-main.js": "/Mascota-de-Cafe/static/js/runtime-main.a5c76cd1.js",
+    "runtime-main.js.map": "/Mascota-de-Cafe/static/js/runtime-main.a5c76cd1.js.map",
+    "static/js/2.7ca9143f.chunk.js": "/Mascota-de-Cafe/static/js/2.7ca9143f.chunk.js",
+    "static/js/2.7ca9143f.chunk.js.map": "/Mascota-de-Cafe/static/js/2.7ca9143f.chunk.js.map",
+    "static/js/3.42568458.chunk.js": "/Mascota-de-Cafe/static/js/3.42568458.chunk.js",
+    "static/js/3.42568458.chunk.js.map": "/Mascota-de-Cafe/static/js/3.42568458.chunk.js.map",
     "index.html": "/Mascota-de-Cafe/index.html",
-    "static/css/main.522bc848.chunk.css.map": "/Mascota-de-Cafe/static/css/main.522bc848.chunk.css.map",
-    "static/js/2.fe64dc4b.chunk.js.LICENSE.txt": "/Mascota-de-Cafe/static/js/2.fe64dc4b.chunk.js.LICENSE.txt",
+    "static/css/main.1eba28fb.chunk.css.map": "/Mascota-de-Cafe/static/css/main.1eba28fb.chunk.css.map",
+    "static/js/2.7ca9143f.chunk.js.LICENSE.txt": "/Mascota-de-Cafe/static/js/2.7ca9143f.chunk.js.LICENSE.txt",
     "static/media/BananaLoaf.156ca7ef.jpg": "/Mascota-de-Cafe/static/media/BananaLoaf.156ca7ef.jpg",
     "static/media/BlueberryCheesecake.89f14e05.jpg": "/Mascota-de-Cafe/static/media/BlueberryCheesecake.89f14e05.jpg",
     "static/media/ChocoWaferBars.19171fd2.jpg": "/Mascota-de-Cafe/static/media/ChocoWaferBars.19171fd2.jpg",
@@ -22,7 +22,6 @@
     "static/media/CinnamonRolls.de6cc5cf.jpg": "/Mascota-de-Cafe/static/media/CinnamonRolls.de6cc5cf.jpg",
     "static/media/ClassicCroissant.d236769b.jpg": "/Mascota-de-Cafe/static/media/ClassicCroissant.d236769b.jpg",
     "static/media/FrenchToast.7b8db004.jpg": "/Mascota-de-Cafe/static/media/FrenchToast.7b8db004.jpg",
-    "static/media/Landing-Video2.79f96e86.mp4": "/Mascota-de-Cafe/static/media/Landing-Video2.79f96e86.mp4",
     "static/media/Macaroons.6133f6d8.jpg": "/Mascota-de-Cafe/static/media/Macaroons.6133f6d8.jpg",
     "static/media/MatchaDonuts.7c274641.jpg": "/Mascota-de-Cafe/static/media/MatchaDonuts.7c274641.jpg",
     "static/media/OriginalGlazeDonuts.c57541b1.jpg": "/Mascota-de-Cafe/static/media/OriginalGlazeDonuts.c57541b1.jpg",
@@ -68,6 +67,7 @@
     "static/media/good_service.cfc5c7d7.mp4": "/Mascota-de-Cafe/static/media/good_service.cfc5c7d7.mp4",
     "static/media/happy.2c81db37.png": "/Mascota-de-Cafe/static/media/happy.2c81db37.png",
     "static/media/jenny.4acf8cc7.png": "/Mascota-de-Cafe/static/media/jenny.4acf8cc7.png",
+    "static/media/landing-video2.79f96e86.mp4": "/Mascota-de-Cafe/static/media/landing-video2.79f96e86.mp4",
     "static/media/landing.b9bf8431.jpg": "/Mascota-de-Cafe/static/media/landing.b9bf8431.jpg",
     "static/media/logo192.2ea9b40d.png": "/Mascota-de-Cafe/static/media/logo192.2ea9b40d.png",
     "static/media/ownersLandingImage.ccdbf0ae.png": "/Mascota-de-Cafe/static/media/ownersLandingImage.ccdbf0ae.png",
@@ -95,9 +95,9 @@
     "static/media/toni.ef888bf3.jpg": "/Mascota-de-Cafe/static/media/toni.ef888bf3.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2e449eb9.js",
-    "static/js/2.fe64dc4b.chunk.js",
-    "static/css/main.522bc848.chunk.css",
-    "static/js/main.bd3f248a.chunk.js"
+    "static/js/runtime-main.a5c76cd1.js",
+    "static/js/2.7ca9143f.chunk.js",
+    "static/css/main.1eba28fb.chunk.css",
+    "static/js/main.6407ab95.chunk.js"
   ]
 }
